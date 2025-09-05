@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ================= BASIC SEO ================= -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blender Intermediate Course: Skills & Projects (Free) | Learn 3D Animation</title>
+  <meta name="description" content="Level up with our Blender Intermediate Course: advanced modeling, modifiers, UVs & texturing, shader nodes, HDRI lighting, Cycles rendering, rigging, walk cycles, physics simulations, and an intermediate project. Free and SEO‑optimized." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://yourdomain.github.io/intermediate-course.html" />
+  <meta name="keywords" content="Blender intermediate course, Blender advanced modeling, Blender UV unwrapping, Blender shader nodes, Blender HDRI lighting, Cycles rendering, Blender rigging, Blender walk cycle, Blender physics simulations" />
+
+  <!-- =============== SOCIAL / SHARING ================= -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Learn 3D Animation" />
+  <meta property="og:title" content="Blender Intermediate Course: Skills & Projects (Free)" />
+  <meta property="og:description" content="Step‑by‑step lessons: modifiers, UVs, shaders, lighting, Cycles, rigging, animation, physics, and a capstone project." />
+  <meta property="og:url" content="https://yourdomain.github.io/intermediate-course.html" />
+  <meta property="og:image" content="https://yourdomain.github.io/assets/og-intermediate.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blender Intermediate Course" />
+  <meta name="twitter:description" content="Take your Blender skills to the next level with structured, practical lessons." />
+  <meta name="twitter:image" content="https://yourdomain.github.io/assets/og-intermediate.jpg" />
+
+  <!-- ================== FAVICONS ================== -->
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" />
+  <link rel="icon" href="/favicon-16.png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- ================== THEME (Beach Purple) ================== -->
+  <style>
+    :root{
+      --purple-900:#462a6f; /* deep purple */
+      --purple-800:#51327f;
+      --purple-700:#6b5b95; /* beach purple primary */
+      --purple-500:#8b74c9; /* lighter accent */
+      --lavender:#efe9ff;   /* soft lavender bg */
+      --sand:#fff5e6;       /* beach sand */
+      --shell:#ffe8c8;      /* shell accent */
+      --sea:#37b3a8;        /* sea teal accent */
+      --text:#262335;
+      --muted:#6b6a75;
+      --border:#e7e3f2;
+      --white:#ffffff;
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0;font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Inter,"Helvetica Neue",Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,var(--sand),var(--lavender)) fixed}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    .topbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.85);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.2px;color:var(--purple-900)}
+    .brand .logo{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--purple-700),var(--purple-500));color:var(--white)}
+    .nav a{color:var(--purple-900);text-decoration:none;font-weight:600}
+    .nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+    .nav a:hover{color:var(--purple-700)}
+
+    /* Hero */
+    .hero{position:relative;isolation:isolate;background:linear-gradient(135deg,var(--purple-700),var(--purple-500));color:var(--white);padding:60px 0 66px;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:auto -20% -80px -20%;height:200px;background:radial-gradient(60% 100% at 50% 0%, var(--shell), transparent 70%);opacity:.25;z-index:-1}
+    .hero h1{font-size:clamp(28px,4vw,42px);margin:0 0 10px}
+    .hero p{max-width:780px;margin:0 auto 18px;opacity:.95}
+    .breadcrumb{font-size:14px;opacity:.92;margin-bottom:10px}
+    .breadcrumb a{color:#fffb;}
+
+    /* TOC */
+    .toc{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:0 10px 30px rgba(107,91,149,.08);margin-top:-30px}
+    .toc h2{font-size:18px;margin:.1rem 0 .6rem;color:var(--purple-900)}
+    .toc ul{margin:0;padding-left:18px}
+    .toc a{color:var(--purple-700);text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+
+    /* Content */
+    section{scroll-margin-top:90px}
+    .section{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;margin:18px 0;box-shadow:0 10px 30px rgba(70,42,111,.06)}
+    .section h2{margin:.4rem 0 .6rem;color:var(--purple-900)}
+    .section h3{margin:1rem 0 .4rem;color:var(--purple-700)}
+    .note{background:linear-gradient(0deg,#ffffff, #fffaf2);border-left:4px solid var(--shell);padding:12px 14px;border-radius:8px}
+    .kbd{display:inline-block;padding:.1rem .4rem;border:1px solid #d9d3ec;border-bottom-width:2px;border-radius:6px;background:#f7f4ff;color:#41396e;font-weight:700;font-size:.9em}
+
+    /* Lists/Grid */
+    .grid{display:grid;gap:16px}
+    @media(min-width:720px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+    @media(min-width:980px){.grid.cols-3{grid-template-columns:1fr 1fr 1fr}}
+    .card{border:1px solid var(--border);border-radius:14px;padding:16px;background:linear-gradient(180deg,#fff, #fdfbff)}
+    .card h3{margin:.2rem 0 .4rem}
+
+    /* CTA */
+    .cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;background:linear-gradient(135deg,var(--sand),#fde7b5);border:1px solid #ffe7b3;border-radius:16px;padding:18px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;border:0;background:linear-gradient(135deg,var(--purple-700),var(--purple-500));color:#fff;font-weight:700;text-decoration:none}
+    .btn:hover{filter:brightness(1.05)}
+
+    /* Footer */
+    footer{color:#fff;background:linear-gradient(135deg,var(--purple-900),#2a1d42);margin-top:28px}
+    footer .inner{padding:26px 0}
+
+    /* Accessibility */
+    a:focus, button:focus{outline:2px solid var(--sea);outline-offset:2px}
+
+    /* Code blocks */
+    pre{background:#14111f;color:#f9f7ff;padding:14px;border-radius:12px;overflow:auto}
+      /* Lesson grid with image */
+    .lesson-grid{display:grid;gap:18px;align-items:center}
+    @media(min-width:860px){.lesson-grid{grid-template-columns:1.15fr .85fr}}
+    .lesson-image img{width:100%;height:auto;border-radius:12px;border:1px solid var(--border);box-shadow:0 8px 24px rgba(70,42,111,.12)}
+    .caption{font-size:.9rem;color:var(--muted);margin:.4rem 0 0}
+  </style>
+
+  <!-- ============== STRUCTURED DATA (Course + ItemList + FAQ + Breadcrumb) ============== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Course",
+    "name":"Blender Intermediate Course: Skills & Projects",
+    "description":"Advance your Blender skills with modeling, modifiers, UVs & texturing, shader nodes, HDRI lighting, Cycles rendering, rigging, animation, physics, and a capstone project.",
+    "provider":{"@type":"Organization","name":"Learn 3D Animation","sameAs":"https://yourdomain.github.io/"},
+    "educationalLevel":"Intermediate",
+    "hasCourseInstance":{
+      "@type":"CourseInstance",
+      "courseMode":"online",
+      "inLanguage":"en",
+      "isAccessibleForFree":true
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"Intermediate Course Lessons",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Intermediate Modeling","url":"#lesson-modeling"},
+      {"@type":"ListItem","position":2,"name":"Advanced Modifiers","url":"#lesson-modifiers"},
+      {"@type":"ListItem","position":3,"name":"UV Unwrapping & Texturing","url":"#lesson-uv"},
+      {"@type":"ListItem","position":4,"name":"Shader Nodes & PBR","url":"#lesson-shaders"},
+      {"@type":"ListItem","position":5,"name":"Lighting with HDRI & Rigs","url":"#lesson-lighting"},
+      {"@type":"ListItem","position":6,"name":"Cycles Rendering (Advanced)","url":"#lesson-cycles"},
+      {"@type":"ListItem","position":7,"name":"Rigging Basics","url":"#lesson-rigging"},
+      {"@type":"ListItem","position":8,"name":"Animation: Walk Cycle & Camera","url":"#lesson-animation"},
+      {"@type":"ListItem","position":9,"name":"Physics Simulations","url":"#lesson-physics"},
+      {"@type":"ListItem","position":10,"name":"Intermediate Project","url":"#lesson-project"},
+      {"@type":"ListItem","position":11,"name":"Optimization & Export","url":"#lesson-export"},
+      {"@type":"ListItem","position":12,"name":"Resources & Next Steps","url":"#lesson-resources"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Do I need a tablet for sculpting?","acceptedAnswer":{"@type":"Answer","text":"A tablet helps for sculpting precision but is optional. A mouse is fine for this course."}},
+      {"@type":"Question","name":"Is Cycles required for realistic renders?","acceptedAnswer":{"@type":"Answer","text":"Cycles provides photorealistic results via path tracing. Eevee can look great too, but Cycles is recommended for realism."}},
+      {"@type":"Question","name":"Can I export models to game engines?","acceptedAnswer":{"@type":"Answer","text":"Yes. Export FBX/GLTF with applied transforms, correct scale, and packed textures for Unity/Unreal."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://yourdomain.github.io/"},
+      {"@type":"ListItem","position":2,"name":"Courses","item":"https://yourdomain.github.io/index.html#courses"},
+      {"@type":"ListItem","position":3,"name":"Blender Intermediate Course","item":"https://yourdomain.github.io/intermediate-course.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- =================== TOP BAR =================== -->
+  <header class="topbar">
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <a class="brand" href="/">
+        <span class="logo">🎬</span>
+        <span>Learn 3D Animation</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/index.html#courses">Courses</a></li>
+          <li><a href="/index.html#download">Download</a></li>
+          <li><a href="/index.html#tools">Tools</a></li>
+          <li><a href="/index.html#shortcuts">Shortcuts</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =================== HERO =================== -->
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> › <a href="/index.html#courses">Courses</a> › Blender Intermediate Course
+      </nav>
+      <h1>Blender Intermediate Course: Skills & Projects (Free)</h1>
+      <p>Upgrade your Blender fundamentals into production‑ready skills. Learn advanced modeling, UVs and texturing, shader nodes, HDRI lighting, Cycles workflows, rigging, animation, physics, and finalize an intermediate project for your portfolio.</p>
+    </div>
+  </section>
+
+  <!-- =================== TOC =================== -->
+  <div class="container">
+    <aside class="section toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of Contents</h2>
+      <ul>
+        <li><a href="#lesson-modeling">1) Intermediate Modeling</a></li>
+        <li><a href="#lesson-modifiers">2) Advanced Modifiers</a></li>
+        <li><a href="#lesson-uv">3) UV Unwrapping & Texturing</a></li>
+        <li><a href="#lesson-shaders">4) Shader Nodes & PBR</a></li>
+        <li><a href="#lesson-lighting">5) Lighting with HDRI & Rigs</a></li>
+        <li><a href="#lesson-cycles">6) Cycles Rendering (Advanced)</a></li>
+        <li><a href="#lesson-rigging">7) Rigging Basics</a></li>
+        <li><a href="#lesson-animation">8) Animation: Walk Cycle & Camera</a></li>
+        <li><a href="#lesson-physics">9) Physics Simulations</a></li>
+        <li><a href="#lesson-project">10) Intermediate Project</a></li>
+        <li><a href="#lesson-export">11) Optimization & Export</a></li>
+        <li><a href="#lesson-resources">12) Resources & Next Steps</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <!-- =================== MAIN CONTENT =================== -->
+  <main class="container" id="content">
+
+    <!-- 1. Intermediate Modeling -->
+    <section id="lesson-modeling" class="section">
+      <h2>1) Intermediate Modeling</h2>
+      <div class="lesson-grid">
+        <div>
+          <p>Move beyond primitives and simple extrusions. Focus on clean topology, controlled edge flow, and detail where it matters.</p>
+          <div class="grid cols-2">
+            <div class="card">
+              <h3>Edge Flow & Control</h3>
+              <ul>
+                <li>Use <span class="kbd">Ctrl</span> + <span class="kbd">R</span> for loop cuts; maintain quads for deformation.</li>
+                <li>Apply <strong>support loops</strong> near sharp edges before Subdivision.</li>
+                <li>Avoid long thin triangles; redirect poles with careful cuts.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Sculpting Intro</h3>
+              <ul>
+                <li>Switch to <em>Sculpt Mode</em> for organic forms.</li>
+                <li>Use <strong>Dyntopo</strong> or <strong>Multires</strong> based on needs.</li>
+                <li>Remesh to unify topology before retopology.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="note">Keep non‑destructive workflows: model with modifiers and apply only when necessary.</div>
+        </div>
+        <div class="lesson-image">
+          <img src="assets/illustrations/intermediate-modeling.webp" alt="Illustration: clean topology with edge loops and bevel support around a subdivided cube" loading="lazy" />
+          <p class="caption">Diagram: support loops for crisp edges and clean quad topology.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Advanced Modifiers -->
+    <section id="lesson-modifiers" class="section">
+      <h2>2) Advanced Modifiers</h2>
+      <div class="lesson-grid">
+        <div>
+          <p>Combine modifiers to build complexity quickly.</p>
+          <ul>
+            <li><strong>Array</strong> for repeated patterns (fences, windows).</li>
+            <li><strong>Boolean</strong> for cutouts; clean up with bevels or remesh.</li>
+            <li><strong>Shrinkwrap</strong> to conform topology to a target surface.</li>
+            <li><strong>Mirror</strong> + <strong>Weighted Normal</strong> for clean shading.</li>
+          </ul>
+          <div class="note">Order matters: Mirror → Bevel → Subdivision is a common stack for hard‑surface models.</div>
+        </div>
+        <div class="lesson-image">
+          <img src="assets/illustrations/advanced-modifiers.webp" alt="Illustration grid showing Array, Boolean cut, and Shrinkwrap over target surface" loading="lazy" />
+          <p class="caption">Visual: chaining modifiers for non‑destructive modeling.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. UV Unwrapping & Texturing -->
+    <section id="lesson-uv" class="section">
+      <h2>3) UV Unwrapping & Texturing</h2>
+      <div class="lesson-grid">
+        <div>
+          <p>Good UVs prevent stretching and make texturing predictable.</p>
+          <ol>
+            <li>Mark seams where the model naturally splits (<span class="kbd">Ctrl</span> + <span class="kbd">E</span>).</li>
+            <li>Unwrap (<span class="kbd">U</span>) and pack islands; keep texel density consistent.</li>
+            <li>Bake maps (normal/roughness) if needed; name textures clearly.</li>
+          </ol>
+          <div class="grid cols-3">
+            <div class="card"><h3>Procedural</h3><p>Use noise, voronoi, and color ramps for tileable, resolution‑independent detail.</p></div>
+            <div class="card"><h3>Image Textures</h3><p>Load PBR sets (BaseColor/Metallic/Roughness/Normal) with Node Wrangler (<span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">T</span>).</p></div>
+            <div class="card"><h3>UDIM Intro</h3><p>For large assets, split UVs into tiles to increase resolution without huge maps.</p></div>
+          </div>
+        </div>
+        <div class="lesson-image">
+          <img src="assets/illustrations/uv-unwrapping.webp" alt="Illustration: unwrapped UV islands laid out on a checker texture" loading="lazy" />
+          <p class="caption">Diagram: seams → unwrap → packed UV islands with consistent texel density.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Shader Nodes & PBR -->
+    <section id="lesson-shaders" class="section">
+      <h2>4) Shader Nodes & PBR</h2>
+      <div class="lesson-grid">
+        <div>
+          <p>Create flexible, reusable materials with the Shader Editor.</p>
+          <ul>
+            <li><strong>Principled BSDF</strong> is physically‑based and covers most surfaces.</li>
+            <li>Mix shaders for layered looks (e.g., coat, dust, edge wear).</li>
+            <li>Use <em>Ambient Occlusion</em>, <em>Fresnel</em>, and <em>Curvature</em> maps for realism.</li>
+          </ul>
+          <div class="note">Keep values physically plausible: roughness 0–1, metallic only for metals, albedo within 0.02–0.9 reflectance.</div>
+        </div>
+        <div class="lesson-image">
+          <img src="assets/illustrations/shader-pbr.webp" alt="Illustration: node graph mixing Principled BSDF with edge wear mask" loading="lazy" />
+          <p class="caption">Node sketch: PBR texture set plugged into Principled BSDF with mask‑based mix.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Lighting with HDRI & Rigs -->
+    <section id="lesson-lighting" class="section">
+      <h2>5) Lighting with HDRI & Rigs</h2>
+      <div class="lesson-grid">
+        <div>
+          <p>Shape mood and readability with lighting.</p>
+          <ul>
+            <li>Use HDRIs for natural ambient light; rotate for the best angle.</li>
+            <li>Build a 3‑point rig (Key/Fill/Rim) and balance intensities.</li>
+            <li>Control color temperatures for contrast (warm key, cool fill).</li>
+          </ul>
+        </div>
+        <div class="lesson-image">
+          <img src="assets/illustrations/lighting-3point.webp" alt="Illustration: three-point lighting diagram with key, fill, and rim arrows" loading="lazy" />
+          <p class="caption">Lighting diagram: key/fill/rim arrangement around a subject.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Cycles Rendering (Advanced) -->
+    <section id="lesson-cycles" class="section">
+      <h2>6) Cycles Rendering (Advanced)</h2>
+      <div class="lesson-grid">
+        <div>
+          <p>Push quality while keeping render times reasonable.</p>
+          <ul>
+            <li>Use <strong>Adaptive Sampling</strong> and <strong>Denoising</strong> (OpenImageDenoise/OptiX).</li>
+            <li>Set light clamping to reduce fireflies; enable MIS for emissive surfaces.</li>
+            <li>Render at 16‑bit PNG/EXR for color grading; manage color with Filmic.</li>
+          </ul>
+        </div>
+        <div class="lesson-image">
+          <img src="assets/illustrations/cycles-settings.webp" alt="Illustration: Cycles sampling and denoising settings mockup" loading="lazy" />
+          <p class="caption">Mock UI: samples, denoise, clamping, and Filmic color management.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Rigging Basics -->
+    <section id="lesson-rigging" class="section">
+      <h2>7) Rigging Basics</h2>
+      <div class="lesson-grid">
+        <div>
+          <p>Add an armature and deform a mesh correctly.</p>
+          <ol>
+            <li>Create an armature; align bones to the mesh.</li>
+            <li>Parent mesh to armature with automatic weights (<span class="kbd">Ctrl</span> + <span class="kbd">P</span>).</li>
+            <li>Fix weights in Weight Paint; add IK constraints to limbs.</li>
+          </ol>
+          <div class="note">Name bones clearly (e.g., upper_arm.L) and mirror weights for symmetry.</div>
+        </div>
+        <div class="lesson-image">
+          <img src="assets/illustrations/rigging-basics.webp" alt="Illustration: simple armature over a character mesh with IK chain" loading="lazy" />
+          <p class="caption">Sketch: armature hierarchy and IK handle on the leg.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Animation: Walk Cycle & Camera -->
+    <section id="lesson-animation" class="section">
+      <h2>8) Animation: Walk Cycle & Camera</h2>
+      <div class="lesson-grid">
+        <div>
+          <p>Create a basic loop and present it cinematically.</p>
+          <ul>
+            <li>Block key poses (contact, down, passing, up) on the timeline.</li>
+            <li>Refine in the Graph Editor; add overlap and offset.</li>
+            <li>Animate a camera path; use depth of field for focus.</li>
+          </ul>
+        </div>
+        <div class="lesson-image">
+          <img src="assets/illustrations/walk-cycle.webp" alt="Illustration: walk cycle key poses on a timeline with camera path" loading="lazy" />
+          <p class="caption">Pose sheet: contact → passing → up → loop with camera dolly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Physics Simulations -->
+    <section id="lesson-physics" class="section">
+      <h2>9) Physics Simulations</h2>
+      <div class="lesson-grid">
+        <div>
+          <p>Add believable motion with built‑in solvers.</p>
+          <div class="grid cols-3">
+            <div class="card"><h3>Rigid Body</h3><p>Stack boxes and drop a sphere; tweak mass and friction.</p></div>
+            <div class="card"><h3>Cloth</h3><p>Pin vertices, increase quality steps, and collide with a moving object.</p></div>
+            <div class="card"><h3>Fluid (Intro)</h3><p>Use Mantaflow for basic pours; cache at low resolution first.</p></div>
+          </div>
+        </div>
+        <div class="lesson-image">
+          <img src="assets/illustrations/physics-solvers.webp" alt="Illustration: rigid body stack, cloth drape, and fluid splash icons" loading="lazy" />
+          <p class="caption">Overview: rigid, cloth, and fluid simulations at a glance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Intermediate Project -->
+    <section id="lesson-project" class="section">
+      <h2>10) Intermediate Project: Stylized Character Bust</h2>
+      <div class="lesson-grid">
+        <div>
+          <p>Combine modeling, sculpting, texturing, lighting, and rendering into a single polished piece.</p>
+          <ol>
+            <li>Block primary forms with simple meshes and sculpt for shapes.</li>
+            <li>Retopologize major areas; unwrap UVs and create simple PBR materials.</li>
+            <li>Light with HDRI + rim; render in Cycles with denoise; output 2K portrait.</li>
+          </ol>
+          <div class="cta">
+            <p><strong>Showcase ready!</strong> Publish on ArtStation/Behance and keep source files organized for iteration.</p>
+            <a class="btn" href="/index.html#courses" aria-label="Back to courses">Back to Courses</a>
+          </div>
+        </div>
+        <div class="lesson-image">
+          <img src="assets/illustrations/project-bust.webp" alt="Illustration: stylized character bust with rim light and HDRI" loading="lazy" />
+          <p class="caption">Final look: clean silhouette, simple materials, moody lighting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Optimization & Export -->
+    <section id="lesson-export" class="section">
+      <h2>11) Optimization & Export</h2>
+      <div class="lesson-grid">
+        <div>
+          <ul>
+            <li>Apply scale/rotation (<span class="kbd">Ctrl</span> + <span class="kbd">A</span>) before export.</li>
+            <li>Pack textures, triangulate if needed for games, and check scale units (meters).</li>
+            <li>Export <strong>FBX</strong> or <strong>GLTF/GLB</strong> for engines; test import in a blank scene.</li>
+          </ul>
+        </div>
+        <div class="lesson-image">
+          <img src="assets/illustrations/export-settings.webp" alt="Illustration: export dialog mockup with scale and texture packing options" loading="lazy" />
+          <p class="caption">Mock UI: FBX/GLTF options with applied transforms and texture packing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Resources & Next Steps -->
+    <section id="lesson-resources" class="section">
+      <h2>12) Resources & Next Steps</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Node Recipes</h3>
+          <p>Edge wear, dust, and procedural textures to reuse across projects.</p>
+          <p><a class="btn" href="/index.html#tools">Explore Tools</a></p>
+        </div>
+        <div class="card">
+          <h3>Lighting Setups</h3>
+          <p>Studio presets for product and character renders.</p>
+          <p><a class="btn" href="/index.html#interface">Open Presets</a></p>
+        </div>
+        <div class="card">
+          <h3>Prepare for Advanced</h3>
+          <p>Rigging polish, simulation caching, compositor, and pipeline tips.</p>
+          <p><a class="btn" href="/advanced-course.html">Go to Advanced</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <h2>Frequently Asked Questions</h2>
+      <h3>Do I need a tablet for sculpting?</h3>
+      <p>It helps with pressure sensitivity and finer control, but a mouse works for this course.</p>
+      <h3>Which renderer should I use?</h3>
+      <p>Use Eevee during look‑dev for speed and Cycles for final frames when realism is important.</p>
+      <h3>How big should my textures be?</h3>
+      <p>Use 2K–4K for hero assets viewed up close; smaller (512–1K) for background props.</p>
+    </section>
+
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer>
+    <div class="container inner">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <p>© <span id="year"></span> Learn 3D Animation • Beginner to Advanced (Free)</p>
+        <nav style="display:flex;gap:16px">
+          <a href="/privacy.html" style="color:#d8cff8">Privacy Policy</a>
+          <a href="/terms.html" style="color:#d8cff8">Terms of Use</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal helper script -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
