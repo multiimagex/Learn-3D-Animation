@@ -1,4 +1,24 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourdomain.github.io/sitemap.xml
+# Disallow sensitive or duplicate paths
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+
+# Sitemap locations
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Crawl-delay to avoid server overload
+Crawl-delay: 10
+
+# Extra SEO-friendly rules
+# Encourage indexing of course pages
+Allow: /beginner.html
+Allow: /intermediate.html
+Allow: /advanced.html
+
+# Encourage indexing of important info pages
+Allow: /about.html
+Allow: /privacy.html
+Allow: /terms-of-use.html
