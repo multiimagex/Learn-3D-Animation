@@ -1,4 +1,34 @@
-export default function Home() {
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx,html}"],
+  theme: {
+    extend: {
+      colors: {
+        saffron: {
+          50: "#fff8e1",
+          100: "#ffecb3",
+          500: "#f4a300",
+          600: "#e59400",
+          700: "#cc8400",
+        },
+      },
+    },
+  },
+  plugins: [],
+};
+
+/* ---------------- src/index.css ---------------- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ---------------- src/App.js ---------------- */
+function App() {
   return (
     <div className="min-h-screen flex flex-col bg-white text-gray-800">
       {/* Header */}
@@ -133,5 +163,4 @@ const sections = [
   },
 ];
 
-// Tailwind saffron color (custom extend in config)
-// theme.extend.colors.saffron = { 50:'#fff8e1', 100:'#ffecb3', 500:'#f4a300', 600:'#e59400', 700:'#cc8400' }
+export default App;
