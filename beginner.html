@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ================= BASIC SEO ================= -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blender Beginner Course: Fundamentals (Free) | Learn 3D Animation</title>
+  <meta name="description" content="Start your Blender journey with our Beginner Course: installation, interface tour, navigation, object basics, transforms, modifiers, modeling, materials, lighting, rendering, simple animation and a mini project. Full theory + practical steps." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://yourdomain.github.io/beginner.html" />
+  <meta name="keywords" content="Blender beginner course, learn Blender from scratch, Blender basics, Blender interface, Blender navigation, Blender modeling basics, Blender materials, Blender lighting, Blender rendering, Blender animation for beginners" />
+
+  <!-- =============== SOCIAL / SHARING ================= -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Learn 3D Animation" />
+  <meta property="og:title" content="Blender Beginner Course: Fundamentals (Free)" />
+  <meta property="og:description" content="Step‑by‑step lessons: install, interface, navigate, transform, model, shade, light, render and animate — with a mini project." />
+  <meta property="og:url" content="https://yourdomain.github.io/beginner.html" />
+  <meta property="og:image" content="https://yourdomain.github.io/assets/og-beginner.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blender Beginner Course" />
+  <meta name="twitter:description" content="Full theory + practical steps to learn Blender quickly." />
+  <meta name="twitter:image" content="https://yourdomain.github.io/assets/og-beginner.jpg" />
+
+  <!-- ================== FAVICONS ================== -->
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" />
+  <link rel="icon" href="/favicon-16.png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- ================== THEME (Beach Purple) ================== -->
+  <style>
+    :root{
+      --purple-900:#462a6f; /* deep purple */
+      --purple-800:#51327f;
+      --purple-700:#6b5b95; /* beach purple primary */
+      --purple-500:#8b74c9; /* lighter accent */
+      --lavender:#efe9ff;   /* soft lavender bg */
+      --sand:#fff5e6;       /* beach sand */
+      --shell:#ffe8c8;      /* shell accent */
+      --sea:#37b3a8;        /* sea teal accent */
+      --text:#262335;
+      --muted:#6b6a75;
+      --border:#e7e3f2;
+      --white:#ffffff;
+      --good:#0a7d41;
+      --warn:#b25b00;
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0;font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Inter,"Helvetica Neue",Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,var(--sand),var(--lavender)) fixed}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    .topbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.85);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.2px;color:var(--purple-900)}
+    .brand .logo{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--purple-700),var(--purple-500));color:var(--white)}
+    .nav a{color:var(--purple-900);text-decoration:none;font-weight:600}
+    .nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+    .nav a:hover{color:var(--purple-700)}
+
+    /* Hero */
+    .hero{position:relative;isolation:isolate;background:linear-gradient(135deg,var(--purple-700),var(--purple-500));color:var(--white);padding:60px 0 66px;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:auto -20% -80px -20%;height:200px;background:radial-gradient(60% 100% at 50% 0%, var(--shell), transparent 70%);opacity:.25;z-index:-1}
+    .hero h1{font-size:clamp(28px,4vw,42px);margin:0 0 10px}
+    .hero p{max-width:800px;margin:0 auto 18px;opacity:.95}
+    .breadcrumb{font-size:14px;opacity:.92;margin-bottom:10px}
+    .breadcrumb a{color:#fffb;}
+
+    /* TOC */
+    .toc{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:0 10px 30px rgba(107,91,149,.08);margin-top:-30px}
+    .toc h2{font-size:18px;margin:.1rem 0 .6rem;color:var(--purple-900)}
+    .toc ul{margin:0;padding-left:18px}
+    .toc a{color:var(--purple-700);text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+
+    /* Content */
+    section{scroll-margin-top:90px}
+    .section{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;margin:18px 0;box-shadow:0 10px 30px rgba(70,42,111,.06)}
+    .section h2{margin:.4rem 0 .6rem;color:var(--purple-900)}
+    .section h3{margin:1rem 0 .4rem;color:var(--purple-700)}
+    .note{background:linear-gradient(0deg,#ffffff, #fffaf2);border-left:4px solid var(--shell);padding:12px 14px;border-radius:8px}
+    .tip{background:linear-gradient(0deg,#ffffff, #eafff7);border-left:4px solid var(--sea);padding:12px 14px;border-radius:8px}
+    .warn{background:linear-gradient(0deg,#ffffff, #fff3e3);border-left:4px solid var(--warn);padding:12px 14px;border-radius:8px}
+    .kbd{display:inline-block;padding:.1rem .4rem;border:1px solid #d9d3ec;border-bottom-width:2px;border-radius:6px;background:#f7f4ff;color:#41396e;font-weight:700;font-size:.9em}
+
+    /* Lists/Grid */
+    .grid{display:grid;gap:16px}
+    @media(min-width:720px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+    @media(min-width:980px){.grid.cols-3{grid-template-columns:1fr 1fr 1fr}}
+    .card{border:1px solid var(--border);border-radius:14px;padding:16px;background:linear-gradient(180deg,#fff, #fdfbff)}
+    .card h3{margin:.2rem 0 .4rem}
+
+    /* Lesson grid with placeholder illustration (no external links) */
+    .lesson-grid{display:grid;gap:18px;align-items:center}
+    @media(min-width:860px){.lesson-grid{grid-template-columns:1.15fr .85fr}}
+    .placeholder{display:grid;place-items:center;aspect-ratio:16/10;border-radius:12px;border:1px dashed var(--purple-500);background:repeating-linear-gradient(45deg, #f6f2ff, #f6f2ff 10px, #fff 10px, #fff 20px);box-shadow:0 8px 24px rgba(70,42,111,.08)}
+    .placeholder span{color:var(--purple-700);font-weight:700;opacity:.8}
+    .caption{font-size:.9rem;color:var(--muted);margin:.4rem 0 0}
+
+    /* CTA */
+    .cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;background:linear-gradient(135deg,var(--sand),#fde7b5);border:1px solid #ffe7b3;border-radius:16px;padding:18px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;border:0;background:linear-gradient(135deg,var(--purple-700),var(--purple-500));color:#fff;font-weight:700;text-decoration:none}
+    .btn:hover{filter:brightness(1.05)}
+
+    /* Footer */
+    footer{color:#fff;background:linear-gradient(135deg,var(--purple-900),#2a1d42);margin-top:28px}
+    footer .inner{padding:26px 0}
+
+    /* Accessibility */
+    a:focus, button:focus{outline:2px solid var(--sea);outline-offset:2px}
+
+    /* Code blocks */
+    pre{background:#14111f;color:#f9f7ff;padding:14px;border-radius:12px;overflow:auto}
+  </style>
+
+  <!-- ============== STRUCTURED DATA (Course + ItemList + FAQ + Breadcrumb) ============== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Course",
+    "name":"Blender Beginner Course: Fundamentals",
+    "description":"Learn Blender from scratch: installation, interface, navigation, transforms, modifiers, modeling basics, materials, lighting, rendering, simple animation and a mini project.",
+    "provider":{"@type":"Organization","name":"Learn 3D Animation","sameAs":"https://yourdomain.github.io/"},
+    "educationalLevel":"Beginner",
+    "hasCourseInstance":{"@type":"CourseInstance","courseMode":"online","inLanguage":"en","isAccessibleForFree":true}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"Beginner Course Lessons",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Install Blender","url":"#lesson-install"},
+      {"@type":"ListItem","position":2,"name":"Interface Tour","url":"#lesson-interface"},
+      {"@type":"ListItem","position":3,"name":"View & Navigation","url":"#lesson-navigation"},
+      {"@type":"ListItem","position":4,"name":"Objects & Transforms","url":"#lesson-objects"},
+      {"@type":"ListItem","position":5,"name":"Modeling Basics","url":"#lesson-modeling"},
+      {"@type":"ListItem","position":6,"name":"Modifiers Intro","url":"#lesson-modifiers"},
+      {"@type":"ListItem","position":7,"name":"Materials & Shading","url":"#lesson-materials"},
+      {"@type":"ListItem","position":8,"name":"Lighting Basics","url":"#lesson-lighting"},
+      {"@type":"ListItem","position":9,"name":"Rendering Basics","url":"#lesson-rendering"},
+      {"@type":"ListItem","position":10,"name":"Animation Basics","url":"#lesson-animation"},
+      {"@type":"ListItem","position":11,"name":"Mini Project","url":"#lesson-project"},
+      {"@type":"ListItem","position":12,"name":"Resources & Next Steps","url":"#lesson-resources"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Is Blender free?","acceptedAnswer":{"@type":"Answer","text":"Yes, Blender is free and open source under the GNU General Public License."}},
+      {"@type":"Question","name":"Which device do I need?","acceptedAnswer":{"@type":"Answer","text":"A 64‑bit PC or laptop with a dedicated GPU is recommended. The course can run on modest hardware; lower sample counts and viewport settings help."}},
+      {"@type":"Question","name":"How long will this course take?","acceptedAnswer":{"@type":"Answer","text":"Plan 10–15 hours for the beginner track including the mini project, depending on your pace."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://yourdomain.github.io/"},
+      {"@type":"ListItem","position":2,"name":"Courses","item":"https://yourdomain.github.io/index.html#courses"},
+      {"@type":"ListItem","position":3,"name":"Blender Beginner Course","item":"https://yourdomain.github.io/beginner.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- =================== TOP BAR =================== -->
+  <header class="topbar">
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <a class="brand" href="/">
+        <span class="logo">🎬</span>
+        <span>Learn 3D Animation</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/index.html#courses">Courses</a></li>
+          <li><a href="/index.html#download">Download</a></li>
+          <li><a href="/index.html#tools">Tools</a></li>
+          <li><a href="/index.html#shortcuts">Shortcuts</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =================== HERO =================== -->
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> › <a href="/index.html#courses">Courses</a> › Blender Beginner Course
+      </nav>
+      <h1>Blender Beginner Course: Fundamentals (Free)</h1>
+      <p>Start with the basics: install Blender, learn the interface and navigation, practice transforms and modeling, add materials and lighting, render your first image, and animate a simple scene. Every lesson includes full theory and practical steps.</p>
+    </div>
+  </section>
+
+  <!-- =================== TOC =================== -->
+  <div class="container">
+    <aside class="section toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of Contents</h2>
+      <ul>
+        <li><a href="#lesson-install">1) Install Blender</a></li>
+        <li><a href="#lesson-interface">2) Interface Tour</a></li>
+        <li><a href="#lesson-navigation">3) View & Navigation</a></li>
+        <li><a href="#lesson-objects">4) Objects & Transforms</a></li>
+        <li><a href="#lesson-modeling">5) Modeling Basics</a></li>
+        <li><a href="#lesson-modifiers">6) Modifiers Intro</a></li>
+        <li><a href="#lesson-materials">7) Materials & Shading</a></li>
+        <li><a href="#lesson-lighting">8) Lighting Basics</a></li>
+        <li><a href="#lesson-rendering">9) Rendering Basics</a></li>
+        <li><a href="#lesson-animation">10) Animation Basics</a></li>
+        <li><a href="#lesson-project">11) Mini Project</a></li>
+        <li><a href="#lesson-resources">12) Resources & Next Steps</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <!-- =================== MAIN CONTENT =================== -->
+  <main class="container" id="content">
+
+    <!-- 1. Install Blender -->
+    <section id="lesson-install" class="section">
+      <h2>1) Install Blender</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Blender is a free, open‑source 3D creation suite. The installer includes modeling, sculpting, animation, rendering (Eevee/Cycles), compositing and video editing — everything you need to begin.</p>
+          <h3>Practical</h3>
+          <ol>
+            <li>Download the latest stable release for your OS.</li>
+            <li>Install and launch Blender. On first run, choose <em>Left Click Select</em> and <em>Industry Compatible</em> keymap (optional).</li>
+            <li>Save preferences: <span class="kbd">Edit</span> → <span class="kbd">Preferences</span> → <span class="kbd">Save Preferences</span>.</li>
+          </ol>
+          <div class="tip">Enable <strong>Node Wrangler</strong> add‑on in Preferences → Add‑ons; it speeds up material setup.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Illustration Placeholder</span></div>
+          <p class="caption">Diagram: Blender splash screen and preferences.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Interface Tour -->
+    <section id="lesson-interface" class="section">
+      <h2>2) Interface Tour</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Blender’s UI is split into <strong>Editors</strong>: 3D Viewport, Outliner, Properties, Timeline, Shader Editor, etc. You can split/merge areas and save a custom layout as the default.</p>
+          <h3>Practical</h3>
+          <ul>
+            <li>Identify: <em>Outliner</em> (scene objects), <em>Properties</em> (object and render settings), <em>Timeline</em> (animation).</li>
+            <li>Split an area by dragging corners; change editor type from the top‑left icon.</li>
+            <li>Save startup file: <span class="kbd">File</span> → <span class="kbd">Defaults</span> → <span class="kbd">Save Startup File</span>.</li>
+          </ul>
+          <div class="note">Workspaces (Layout, Modeling, Shading, Animation, Rendering) are presets for common tasks.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Editor Layout Sketch</span></div>
+          <p class="caption">Blocks: Viewport, Outliner, Properties, Timeline.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. View & Navigation -->
+    <section id="lesson-navigation" class="section">
+      <h2>3) View & Navigation</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Efficient navigation is key. Orbit, pan, and zoom without breaking focus. Use orthographic views for precision and isolate objects to reduce clutter.</p>
+          <h3>Practical</h3>
+          <ul>
+            <li>Orbit: <span class="kbd">MMB</span> drag • Pan: <span class="kbd">Shift</span> + <span class="kbd">MMB</span> • Zoom: <span class="kbd">Ctrl</span> + <span class="kbd">MMB</span>.</li>
+            <li>Focus selected: <span class="kbd">Numpad .</span> • Toggle ortho/persp: <span class="kbd">Numpad 5</span>.</li>
+            <li>Front/Right/Top: <span class="kbd">1/3/7</span> (add <span class="kbd">Ctrl</span> for opposite).</li>
+          </ul>
+          <div class="tip">Use <strong>Local View</strong> <span class="kbd">/</span> to isolate the selected object.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Navigation Cheat‑Sheet</span></div>
+          <p class="caption">Orbit, pan, zoom and orthographic views.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Objects & Transforms -->
+    <section id="lesson-objects" class="section">
+      <h2>4) Objects & Transforms</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Everything in the scene is an object with transform data: <em>location</em>, <em>rotation</em>, <em>scale</em>. Learn to add primitives, edit origins, and reset transforms.</p>
+          <h3>Practical</h3>
+          <ol>
+            <li>Add a mesh: <span class="kbd">Shift</span> + <span class="kbd">A</span> → Mesh → Cube.</li>
+            <li>Move/Rotate/Scale: <span class="kbd">G</span>/<span class="kbd">R</span>/<span class="kbd">S</span> • Axis constrain: <span class="kbd">X</span>, <span class="kbd">Y</span>, <span class="kbd">Z</span>.</li>
+            <li>Snap: <span class="kbd">Shift</span> + <span class="kbd">Tab</span> • Reset: <span class="kbd">Alt</span> + <span class="kbd">G/R/S</span>.</li>
+          </ol>
+          <div class="note">Apply transforms before exporting: <span class="kbd">Ctrl</span> + <span class="kbd">A</span> → Apply All Transforms.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Transforms Gizmo</span></div>
+          <p class="caption">Move (red/green/blue), rotate rings, scale handles.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Modeling Basics -->
+    <section id="lesson-modeling" class="section">
+      <h2>5) Modeling Basics</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Modeling edits the mesh at the component level: vertices, edges and faces. Clean topology (mostly quads) deforms and shades better. Start simple, add detail where the silhouette needs it.</p>
+          <h3>Practical</h3>
+          <ul>
+            <li>Enter Edit Mode: <span class="kbd">Tab</span>. Select <span class="kbd">1/2/3</span> for Vertex/Edge/Face.</li>
+            <li>Extrude: <span class="kbd">E</span> • Inset: <span class="kbd">I</span> • Loop Cut: <span class="kbd">Ctrl</span> + <span class="kbd">R</span> • Bevel: <span class="kbd">Ctrl</span> + <span class="kbd">B</span>.</li>
+            <li>Merge: <span class="kbd">M</span> • Knife: <span class="kbd">K</span> • Proportional Edit: <span class="kbd">O</span>.</li>
+          </ul>
+          <div class="tip">Keep scale uniform. Avoid long thin triangles and n‑gons in curved areas.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Edit Mode Elements</span></div>
+          <p class="caption">Vertices, edges, faces with common tools.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Modifiers Intro -->
+    <section id="lesson-modifiers" class="section">
+      <h2>6) Modifiers Intro</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Modifiers are non‑destructive operations that procedurally change your mesh. Common beginner modifiers: Subdivision Surface (smooth detail), Mirror (symmetry), Array (repetition), Bevel (rounded edges).</p>
+          <h3>Practical</h3>
+          <ol>
+            <li>Add a <strong>Mirror</strong> modifier on the X axis. Model only half of the object.</li>
+            <li>Add <strong>Subdivision Surface</strong> and control sharpness with support loops.</li>
+            <li>Use <strong>Array</strong> to duplicate evenly spaced parts.</li>
+          </ol>
+          <div class="warn">Apply modifiers only when necessary. Keep a copy of the non‑applied version.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Modifier Stack</span></div>
+          <p class="caption">Mirror → Bevel → Subdivision order example.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Materials & Shading -->
+    <section id="lesson-materials" class="section">
+      <h2>7) Materials & Shading</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Materials describe how surfaces react to light. The <strong>Principled BSDF</strong> shader follows PBR rules to produce believable results with a few controls: Base Color, Roughness, Metallic, Normal.</p>
+          <h3>Practical</h3>
+          <ul>
+            <li>Switch to the <em>Shading</em> workspace. Create a new material.</li>
+            <li>Plug a Noise Texture into Base Color via a ColorRamp for a simple procedural pattern.</li>
+            <li>Use Node Wrangler (<span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">T</span>) to add PBR image textures when available.</li>
+          </ul>
+          <div class="note">Keep albedo values realistic; avoid pure black/white for physically plausible results.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Principled BSDF</span></div>
+          <p class="caption">Simple node setup: Base Color, Roughness, Normal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Lighting Basics -->
+    <section id="lesson-lighting" class="section">
+      <h2>8) Lighting Basics</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Lighting shapes mood and forms. A classic <strong>three‑point</strong> setup uses a Key (main direction), Fill (softens shadows) and Rim (separates subject from background).</p>
+          <h3>Practical</h3>
+          <ol>
+            <li>Add an Area light (Key) from the front‑side; set power and size.</li>
+            <li>Add a weaker Fill from the opposite side.</li>
+            <li>Add a Rim behind the subject to outline edges.</li>
+          </ol>
+          <div class="tip">For natural ambience, add an HDRI in World settings. Rotate for best highlights.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>3‑Point Lighting</span></div>
+          <p class="caption">Key, Fill and Rim arrangement around the object.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Rendering Basics -->
+    <section id="lesson-rendering" class="section">
+      <h2>9) Rendering Basics</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Rendering converts your 3D scene into a 2D image. <strong>Eevee</strong> is real‑time (fast look‑dev), <strong>Cycles</strong> is path‑traced (more realistic). Use Filmic color management for natural highlights.</p>
+          <h3>Practical</h3>
+          <ul>
+            <li>Set output size (1920×1080) and file format (PNG) in Render Properties.</li>
+            <li>For Cycles, set samples (e.g., 64) and enable denoising.</li>
+            <li>Press <span class="kbd">F12</span> to render and <span class="kbd">Image</span> → <span class="kbd">Save As</span>.</li>
+          </ul>
+          <div class="note">Use render region (<span class="kbd">Ctrl</span> + <span class="kbd">B</span>) to test small areas quickly.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Render Settings</span></div>
+          <p class="caption">Samples, denoise and output settings overview.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Animation Basics -->
+    <section id="lesson-animation" class="section">
+      <h2>10) Animation Basics</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Animation creates motion by changing values over time. Keyframes record values, interpolation blends them, and the Graph Editor refines easing and overshoot.</p>
+          <h3>Practical</h3>
+          <ol>
+            <li>Set timeline to 1–120. Select an object and insert a keyframe for Location at frame 1 (<span class="kbd">I</span>).</li>
+            <li>Move to frame 60, move the object on X, insert another keyframe.</li>
+            <li>Open Graph Editor, select curves and set interpolation to <em>Bezier</em> for smooth motion.</li>
+          </ol>
+          <div class="tip">Use <strong>Auto Keying</strong> for faster blocking; disable when not needed.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Timeline & Curves</span></div>
+          <p class="caption">Keyframes on the timeline and smooth Bezier curves.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Mini Project -->
+    <section id="lesson-project" class="section">
+      <h2>11) Mini Project: Simple Product Render</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Goal</h3>
+          <p>Create a clean product‑style render (a perfume bottle or stylized cup) using primitives, modifiers, materials, three‑point lighting and Cycles rendering.</p>
+          <h3>Steps</h3>
+          <ol>
+            <li>Block shapes with <em>Cube</em>/<em>Cylinder</em>; use <strong>Bevel</strong> for soft edges.</li>
+            <li>Add <strong>Mirror</strong> if symmetric; use <strong>Subdivision</strong> for smoothness.</li>
+            <li>Create a simple PBR material; add a subtle roughness gradient.</li>
+            <li>Build a three‑point light rig; adjust shadows for clarity.</li>
+            <li>Render in Cycles at 1080p with denoise enabled.</li>
+          </ol>
+          <div class="cta">
+            <p><strong>Deliverable:</strong> One 1920×1080 PNG with a neutral background and good lighting. Name files clearly and keep your .blend organized.</p>
+            <a class="btn" href="/index.html#courses" aria-label="Back to courses">Back to Courses</a>
+          </div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Final Look Sketch</span></div>
+          <p class="caption">Clean silhouette, soft bevels, simple materials, crisp lighting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Resources & Next Steps -->
+    <section id="lesson-resources" class="section">
+      <h2>12) Resources & Next Steps</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Shortcut Keys</h3>
+          <p>Practice daily: <span class="kbd">G/R/S</span>, <span class="kbd">E</span>, <span class="kbd">I</span>, <span class="kbd">Ctrl</span>+<span class="kbd">R</span>, <span class="kbd">B</span>.</p>
+        </div>
+        <div class="card">
+          <h3>Modeling Drills</h3>
+          <p>Make 10 simple props: mug, book, chair, lamp, dice, box, bowl, spoon, phone, pen.</p>
+        </div>
+        <div class="card">
+          <h3>Move to Intermediate</h3>
+          <p>Next: UV unwrapping, shader nodes, HDRI lighting, rigging and physics simulations.</p>
+          <p><a class="btn" href="/intermediate.html">Go to Intermediate</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <h2>Frequently Asked Questions</h2>
+      <h3>What version of Blender should I use?</h3>
+      <p>Use the latest stable release for general learning. If you follow studio add‑ons or specific tutorials, match their version.</p>
+      <h3>How can I make Blender run faster?</h3>
+      <p>Lower viewport samples, disable overlays, use Solid view for modeling, and reduce subdivision levels when not rendering.</p>
+      <h3>Where should I save my files?</h3>
+      <p>Create a project folder with subfolders: <code>/blend</code>, <code>/textures</code>, <code>/renders</code>, <code>/refs</code>. Name versions like <code>product_v01.blend</code>.</p>
+    </section>
+
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer>
+    <div class="container inner">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <p>© <span id="year"></span> Learn 3D Animation • Beginner to Advanced (Free)</p>
+        <nav style="display:flex;gap:16px">
+          <a href="/privacy.html" style="color:#d8cff8">Privacy Policy</a>
+          <a href="/terms.html" style="color:#d8cff8">Terms of Use</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal helper script -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
