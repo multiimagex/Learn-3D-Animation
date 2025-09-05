@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ================= BASIC SEO ================= -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blender Advanced Course: Mastery (Free) | Learn 3D Animation</title>
+  <meta name="description" content="Master Blender with our Advanced Course: professional workflows for sculpting, retopology, UDIMs, procedural shading, hair & fur, advanced rigging, character animation, geometry nodes, FX simulations, cinematic lighting, rendering & compositing, optimization, USD/FBX/GLTF export, and a full short-scene project. Full theory + practical steps." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://yourdomain.github.io/advanced.html" />
+  <meta name="keywords" content="Blender advanced course, Blender mastery, retopology, UDIM, procedural shading, hair grooming, advanced rigging, character animation, geometry nodes, smoke fire fluid simulation, cinematic lighting, compositing, color grading, USD export, GLTF export" />
+
+  <!-- =============== SOCIAL / SHARING ================= -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Learn 3D Animation" />
+  <meta property="og:title" content="Blender Advanced Course: Mastery (Free)" />
+  <meta property="og:description" content="Pro workflows: sculpt → retopo → UDIMs → shaders → hair → rig → animate → FX → geo nodes → light → render → comp → export." />
+  <meta property="og:url" content="https://yourdomain.github.io/advanced.html" />
+  <meta property="og:image" content="https://yourdomain.github.io/assets/og-advanced.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blender Advanced Course" />
+  <meta name="twitter:description" content="Full theory + practical for production‑ready Blender skills." />
+  <meta name="twitter:image" content="https://yourdomain.github.io/assets/og-advanced.jpg" />
+
+  <!-- ================== THEME (Beach Purple) ================== -->
+  <style>
+    :root{
+      --purple-900:#462a6f; --purple-800:#51327f; --purple-700:#6b5b95; --purple-500:#8b74c9;
+      --lavender:#efe9ff; --sand:#fff5e6; --shell:#ffe8c8; --sea:#37b3a8;
+      --text:#262335; --muted:#6b6a75; --border:#e7e3f2; --white:#ffffff; --warn:#b25b00;
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0;font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Inter,"Helvetica Neue",Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,var(--sand),var(--lavender)) fixed}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    .topbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.85);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.2px;color:var(--purple-900)}
+    .brand .logo{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--purple-700),var(--purple-500));color:var(--white)}
+    .nav a{color:var(--purple-900);text-decoration:none;font-weight:600}
+    .nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+    .nav a:hover{color:var(--purple-700)}
+
+    /* Hero */
+    .hero{position:relative;isolation:isolate;background:linear-gradient(135deg,var(--purple-700),var(--purple-500));color:var(--white);padding:60px 0 66px;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:auto -20% -80px -20%;height:200px;background:radial-gradient(60% 100% at 50% 0%, var(--shell), transparent 70%);opacity:.25;z-index:-1}
+    .hero h1{font-size:clamp(28px,4vw,42px);margin:0 0 10px}
+    .hero p{max-width:860px;margin:0 auto 18px;opacity:.95}
+    .breadcrumb{font-size:14px;opacity:.92;margin-bottom:10px}
+    .breadcrumb a{color:#fffb;}
+
+    /* TOC */
+    .toc{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:0 10px 30px rgba(107,91,149,.08);margin-top:-30px}
+    .toc h2{font-size:18px;margin:.1rem 0 .6rem;color:var(--purple-900)}
+    .toc ul{margin:0;padding-left:18px}
+    .toc a{color:var(--purple-700);text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+
+    /* Content */
+    section{scroll-margin-top:90px}
+    .section{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;margin:18px 0;box-shadow:0 10px 30px rgba(70,42,111,.06)}
+    .section h2{margin:.4rem 0 .6rem;color:var(--purple-900)}
+    .section h3{margin:1rem 0 .4rem;color:var(--purple-700)}
+    .note{background:linear-gradient(0deg,#ffffff, #fffaf2);border-left:4px solid var(--shell);padding:12px 14px;border-radius:8px}
+    .tip{background:linear-gradient(0deg,#ffffff, #eafff7);border-left:4px solid var(--sea);padding:12px 14px;border-radius:8px}
+    .warn{background:linear-gradient(0deg,#ffffff, #fff3e3);border-left:4px solid var(--warn);padding:12px 14px;border-radius:8px}
+    .kbd{display:inline-block;padding:.1rem .4rem;border:1px solid #d9d3ec;border-bottom-width:2px;border-radius:6px;background:#f7f4ff;color:#41396e;font-weight:700;font-size:.9em}
+
+    /* Grid */
+    .grid{display:grid;gap:16px}
+    @media(min-width:720px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+    @media(min-width:980px){.grid.cols-3{grid-template-columns:1fr 1fr 1fr}}
+    .card{border:1px solid var(--border);border-radius:14px;padding:16px;background:linear-gradient(180deg,#fff, #fdfbff)}
+
+    /* Lesson grid with placeholder illustration */
+    .lesson-grid{display:grid;gap:18px;align-items:center}
+    @media(min-width:860px){.lesson-grid{grid-template-columns:1.15fr .85fr}}
+    .placeholder{display:grid;place-items:center;aspect-ratio:16/10;border-radius:12px;border:1px dashed var(--purple-500);background:repeating-linear-gradient(45deg, #f6f2ff, #f6f2ff 10px, #fff 10px, #fff 20px);box-shadow:0 8px 24px rgba(70,42,111,.08)}
+    .placeholder span{color:var(--purple-700);font-weight:700;opacity:.8}
+    .caption{font-size:.9rem;color:var(--muted);margin:.4rem 0 0}
+
+    /* CTA */
+    .cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;background:linear-gradient(135deg,var(--sand),#fde7b5);border:1px solid #ffe7b3;border-radius:16px;padding:18px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;border:0;background:linear-gradient(135deg,var(--purple-700),var(--purple-500));color:#fff;font-weight:700;text-decoration:none}
+    .btn:hover{filter:brightness(1.05)}
+
+    /* Footer */
+    footer{color:#fff;background:linear-gradient(135deg,var(--purple-900),#2a1d42);margin-top:28px}
+    footer .inner{padding:26px 0}
+
+    a:focus, button:focus{outline:2px solid var(--sea);outline-offset:2px}
+    pre{background:#14111f;color:#f9f7ff;padding:14px;border-radius:12px;overflow:auto}
+  </style>
+
+  <!-- ============== STRUCTURED DATA (Course + ItemList + FAQ + Breadcrumb) ============== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Course",
+    "name":"Blender Advanced Course: Mastery",
+    "description":"Production‑ready Blender: sculpting & retopo, UDIMs, layered shaders, hair & fur, advanced rigging & character animation, geometry nodes, FX simulations, cinematic lighting, rendering & compositing, optimization and pipelines.",
+    "provider":{"@type":"Organization","name":"Learn 3D Animation","sameAs":"https://yourdomain.github.io/"},
+    "educationalLevel":"Advanced",
+    "hasCourseInstance":{"@type":"CourseInstance","courseMode":"online","inLanguage":"en","isAccessibleForFree":true}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"Advanced Course Lessons",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Project Planning & References","url":"#lesson-planning"},
+      {"@type":"ListItem","position":2,"name":"Advanced Modeling & Retopology","url":"#lesson-retopo"},
+      {"@type":"ListItem","position":3,"name":"High‑Res Sculpting & Multires","url":"#lesson-sculpt"},
+      {"@type":"ListItem","position":4,"name":"Advanced UVs & UDIMs","url":"#lesson-udim"},
+      {"@type":"ListItem","position":5,"name":"Layered Procedural Shading","url":"#lesson-shading"},
+      {"@type":"ListItem","position":6,"name":"Hair & Fur Grooming","url":"#lesson-hair"},
+      {"@type":"ListItem","position":7,"name":"Advanced Rigging (Constraints & Drivers)","url":"#lesson-rigging"},
+      {"@type":"ListItem","position":8,"name":"Character Animation (Body Mechanics)","url":"#lesson-animation"},
+      {"@type":"ListItem","position":9,"name":"FX Simulations: Smoke, Fire, Fluids","url":"#lesson-fx"},
+      {"@type":"ListItem","position":10,"name":"Geometry Nodes: Procedural Worlds","url":"#lesson-gn"},
+      {"@type":"ListItem","position":11,"name":"Cinematic Lighting & Color","url":"#lesson-lighting"},
+      {"@type":"ListItem","position":12,"name":"Rendering & Compositing","url":"#lesson-comp"},
+      {"@type":"ListItem","position":13,"name":"Optimization & Asset Management","url":"#lesson-optim"},
+      {"@type":"ListItem","position":14,"name":"Final Project: Short Scene","url":"#lesson-project"},
+      {"@type":"ListItem","position":15,"name":"Pipelines & Export (USD/FBX/GLTF)","url":"#lesson-export"},
+      {"@type":"ListItem","position":16,"name":"Portfolio & Presentation","url":"#lesson-portfolio"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Do I need a powerful PC for this course?","acceptedAnswer":{"@type":"Answer","text":"A mid‑range GPU and 16GB RAM are recommended for heavy scenes. You can still follow by lowering viewport settings, using proxies, and rendering at lower samples when iterating."}},
+      {"@type":"Question","name":"Which color management should I use?","acceptedAnswer":{"@type":"Answer","text":"Use Filmic by default for broader dynamic range. For VFX pipelines, you can integrate ACES if required by the project."}},
+      {"@type":"Question","name":"Is USD better than FBX/GLTF?","acceptedAnswer":{"@type":"Answer","text":"It depends on the pipeline. USD is powerful for complex scene interchange and layering; GLTF is great for web and realtime; FBX is widely supported for DCC/game engines."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://yourdomain.github.io/"},
+      {"@type":"ListItem","position":2,"name":"Courses","item":"https://yourdomain.github.io/index.html#courses"},
+      {"@type":"ListItem","position":3,"name":"Blender Advanced Course","item":"https://yourdomain.github.io/advanced.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- =================== TOP BAR =================== -->
+  <header class="topbar">
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <a class="brand" href="/">
+        <span class="logo">🎬</span>
+        <span>Learn 3D Animation</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/index.html#courses">Courses</a></li>
+          <li><a href="/beginner.html">Beginner</a></li>
+          <li><a href="/intermediate.html">Intermediate</a></li>
+          <li><a href="/advanced.html">Advanced</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =================== HERO =================== -->
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> › <a href="/index.html#courses">Courses</a> › Blender Advanced Course
+      </nav>
+      <h1>Blender Advanced Course: Mastery (Free)</h1>
+      <p>Build production‑ready skills: sculpt → retopo → UVs/UDIMs → layered shading → hair/groom → advanced rigging → character animation → FX → geometry nodes → cinematic lighting → rendering → compositing → optimization → export pipelines.</p>
+    </div>
+  </section>
+
+  <!-- =================== TOC =================== -->
+  <div class="container">
+    <aside class="section toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of Contents</h2>
+      <ul>
+        <li><a href="#lesson-planning">1) Project Planning & References</a></li>
+        <li><a href="#lesson-retopo">2) Advanced Modeling & Retopology</a></li>
+        <li><a href="#lesson-sculpt">3) High‑Res Sculpting & Multires</a></li>
+        <li><a href="#lesson-udim">4) Advanced UVs & UDIMs</a></li>
+        <li><a href="#lesson-shading">5) Layered Procedural Shading</a></li>
+        <li><a href="#lesson-hair">6) Hair & Fur Grooming</a></li>
+        <li><a href="#lesson-rigging">7) Advanced Rigging (Constraints & Drivers)</a></li>
+        <li><a href="#lesson-animation">8) Character Animation (Body Mechanics)</a></li>
+        <li><a href="#lesson-fx">9) FX Simulations: Smoke, Fire, Fluids</a></li>
+        <li><a href="#lesson-gn">10) Geometry Nodes: Procedural Worlds</a></li>
+        <li><a href="#lesson-lighting">11) Cinematic Lighting & Color</a></li>
+        <li><a href="#lesson-comp">12) Rendering & Compositing</a></li>
+        <li><a href="#lesson-optim">13) Optimization & Asset Management</a></li>
+        <li><a href="#lesson-project">14) Final Project: Short Scene</a></li>
+        <li><a href="#lesson-export">15) Pipelines & Export (USD/FBX/GLTF)</a></li>
+        <li><a href="#lesson-portfolio">16) Portfolio & Presentation</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <!-- =================== MAIN CONTENT =================== -->
+  <main class="container" id="content">
+
+    <!-- 1. Planning -->
+    <section id="lesson-planning" class="section">
+      <h2>1) Project Planning & References</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Professional work starts with a clear brief: scope, deadlines, style, and deliverables. Gather references (mood boards, orthographic blueprints, material swatches). Lock naming conventions and folder structure to avoid chaos.</p>
+          <h3>Practical</h3>
+          <ol>
+            <li>Create a project root with subfolders: <code>/blend</code>, <code>/assets</code>, <code>/textures</code>, <code>/cache</code>, <code>/renders</code>, <code>/comp</code>, <code>/refs</code>.</li>
+            <li>Define naming rules: <code>char_main_v01.blend</code>, <code>mat_skin_v02</code>, <code>shot010_comp_v03</code>.</li>
+            <li>Make a shot list and schedule milestones (model → lookdev → rig → anim → lighting → final).</li>
+          </ol>
+          <div class="tip">Sync references with your scene: keep a <em>Reference</em> collection and disable it at render time.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Brief & Board</span></div>
+          <p class="caption">Mood board + shot plan + folder map.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Retopo -->
+    <section id="lesson-retopo" class="section">
+      <h2>2) Advanced Modeling & Retopology</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>High‑poly sculpts need clean, efficient low‑poly meshes. Aim for deformation‑friendly edge loops around joints and facial features. Preserve silhouette while reducing density in flat areas.</p>
+          <h3>Practical</h3>
+          <ul>
+            <li>Use Shrinkwrap + snapping to surface for retopo over the sculpt.</li>
+            <li>Place loops around elbows, knees, mouth, and eyes; avoid poles in bending zones.</li>
+            <li>Test with a basic rig early to validate deformations.</li>
+          </ul>
+          <div class="note">Keep quads dominant; triangles are acceptable in rigid, non‑deforming zones.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Retopo Flow</span></div>
+          <p class="caption">Edge flow around mouth, eyes, shoulders, and hips.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Sculpt -->
+    <section id="lesson-sculpt" class="section">
+      <h2>3) High‑Res Sculpting & Multires</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Sculpt primary, secondary, then tertiary forms. Multires keeps a link between base and high‑res levels for detail while allowing lower‑res edits. Use alphas/stencils for repeatable micro details.</p>
+          <h3>Practical</h3>
+          <ol>
+            <li>Block primary volumes with Move/Clay brushes.</li>
+            <li>Refine planes and anatomy; keep surface tension consistent.</li>
+            <li>Add pores/wrinkles with alphas at higher levels; bake normal/displacement maps.</li>
+          </ol>
+          <div class="tip">Avoid over‑smoothing; preserve crisp plane changes for readability.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Form Stages</span></div>
+          <p class="caption">Primary → secondary → tertiary forms illustrated.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. UDIM -->
+    <section id="lesson-udim" class="section">
+      <h2>4) Advanced UVs & UDIMs</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>UDIMs split UVs into tiles for higher texture resolution. Keep consistent texel density per asset class and align seams to hidden or logical breaks.</p>
+          <h3>Practical</h3>
+          <ul>
+            <li>Mark seams, unwrap, then distribute islands across UDIM tiles.</li>
+            <li>Pack priority areas (face, hands) into larger UV space.</li>
+            <li>Export UVs for paint apps; name maps using tile tokens.</li>
+          </ul>
+          <div class="note">For real‑time, consider a single 0‑1 UV set or limited tiles to manage memory.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>UDIM Layout</span></div>
+          <p class="caption">Multiple tiles with density‑matched islands.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Shading -->
+    <section id="lesson-shading" class="section">
+      <h2>5) Layered Procedural Shading</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Build reusable, parameter‑driven materials. Mix procedural masks with image textures for macro‑to‑micro detail. Separate base, coat, dust, edge‑wear, and decals as layers.</p>
+          <h3>Practical</h3>
+          <ol>
+            <li>Create base Principled BSDF; expose Roughness/Color as custom properties.</li>
+            <li>Generate curvature/ambient‑occlusion masks to drive wear and dirt.</li>
+            <li>Pack outputs to a group node for easy reuse across assets.</li>
+          </ol>
+          <div class="tip">Stay physically plausible: clamp metallic to metals only; keep roughness in realistic ranges.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Layer Stack</span></div>
+          <p class="caption">Base → wear → dust → decal masking flow.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Hair -->
+    <section id="lesson-hair" class="section">
+      <h2>6) Hair & Fur Grooming</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Realistic hair requires controlled guides, clumping, noise, and proper shading. Break grooms into regions (scalp, brows, lashes, fur cards) and vary roughness and color along strands.</p>
+          <h3>Practical</h3>
+          <ul>
+            <li>Define scalp density and guide flow; use comb/smooth/length tools.</li>
+            <li>Add clump and noise layers; refine children settings for volume.</li>
+            <li>Use hair BSDF with color variation; render test close‑ups.</li>
+          </ul>
+          <div class="note">Keep polycards for realtime hair; use particle/geometry nodes for offline.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Groom Regions</span></div>
+          <p class="caption">Guides + clump/noise layering concept.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Rigging -->
+    <section id="lesson-rigging" class="section">
+      <h2>7) Advanced Rigging (Constraints & Drivers)</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Production rigs separate deformation bones from control bones. Constraints and drivers automate complex motion (IK/FK switches, stretchy limbs, face controls) while preserving stability.</p>
+          <h3>Practical</h3>
+          <ol>
+            <li>Build IK chains for legs/arms; add pole vectors and space switching.</li>
+            <li>Create FK layers; implement IK↔FK matching with snapping.</li>
+            <li>Use drivers for auto‑spread fingers, eyelid follow, and volume preservation.</li>
+          </ol>
+          <div class="tip">Name bones clearly and expose only animator‑friendly controls.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Control vs Deform</span></div>
+          <p class="caption">Rig layers and constraint graph sketch.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Animation -->
+    <section id="lesson-animation" class="section">
+      <h2>8) Character Animation (Body Mechanics)</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Appeal and clarity first: strong posing, timing, spacing, and arcs. Layer passes: blocking (stepped), splining (curves), and polishing (overlap, settle, secondary motion).</p>
+          <h3>Practical</h3>
+          <ul>
+            <li>Block a 4‑beat action (anticipation → action → overshoot → settle) in stepped keys.</li>
+            <li>Convert to Bezier, fix arcs in the Graph Editor, offset keys for overlap.</li>
+            <li>Add camera motion; stage with rule of thirds and leading lines.</li>
+          </ul>
+          <div class="note">Keep silhouette readable and avoid twinning; record yourself for reference.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Blocking → Polish</span></div>
+          <p class="caption">Keys and curves progression diagram.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FX -->
+    <section id="lesson-fx" class="section">
+      <h2>9) FX Simulations: Smoke, Fire, Fluids</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Use domain settings, voxel resolution, and caches to balance quality and speed. Separate low‑res preview caches from high‑res final bakes. Light volumes carefully for depth.</p>
+          <h3>Practical</h3>
+          <ol>
+            <li>Setup a smoke domain; add flow object and collision.</li>
+            <li>Cache preview at low res; iterate timing and forces.</li>
+            <li>Bake high res; shade volume with temperature and density ramps.</li>
+          </ol>
+          <div class="warn">Cache to a fast local drive. Clear caches when changing topology or domain scale.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Domain & Cache</span></div>
+          <p class="caption">Low‑res preview vs high‑res bake workflow.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Geometry Nodes -->
+    <section id="lesson-gn" class="section">
+      <h2>10) Geometry Nodes: Procedural Worlds</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Geo Nodes create non‑destructive, parameterized systems (scatterers, generators). Use attributes, fields, and instancing for scalable scenes.</p>
+          <h3>Practical</h3>
+          <ul>
+            <li>Build a rock scatterer with culling by slope and altitude.</li>
+            <li>Expose density/scale/random seed as group inputs.</li>
+            <li>Instance LOD variants for performance on large terrains.</li>
+          </ul>
+          <div class="tip">Profile with the viewport stats; avoid heavy geometry on base mesh—instance instead.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Scatter Graph</span></div>
+          <p class="caption">Slope/altitude masks → instance distribution.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Lighting -->
+    <section id="lesson-lighting" class="section">
+      <h2>11) Cinematic Lighting & Color</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Tell story with light: key direction, contrast ratios, color harmony, and motivated sources. Control specular highlights and bounce to guide the eye.</p>
+          <h3>Practical</h3>
+          <ol>
+            <li>Block key/fill/rim; add practical lights (lamps, screens) as motivators.</li>
+            <li>Use gobos and fog for depth; balance exposure with Filmic.</li>
+            <li>Render test frames and annotate notes for iteration.</li>
+          </ol>
+          <div class="note">Think in sequences, not single frames—match continuity across shots.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Lighting Plan</span></div>
+          <p class="caption">Key map, ratios, and motivators diagram.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Compositing -->
+    <section id="lesson-comp" class="section">
+      <h2>12) Rendering & Compositing</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Render multi‑pass EXRs with Cryptomatte and AOVs to gain control in comp. Linear workflow prevents gamma issues; grade with curves and film emulation subtly.</p>
+          <h3>Practical</h3>
+          <ul>
+            <li>Render multilayer OpenEXR (16‑bit half).</li>
+            <li>Use Cryptomatte for per‑object masking; relight with normals if needed.</li>
+            <li>Apply denoise carefully; add glows/bloom and sharpen at the end.</li>
+          </ul>
+          <div class="tip">Name passes clearly and keep a comp template to reuse across shots.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Comp Node Tree</span></div>
+          <p class="caption">Cryptomatte, AOVs, grade, and post stack.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. Optimization -->
+    <section id="lesson-optim" class="section">
+      <h2>13) Optimization & Asset Management</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Large scenes demand instancing, LODs, texture atlases, and proxy rigs. Track versions and dependencies; use libraries for reuse and consistency.</p>
+          <h3>Practical</h3>
+          <ol>
+            <li>Instance props via collections; merge small maps into atlases.</li>
+            <li>Enable Simplify for viewport; keep render overrides in a separate file.</li>
+            <li>Archive caches/renders externally; document settings per shot.</li>
+          </ol>
+          <div class="note">Treat each asset as a mini‑project with its own source and published states.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>LOD & Library</span></div>
+          <p class="caption">Asset states and LOD switch strategy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Project -->
+    <section id="lesson-project" class="section">
+      <h2>14) Final Project: Short Scene</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Goal</h3>
+          <p>Create a 10–20 second short: one character interacting with a prop in a small environment, with cinematic lighting, FX accent, and final grade.</p>
+          <h3>Pipeline</h3>
+          <ol>
+            <li>Previs: storyboard + animatic timing with proxy rigs.</li>
+            <li>Asset pass: final models, UVs/UDIMs, materials; approve lookdev turntables.</li>
+            <li>Animation pass: blocking → spline → polish. Add secondary sim passes.</li>
+            <li>Lighting: sequence‑consistent rig; render EXRs per shot.</li>
+            <li>Compositing: match color and grain; final conform and audio.</li>
+          </ol>
+          <div class="cta">
+            <p><strong>Deliverables:</strong> EXR sequence, graded ProRes/MP4, and breakdown images (wireframe, AO, passes). Keep a one‑page shot log.</p>
+            <a class="btn" href="/index.html#courses" aria-label="Back to courses">Back to Courses</a>
+          </div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Shot Flow</span></div>
+          <p class="caption">Storyboard → animatic → final frames overview.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. Export -->
+    <section id="lesson-export" class="section">
+      <h2>15) Pipelines & Export (USD/FBX/GLTF)</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>Choose the right interchange for your target: USD for large DCC pipelines, FBX for game engines and legacy tools, GLTF/GLB for realtime/web. Keep transforms applied and scales consistent (meters).</p>
+          <h3>Practical</h3>
+          <ul>
+            <li>Apply transforms (<span class="kbd">Ctrl</span> + <span class="kbd">A</span>), reset origins, pack textures.</li>
+            <li>Export test to a clean scene to validate materials, armatures, and animations.</li>
+            <li>Maintain per‑engine presets (Unreal/Unity/Web) as separate export profiles.</li>
+          </ul>
+          <div class="tip">Embed version metadata in filenames and keep a changelog for external teams.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Export Presets</span></div>
+          <p class="caption">USD layers, FBX skeletal, GLTF PBR overview.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 16. Portfolio -->
+    <section id="lesson-portfolio" class="section">
+      <h2>16) Portfolio & Presentation</h2>
+      <div class="lesson-grid">
+        <div>
+          <h3>Theory</h3>
+          <p>A strong reel shows clarity: your best 20–60 seconds, strongest shot first, clean labels, and no WIP unless relevant. Show breakdowns to demonstrate problem‑solving.</p>
+          <h3>Practical</h3>
+          <ol>
+            <li>Render turntables and beauty stills at 2K. Include wireframe/AO overlays.</li>
+            <li>Cut a concise reel with title card and role credits (modeling, shading, etc.).</li>
+            <li>Write project notes: goals, tools, challenges, and outcomes.</li>
+          </ol>
+          <div class="note">Tailor your reel to the job: character focus vs hard‑surface vs environment.</div>
+        </div>
+        <div>
+          <div class="placeholder"><span>Reel Beats</span></div>
+          <p class="caption">Shot order and labeling plan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <h2>Frequently Asked Questions</h2>
+      <h3>How do I keep scenes responsive?</h3>
+      <p>Use instances and LODs, disable high‑cost modifiers in viewport, and toggle Simplify. Render heavy passes separately and comp them.</p>
+      <h3>What render settings are safe defaults?</h3>
+      <p>Cycles: adaptive sampling on, denoise (OIDN/OptiX), clamp indirect 2–5, Filmic, 16‑bit EXR. Eevee: shadow size high, SSGI optional, use TAA and motion blur sparingly.</p>
+      <h3>Should I learn ACES?</h3>
+      <p>Film and VFX pipelines may require ACES for consistent color across tools. For solo/general work, Filmic is often sufficient.</p>
+    </section>
+
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer>
+    <div class="container inner">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <p>© <span id="year"></span> Learn 3D Animation • Advanced Course</p>
+        <nav style="display:flex;gap:16px">
+          <a href="/privacy.html" style="color:#d8cff8">Privacy Policy</a>
+          <a href="/terms.html" style="color:#d8cff8">Terms of Use</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal helper script -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
