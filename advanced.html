@@ -1,121 +1,151 @@
-<!-- advanced.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanced Blender Course | Learn 3D Animation</title>
-  <meta name="description" content="Advanced Blender Course – Master sculpting, rigging, advanced shading, VFX, and rendering. Step-by-step tutorials in English and Hindi with images.">
-  <meta name="keywords" content="Blender Advanced Course, Blender Rigging, Blender Sculpting, Blender VFX, Blender Hindi, Blender English">
-  <link rel="icon" href="/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Blender 3D Animation Course | Learn 3D Animation</title>
+  <meta name="description" content="Advanced Blender 3D animation tutorials in Hindi and English. Learn physics simulations, rigging, advanced rendering, compositing, and game development with Blender." />
+  <meta name="keywords" content="Advanced Blender course, Blender physics simulation, Blender rigging tutorial, advanced rendering Blender, compositing Blender, game development Blender" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <meta property="og:title" content="Advanced Blender Course | Learn 3D Animation">
-  <meta property="og:description" content="Step-by-step Advanced Blender Course in English and Hindi. Learn sculpting, rigging, shading, and VFX.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.github.io/advanced.html">
-  <meta property="og:image" content="https://yourdomain.github.io/og-advanced.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Advanced Blender Course | Learn 3D Animation">
-  <meta name="twitter:description" content="Free step-by-step Advanced Blender Course in Hindi and English.">
-  <meta name="twitter:image" content="https://yourdomain.github.io/og-advanced.jpg">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .theme-bg { background-color: #6b21a8; }
+    .theme-text { color: #6b21a8; }
+    .card { transition: transform 0.3s ease; }
+    .card:hover { transform: scale(1.02); }
+  </style>
 </head>
-<body class="font-[Poppins] bg-white text-gray-800">
-  <!-- Header -->
-  <header class="sticky top-0 bg-white shadow z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
-      <a href="index.html" class="text-xl font-bold text-purple-600">Learn 3D Animation</a>
-      <nav class="space-x-4 hidden md:block">
-        <a href="index.html" class="hover:text-purple-600">Home</a>
-        <a href="beginner.html" class="hover:text-purple-600">Beginner</a>
-        <a href="intermediate.html" class="hover:text-purple-600">Intermediate</a>
-        <a href="about.html" class="hover:text-purple-600">About</a>
-      </nav>
-    </div>
+<body class="bg-purple-50 text-gray-800">
+  <header class="theme-bg text-white p-6 text-center">
+    <h1 class="text-4xl font-bold">Advanced Blender 3D Animation Course</h1>
+    <p class="mt-2">(English + Hindi) — Master Physics, Rigging, Rendering, and More</p>
   </header>
 
-  <!-- Banner -->
-  <section class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-16 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Advanced Blender Course</h1>
-    <p class="text-lg">Master Blender – English & Hindi tutorials with visuals for professionals.</p>
-  </section>
+  <main class="max-w-6xl mx-auto p-6 space-y-12">
+    <section>
+      <h2 class="text-3xl font-semibold theme-text mb-4">Course Overview / पाठ्यक्रम का अवलोकन</h2>
+      <p class="mb-4">This advanced Blender course covers simulations, rigging, shader nodes, geometry nodes, animation cycles, and VFX workflows. Ideal for professionals aiming for mastery.</p>
+      <p>यह एडवांस ब्लेंडर कोर्स सिमुलेशन, रिगिंग, शेडर नोड्स, ज्योमेट्री नोड्स, एनीमेशन साइकिल और VFX वर्कफ़्लो को कवर करता है। यह उन प्रोफेशनल्स के लिए आदर्श है जो मास्टरी पाना चाहते हैं।</p>
+    </section>
 
-  <!-- Lessons -->
-  <main class="max-w-5xl mx-auto p-6 space-y-12">
+    <section class="grid gap-8 md:grid-cols-2">
+      <!-- Lessons -->
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">1. Advanced Modeling / उन्नत मॉडलिंग</h3>
+        <p>Create complex hard-surface and organic models using advanced techniques.</p>
+        <p>एडवांस तकनीकों का उपयोग करके जटिल हार्ड-सर्फेस और ऑर्गेनिक मॉडल बनाना।</p>
+        <img src="assets/images/advanced_modeling.png" alt="Advanced modeling in Blender" loading="lazy" class="mt-4 rounded-lg">
+      </article>
 
-    <!-- Lesson 1 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 1: Advanced Sculpting</h2>
-        <p class="mb-2"><strong>English:</strong> Use dynamic topology and multiresolution modifiers for detailed sculpting. Learn brushes like Clay, Crease, and Snake Hook.</p>
-        <p><strong>हिंदी:</strong> डिटेल्ड स्कल्प्टिंग के लिए Dynamic Topology और Multiresolution modifiers का प्रयोग करें। Clay, Crease और Snake Hook जैसी brushes सीखें।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/blender-sculpting.jpg" alt="Advanced Sculpting in Blender" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">2. Advanced Sculpting / उन्नत स्कल्प्टिंग</h3>
+        <p>Detailing, retopology, and multi-resolution sculpting techniques.</p>
+        <p>डिटेलिंग, रीटोपोलॉजी और मल्टी-रेजोल्यूशन स्कल्प्टिंग तकनीक।</p>
+        <img src="assets/images/advanced_sculpting.png" alt="Advanced sculpting techniques" loading="lazy" class="mt-4 rounded-lg">
+      </article>
 
-    <!-- Lesson 2 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/blender-rigging.jpg" alt="Rigging in Blender" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 2: Rigging and Armatures</h2>
-        <p class="mb-2"><strong>English:</strong> Create armatures and bones for characters. Use weight painting to bind mesh with skeletons.</p>
-        <p><strong>हिंदी:</strong> कैरेक्टर्स के लिए armatures और bones बनाएं। Mesh को skeleton से जोड़ने के लिए weight painting का उपयोग करें।</p>
-      </div>
-    </article>
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">3. Physics Simulation / भौतिक सिमुलेशन</h3>
+        <p>Rigid body, soft body, and cloth physics explained in depth.</p>
+        <p>रिजिड बॉडी, सॉफ्ट बॉडी और कपड़े की फिजिक्स को गहराई से समझाया गया।</p>
+        <img src="assets/images/physics_simulation.png" alt="Blender physics simulation" loading="lazy" class="mt-4 rounded-lg">
+      </article>
 
-    <!-- Lesson 3 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 3: Advanced Shading and Texturing</h2>
-        <p class="mb-2"><strong>English:</strong> Use the Shader Editor with nodes to create realistic materials like glass, metal, and skin.</p>
-        <p><strong>हिंदी:</strong> Shader Editor में nodes का प्रयोग करके यथार्थवादी materials बनाएं जैसे कांच, धातु और त्वचा।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/blender-shading.jpg" alt="Advanced Shading in Blender" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">4. Smoke & Fire Simulation / धुआं और आग सिमुलेशन</h3>
+        <p>Create realistic smoke, explosions, and fire effects.</p>
+        <p>यथार्थवादी धुआं, विस्फोट और आग के प्रभाव बनाना।</p>
+        <img src="assets/images/smoke_fire.png" alt="Smoke and fire simulation" loading="lazy" class="mt-4 rounded-lg">
+      </article>
 
-    <!-- Lesson 4 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/blender-vfx.jpg" alt="VFX in Blender" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 4: Visual Effects (VFX)</h2>
-        <p class="mb-2"><strong>English:</strong> Use Blender’s compositor for green screen effects, motion tracking, and adding explosions or smoke simulations.</p>
-        <p><strong>हिंदी:</strong> Blender के compositor का उपयोग करें ग्रीन स्क्रीन इफेक्ट्स, मोशन ट्रैकिंग और विस्फोट या स्मोक simulation जोड़ने के लिए।</p>
-      </div>
-    </article>
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">5. Fluid Simulation / द्रव सिमुलेशन</h3>
+        <p>Simulate water, liquid pouring, and ocean surfaces.</p>
+        <p>पानी, तरल पदार्थ डालना और महासागर सतह का सिमुलेशन करना।</p>
+        <img src="assets/images/fluid_simulation.png" alt="Fluid simulation in Blender" loading="lazy" class="mt-4 rounded-lg">
+      </article>
 
-    <!-- Lesson 5 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 5: Advanced Rendering & Compositing</h2>
-        <p class="mb-2"><strong>English:</strong> Use render passes, denoising, and compositor nodes to achieve cinematic results.</p>
-        <p><strong>हिंदी:</strong> Render passes, denoising और compositor nodes का उपयोग करके cinematic results प्राप्त करें।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/blender-compositing.jpg" alt="Blender Compositing" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">6. Hair & Fur / बाल और फर</h3>
+        <p>Create realistic hair and fur with particle systems.</p>
+        <p>पार्टिकल सिस्टम का उपयोग करके यथार्थवादी बाल और फर बनाना।</p>
+        <img src="assets/images/hair_fur.png" alt="Blender hair and fur" loading="lazy" class="mt-4 rounded-lg">
+      </article>
 
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">7. Advanced Shader Nodes / उन्नत शेडर नोड्स</h3>
+        <p>Learn PBR workflows and complex shader node setups.</p>
+        <p>PBR वर्कफ़्लो और जटिल शेडर नोड सेटअप सीखना।</p>
+        <img src="assets/images/shader_nodes.png" alt="Advanced shader nodes" loading="lazy" class="mt-4 rounded-lg">
+      </article>
+
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">8. Geometry Nodes / ज्योमेट्री नोड्स</h3>
+        <p>Procedural modeling and motion graphics with geometry nodes.</p>
+        <p>ज्योमेट्री नोड्स के साथ प्रक्रियात्मक मॉडलिंग और मोशन ग्राफिक्स।</p>
+        <img src="assets/images/geometry_nodes.png" alt="Blender geometry nodes" loading="lazy" class="mt-4 rounded-lg">
+      </article>
+
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">9. Rigging in Depth / रिगिंग गहराई से</h3>
+        <p>Bone deformers, constraints, and weight painting explained.</p>
+        <p>बोन डिफॉर्मर्स, कॉन्स्ट्रेंट्स और वेट पेंटिंग को समझाया गया।</p>
+        <img src="assets/images/rigging.png" alt="Rigging in Blender" loading="lazy" class="mt-4 rounded-lg">
+      </article>
+
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">10. Animation Cycles / एनीमेशन साइकिल</h3>
+        <p>Create realistic walk and run cycles for characters.</p>
+        <p>किरदारों के लिए यथार्थवादी चलने और दौड़ने की साइकिल बनाना।</p>
+        <img src="assets/images/animation_cycles.png" alt="Walk cycle animation" loading="lazy" class="mt-4 rounded-lg">
+      </article>
+
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">11. Lip Sync & Facial Animation / लिप सिंक और चेहरे की एनीमेशन</h3>
+        <p>Animate character dialogues with lip sync and expressions.</p>
+        <p>किरदार संवादों को लिप सिंक और भावों के साथ एनीमेट करना।</p>
+        <img src="assets/images/lipsync.png" alt="Lip sync animation" loading="lazy" class="mt-4 rounded-lg">
+      </article>
+
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">12. Compositing / कंपोजिटिंग</h3>
+        <p>Learn compositing nodes, VFX, and green screen integration.</p>
+        <p>कंपोजिटिंग नोड्स, VFX और ग्रीन स्क्रीन इंटीग्रेशन सीखना।</p>
+        <img src="assets/images/compositing.png" alt="Blender compositing" loading="lazy" class="mt-4 rounded-lg">
+      </article>
+
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">13. Advanced Rendering / उन्नत रेंडरिंग</h3>
+        <p>Photorealistic rendering with HDRI, caustics, and optimization.</p>
+        <p>HDRI, कॉस्टिक्स और ऑप्टिमाइज़ेशन के साथ फोटोरियलिस्टिक रेंडरिंग।</p>
+        <img src="assets/images/advanced_rendering.png" alt="Advanced rendering in Blender" loading="lazy" class="mt-4 rounded-lg">
+      </article>
+
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">14. Motion Graphics / मोशन ग्राफिक्स</h3>
+        <p>Create motion graphics using Blender’s procedural tools.</p>
+        <p>Blender के प्रक्रियात्मक टूल का उपयोग करके मोशन ग्राफिक्स बनाना।</p>
+        <img src="assets/images/motion_graphics.png" alt="Blender motion graphics" loading="lazy" class="mt-4 rounded-lg">
+      </article>
+
+      <article class="card bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold theme-text mb-2">15. Blender for Game Development / गेम डेवलपमेंट के लिए ब्लेंडर</h3>
+        <p>Export assets to Unity and Unreal Engine with proper optimization.</p>
+        <p>एसेट्स को Unity और Unreal Engine में सही ऑप्टिमाइज़ेशन के साथ एक्सपोर्ट करना।</p>
+        <img src="assets/images/game_dev.png" alt="Game development with Blender" loading="lazy" class="mt-4 rounded-lg">
+      </article>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-100 p-6 mt-10 text-center">
-    <p class="font-bold text-purple-600 mb-2">Learn 3D Animation</p>
-    <p class="mb-2">Easy to learn 3D animation beginner to advance level free.</p>
-    <nav class="mb-2">
-      <a href="privacy.html" class="mx-2 hover:text-purple-600">Privacy Policy</a>
-      <a href="terms-of-use.html" class="mx-2 hover:text-purple-600">Terms of Use</a>
-      <a href="about.html" class="mx-2 hover:text-purple-600">About</a>
-      <a href="sitemap.xml" class="mx-2 hover:text-purple-600">Sitemap</a>
+  <footer class="theme-bg text-white p-6 mt-12 text-center">
+    <p>&copy; 2025 Learn 3D Animation. Advanced Blender Course. All rights reserved.</p>
+    <nav class="mt-4 space-x-4">
+      <a href="index.html" class="underline">Home</a>
+      <a href="privacy.html" class="underline">Privacy Policy</a>
+      <a href="terms-of-use.html" class="underline">Terms of Use</a>
+      <a href="about.html" class="underline">About</a>
     </nav>
-    <p class="text-sm">© 2025 Learn3DAnimation. All rights reserved.</p>
   </footer>
 </body>
 </html>
