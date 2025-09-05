@@ -1,1 +1,217 @@
+import React from 'react';
+import Head from 'next/head';
 
+const Learn3DAnimationHomepage = () => {
+  return (
+    <>
+      <Head>
+        <title>Learn 3D Animation - Blender Tutorials & Courses</title>
+        <meta name="description" content="Free step-by-step Blender tutorials and 3D animation courses for beginners to advanced. Learn tools, shortcuts, and animation techniques." />
+        <meta name="keywords" content="Blender, 3D animation, tutorials, courses, free, beginner, advanced, modeling, shortcuts, cheatsheet" />
+        <meta property="og:title" content="Learn 3D Animation - Master Blender with Easy Guides" />
+        <meta property="og:description" content="Perfect for beginners to explore Blender tools, shortcuts, and animation courses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://learn3danimation.com" />
+        <meta property="og:image" content="https://learn3danimation.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Learn 3D Animation - Blender Tutorials & Courses" />
+        <meta name="twitter:description" content="Free step-by-step Blender tutorials and 3D animation courses for beginners to advanced." />
+        <meta name="twitter:image" content="https://learn3danimation.com/twitter-image.jpg" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+      </Head>
+
+      <div className="min-h-screen bg-white">
+        {/* Header */}
+        <header className="bg-white shadow-sm">
+          <nav className="container mx-auto px-4 py-4 flex justify-between items-center" aria-label="Main navigation">
+            <div className="flex items-center">
+              <h1 className="text-2xl font-bold text-gray-900 font-poppins">Learn 3D Animation</h1>
+            </div>
+            <div className="hidden md:flex space-x-8">
+              <a href="#" className="text-gray-700 hover:text-saffron-600 font-medium transition-colors">Home</a>
+              <a href="#" className="text-gray-700 hover:text-saffron-600 font-medium transition-colors">Sections</a>
+            </div>
+            <button className="md:hidden text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </nav>
+        </header>
+
+        <main>
+          {/* Hero Section */}
+          <section className="py-12 md:py-20 bg-gradient-to-r from-saffron-50 to-saffron-100">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto text-center">
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-poppins">Master 3D Animation with Easy Step-by-Step Guides</h1>
+                <p className="text-xl text-gray-700 mb-8">Perfect for beginners to explore Blender tools, shortcuts, and animation courses.</p>
+                <div className="max-w-xl mx-auto">
+                  <div className="relative">
+                    <input 
+                      type="text" 
+                      placeholder="Search a section..." 
+                      className="w-full px-6 py-4 rounded-lg shadow-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-saffron-500 focus:border-transparent"
+                    />
+                    <button className="absolute right-2 top-2 bg-saffron-600 text-white p-2 rounded-md hover:bg-saffron-700 transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Content Sections */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              {/* Section 1: Download Blender */}
+              <div className="mb-16">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 font-poppins">How to Download Blender Software</h2>
+                <p className="text-gray-600 mb-8 max-w-3xl">Get started with Blender by downloading the latest version for your operating system. Completely free and open-source.</p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {/* Card 1 */}
+                  <article className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div className="p-6">
+                      <div className="w-12 h-12 bg-saffron-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-saffron-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Windows Installation</h3>
+                      <p className="text-gray-600 mb-4">Step-by-step guide to install Blender on Windows</p>
+                      <button className="bg-saffron-600 text-white px-4 py-2 rounded-md hover:bg-saffron-700 transition-colors font-medium">Use Section</button>
+                    </div>
+                  </article>
+                  
+                  {/* Card 2 */}
+                  <article className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div className="p-6">
+                      <div className="w-12 h-12 bg-saffron-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-saffron-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                        </svg>
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Mac Installation</h3>
+                      <p className="text-gray-600 mb-4">Install Blender on macOS with these simple steps</p>
+                      <button className="bg-saffron-600 text-white px-4 py-2 rounded-md hover:bg-saffron-700 transition-colors font-medium">Use Section</button>
+                    </div>
+                  </article>
+                  
+                  {/* Card 3 */}
+                  <article className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div className="p-6">
+                      <div className="w-12 h-12 bg-saffron-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-saffron-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                        </svg>
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Linux Installation</h3>
+                      <p className="text-gray-600 mb-4">Guide to installing Blender on various Linux distributions</p>
+                      <button className="bg-saffron-600 text-white px-4 py-2 rounded-md hover:bg-saffron-700 transition-colors font-medium">Use Section</button>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              
+              {/* Section 2: Blender Interface */}
+              <div className="mb-16">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 font-poppins">About Blender Software Interface</h2>
+                <p className="text-gray-600 mb-8 max-w-3xl">Understand Blender's interface layout, workspaces, and how to customize your workspace for optimal workflow.</p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {/* Repeat card structure for each item in this section */}
+                  <article className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
+                    <div className="p-6">
+                      <div className="w-12 h-12 bg-saffron-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-saffron-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+                        </svg>
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Interface Overview</h3>
+                      <p className="text-gray-600 mb-4">Learn about the main areas of Blender's interface</p>
+                      <button className="bg-saffron-600 text-white px-4 py-2 rounded-md hover:bg-saffron-700 transition-colors font-medium">Use Section</button>
+                    </div>
+                  </article>
+                  
+                  {/* Additional cards would go here */}
+                </div>
+              </div>
+              
+              {/* Additional sections would follow the same pattern */}
+              
+            </div>
+          </section>
+        </main>
+
+        {/* Footer */}
+        <footer className="bg-gray-900 text-white py-12">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
+              <div className="mb-8 md:mb-0">
+                <h2 className="text-2xl font-bold font-poppins mb-2">Learn 3D Animation</h2>
+                <p className="text-gray-300 max-w-xs">Easy to learn 3D animation beginner to advance level free.</p>
+              </div>
+              
+              <div className="mb-8 md:mb-0">
+                <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul className="space-y-2">
+                  <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+                  <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Terms of Use</a></li>
+                </ul>
+              </div>
+              
+              <div className="max-w-md">
+                <h3 className="text-lg font-semibold mb-4">SEO Description</h3>
+                <p className="text-gray-300">Learn 3D animation online free with our comprehensive Blender tutorials. From beginner to advanced 3D modeling, animation tips, shortcuts, and courses. Master Blender tools and techniques with our step-by-step guides.</p>
+              </div>
+            </div>
+            
+            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+              <p>&copy; {new Date().getFullYear()} Learn 3D Animation. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <style jsx>{`
+        .font-poppins {
+          font-family: 'Poppins', sans-serif;
+        }
+      `}</style>
+    </>
+  );
+};
+
+// Custom saffron color configuration for Tailwind
+// Add this to your tailwind.config.js
+/*
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        saffron: {
+          50: '#FFFAF0',
+          100: '#FEF3C7',
+          200: '#FDE68A',
+          300: '#FCD34D',
+          400: '#FBBF24',
+          500: '#F59E0B',
+          600: '#D97706',
+          700: '#B45309',
+          800: '#92400E',
+          900: '#78350F',
+        }
+      }
+    }
+  }
+}
+*/
+
+export default Learn3DAnimationHomepage;
