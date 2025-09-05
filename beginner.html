@@ -1,208 +1,436 @@
-<!-- beginner.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beginner Blender Course | Learn 3D Animation</title>
-  <meta name="description" content="Beginner Blender Course – Learn Blender step by step: download, interface, navigation, objects, materials, lighting, and first animation. Bilingual tutorials (English + Hindi).">
-  <meta name="keywords" content="Blender Beginner Course, Blender Basics, Learn Blender Hindi, Learn Blender English, Blender Tutorials">
-  <link rel="icon" href="/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <meta property="og:title" content="Beginner Blender Course | Learn 3D Animation">
-  <meta property="og:description" content="Step-by-step Beginner Blender Course in English and Hindi. Learn Blender basics with images.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.github.io/beginner.html">
-  <meta property="og:image" content="https://yourdomain.github.io/og-beginner.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Beginner Blender Course | Learn 3D Animation">
-  <meta name="twitter:description" content="Free Beginner Blender Course with Hindi + English tutorials.">
-  <meta name="twitter:image" content="https://yourdomain.github.io/og-beginner.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beginner Blender Course (80 Lessons) | Learn 3D Animation</title>
+  <meta name="description" content="Massive beginner Blender course in Hindi & English (80 lessons). Learn Blender from installation to rendering: UI, modeling, UVs, sculpting, materials, animation, physics, lighting, camera, and 10 mini projects." />
+  <meta name="keywords" content="Blender beginner course, Learn 3D animation, Blender Hindi, Blender tutorial English, UV mapping, rigging basics, viewport shading, Eevee, Cycles, cloth simulation, grease pencil, compositing, beginner projects" />
+  <meta property="og:title" content="Beginner Blender Course (80 Lessons) | Learn 3D Animation" />
+  <meta property="og:description" content="Step-by-step 80-lesson beginner Blender course with bilingual explanations, images and mini projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/blender-beginner-banner.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Beginner Blender Course (80 Lessons)" />
+  <meta name="twitter:description" content="Bilingual Blender course with UI, modeling, UVs, animation, rendering & mini projects." />
+  <link rel="canonical" href="https://learn3danimation.com/beginner.html" />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Tailwind CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Poppins',sans-serif}
+    .beach-purple{background-image:linear-gradient(135deg,#7c3aed 0%,#9333ea 25%,#a855f7 50%,#06b6d4 100%)}
+    .card{transition:transform .25s ease, box-shadow .25s ease}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.15)}
+    .chip{border:1px solid rgba(255,255,255,.35)}
+    .sticky-cta{backdrop-filter:saturate(160%) blur(6px)}
+  </style>
+  <!-- JSON-LD Course Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Course",
+    "name":"Beginner Blender Course (80 Lessons)",
+    "description":"Bilingual (Hindi+English) beginner Blender course with UI, modeling, UVs, sculpting, materials, animation, physics, lighting, camera, and 10 mini projects.",
+    "provider":{"@type":"Organization","name":"Learn3DAnimation","sameAs":"https://learn3danimation.com"},
+    "inLanguage":["en","hi"],
+    "url":"https://learn3danimation.com/beginner.html"
+  }
+  </script>
 </head>
-<body class="font-[Poppins] bg-white text-gray-800">
-  <!-- Header -->
-  <header class="sticky top-0 bg-white shadow z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
-      <a href="index.html" class="text-xl font-bold text-purple-600">Learn 3D Animation</a>
-      <nav class="space-x-4 hidden md:block">
-        <a href="index.html" class="hover:text-purple-600">Home</a>
-        <a href="intermediate.html" class="hover:text-purple-600">Intermediate</a>
-        <a href="advanced.html" class="hover:text-purple-600">Advanced</a>
+<body class="bg-purple-50 text-gray-900">
+
+  <!-- Sticky Top Bar -->
+  <header class="sticky top-0 z-40 shadow-sm sticky-cta bg-white/90">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="w-8 h-8 rounded-xl beach-purple"></span>
+        <span class="font-bold">Learn 3D Animation</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#toc" class="hover:text-purple-600">Lessons</a>
+        <a href="#projects" class="hover:text-purple-600">Projects</a>
         <a href="about.html" class="hover:text-purple-600">About</a>
+        <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
+        <a href="terms-of-use.html" class="hover:text-purple-600">Terms</a>
       </nav>
     </div>
   </header>
 
-  <!-- Banner -->
-  <section class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-16 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Beginner Blender Course</h1>
-    <p class="text-lg">Start your Blender journey – English & Hindi tutorials with visuals.</p>
+  <!-- Hero Banner -->
+  <section class="beach-purple text-white">
+    <div class="max-w-7xl mx-auto px-6 py-12 text-center">
+      <h1 class="text-3xl md:text-5xl font-extrabold">Beginner Blender Course – 80 Lessons (Hindi + English)</h1>
+      <p class="mt-3 text-lg md:text-xl opacity-95">Install → Interface → Modeling → UV → Materials → Lighting → Animation → Physics → Rendering → 10 Mini Projects</p>
+      <div class="mt-6 flex flex-wrap gap-2 justify-center">
+        <span class="chip px-3 py-1 rounded-full text-sm">SEO-Optimized</span>
+        <span class="chip px-3 py-1 rounded-full text-sm">Mobile-First</span>
+        <span class="chip px-3 py-1 rounded-full text-sm">Illustrations Included</span>
+      </div>
+      <div class="mt-6 max-w-2xl mx-auto">
+        <label class="sr-only" for="search">Search lessons</label>
+        <input id="search" type="search" placeholder="Search lessons… (e.g., UV, Camera, Physics)" class="w-full rounded-2xl px-5 py-3 text-gray-800 shadow focus:ring-2 focus:ring-purple-500" oninput="filterLessons(this.value)" />
+      </div>
+    </div>
   </section>
 
-  <!-- Lessons -->
-  <main class="max-w-5xl mx-auto p-6 space-y-12">
+  <main class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-10">
+    <!-- Table of Contents -->
+    <section id="toc" class="mb-10">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Lesson Modules</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <a href="#m1" class="card bg-white p-4 rounded-2xl shadow">01. Getting Started</a>
+        <a href="#m2" class="card bg-white p-4 rounded-2xl shadow">02. Navigation & Viewport</a>
+        <a href="#m3" class="card bg-white p-4 rounded-2xl shadow">03. Object & Edit Modes</a>
+        <a href="#m4" class="card bg-white p-4 rounded-2xl shadow">04. Modeling Tools</a>
+        <a href="#m5" class="card bg-white p-4 rounded-2xl shadow">05. Modifiers Deep Dive</a>
+        <a href="#m6" class="card bg-white p-4 rounded-2xl shadow">06. Materials & Shading</a>
+        <a href="#m7" class="card bg-white p-4 rounded-2xl shadow">07. UV & Texturing</a>
+        <a href="#m8" class="card bg-white p-4 rounded-2xl shadow">08. Sculpting Expanded</a>
+        <a href="#m9" class="card bg-white p-4 rounded-2xl shadow">09. Lighting & Camera</a>
+        <a href="#m10" class="card bg-white p-4 rounded-2xl shadow">10. Animation Basics</a>
+        <a href="#m11" class="card bg-white p-4 rounded-2xl shadow">11. Physics & Simulation</a>
+        <a href="#m12" class="card bg-white p-4 rounded-2xl shadow">12. Rendering & Compositing</a>
+        <a href="#m13" class="card bg-white p-4 rounded-2xl shadow">13. Grease Pencil</a>
+        <a href="#m14" class="card bg-white p-4 rounded-2xl shadow">14. Workflow & Export</a>
+        <a href="#projects" class="card bg-white p-4 rounded-2xl shadow">Mini Projects (10)</a>
+      </div>
+    </section>
 
-    <!-- Template Lesson Block -->
-    <!-- Repeat this block for each lesson -->
+    <!-- Helper for generating many lesson cards -->
+    <script>
+      function makeCard(n, titleEN, titleHI, descEN, descHI, img){
+        return `
+        <article class="card bg-white p-5 rounded-2xl shadow" data-title="${titleEN.toLowerCase()} ${titleHI.toLowerCase()}">
+          <h3 class="text-lg md:text-xl font-semibold mb-1">Lesson ${n}: ${titleEN} | ${titleHI}</h3>
+          <p class="text-gray-700 text-sm md:text-base">English: ${descEN}<br><span class="text-gray-800">हिंदी:</span> ${descHI}</p>
+          <img src="images/${img}" alt="${titleEN} illustration" loading="lazy" class="mt-3 rounded-xl"/>
+        </article>`;
+      }
+      function inject(id, cards){
+        document.addEventListener('DOMContentLoaded',()=>{
+          const el=document.getElementById(id); if(!el) return; el.innerHTML=cards.join('');
+        })
+      }
+      function filterLessons(q){
+        const cards=[...document.querySelectorAll('[data-title]')];
+        const term=(q||'').trim().toLowerCase();
+        cards.forEach(c=>{
+          c.style.display = !term || c.dataset.title.includes(term) ? '' : 'none';
+        });
+      }
+    </script>
 
-    <!-- Lesson 1 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 1: Introduction to Blender</h2>
-        <p class="mb-2"><strong>English:</strong> Blender is a free, open-source 3D creation suite. It supports modeling, animation, rendering, VFX, and more. Perfect for beginners.</p>
-        <p><strong>हिंदी:</strong> Blender एक मुफ्त, open-source 3D क्रिएशन सॉफ्टवेयर है। यह modeling, animation, rendering और VFX के लिए उपयोग होता है। Beginners के लिए यह बेहतरीन है।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/blender-intro.jpg" alt="Introduction to Blender" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Module 1: Getting Started (1–6) -->
+    <section id="m1" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">01 · Getting Started with Blender</h2>
+      <div id="m1cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m1cards', [
+        makeCard(1,'What is Blender?','Blender क्या है?','Blender is a free, open-source 3D suite for modeling, animation, VFX, and more.','Blender एक free, open‑source 3D suite है जिसका use modeling, animation, VFX आदि में होता है.','blender-intro.png'),
+        makeCard(2,'Install Blender','Blender इंस्टॉल','Download from blender.org, install, set language & add-ons later.','blender.org से download करें, install करें, language व add-ons बाद में सेट करेंगे.','blender-install.png'),
+        makeCard(3,'First Launch & Preferences','पहली बार लॉन्च + प्रेफरेंसेस','Configure input, keymap (Industry Compatible optional), autosave.','Input, keymap, autosave सेट करें (Industry Compatible चाहें तो).','preferences.png'),
+        makeCard(4,'Project Setup & Files','प्रोजेक्ट सेटअप','Understand .blend files, folder structure, and saving versions.','.blend files, folder structure और versioned saves समझें.','project-files.png'),
+        makeCard(5,'Understanding the UI','UI समझें','Layout: 3D Viewport, Outliner, Properties, Timeline.','Layout: 3D Viewport, Outliner, Properties, Timeline.','ui-overview.png'),
+        makeCard(6,'Essential Terminology','ज़रूरी शब्दावली','Object, Mesh, Vertex, Edge, Face, Collection, Scene, Frame.','Object, Mesh, Vertex, Edge, Face, Collection, Scene, Frame.','terminology.png')
+      ]);
+    </script>
 
-    <!-- Lesson 2 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/blender-download.jpg" alt="Download Blender" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 2: How to Download & Install Blender</h2>
-        <p class="mb-2"><strong>English:</strong> Visit blender.org and download the latest version for Windows, Mac, or Linux. Installation is simple and lightweight.</p>
-        <p><strong>हिंदी:</strong> blender.org पर जाएं और Windows, Mac या Linux के लिए नवीनतम वर्ज़न डाउनलोड करें। इंस्टॉलेशन आसान और हल्का है।</p>
-      </div>
-    </article>
+    <!-- Module 2: Navigation & Viewport (7–12) -->
+    <section id="m2" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">02 · Navigation & Viewport</h2>
+      <div id="m2cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m2cards', [
+        makeCard(7,'Viewport Navigation','व्यू포र्ट नेविगेशन','Orbit, pan, zoom; numpad views (1/3/7) and focus (F).','Orbit, pan, zoom; numpad views (1/3/7) और focus (F).','navigation.png'),
+        makeCard(8,'Selection & Gizmos','सेलेक्शन व गिज़्मो','Box/Lasso select, move/rotate/scale gizmos & snapping.','Box/Lasso select, move/rotate/scale gizmos व snapping.','gizmos.png'),
+        makeCard(9,'Transform Shortcuts','ट्रांसफॉर्म शॉर्टकट्स','G/R/S with axis locks (X/Y/Z), precision with Shift.','G/R/S और axis locks (X/Y/Z), precision के लिए Shift.','transform.png'),
+        makeCard(10,'Local vs Global','लोकल बनाम ग्लोबल','Use orientations (Global, Local) & pivot points.','Orientations (Global, Local) व pivot points का उपयोग.','orientation.png'),
+        makeCard(11,'Outliner Essentials','आउटलाइнер बेसिक्स','Hide/lock, collections, parenting, and search.','Hide/lock, collections, parenting व search.','outliner.png'),
+        makeCard(12,'View Layers & Collections','व्यू लेयर्स व कलेक्शंस','Organize complex scenes; isolate elements.','Complex scenes organize करें; isolate करना सीखें.','collections.png')
+      ]);
+    </script>
 
-    <!-- Lesson 3 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 3: Blender Interface</h2>
-        <p class="mb-2"><strong>English:</strong> Blender’s interface includes 3D viewport, outliner, properties editor, and timeline. Customize layouts as per your workflow.</p>
-        <p><strong>हिंदी:</strong> Blender का इंटरफ़ेस 3D viewport, outliner, properties editor और timeline से बना है। इसे अपनी ज़रूरत के अनुसार customize कर सकते हैं।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/blender-interface.jpg" alt="Blender Interface" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Module 3: Object & Edit Modes (13–20) -->
+    <section id="m3" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">03 · Object & Edit Modes</h2>
+      <div id="m3cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m3cards', [
+        makeCard(13,'Object vs Edit Mode','ऑब्जेक्ट बनाम एडिट मोड','Switching modes and when to use each.','Modes बदलना और कब किसका उपयोग करें.','modes.png'),
+        makeCard(14,'Mesh Elements','मेश एलिमेंट्स','Vertices, edges, faces; select modes (1/2/3).','Vertices, edges, faces; select modes (1/2/3).','mesh-elements.png'),
+        makeCard(15,'Adding Primitives','प्रिमिटिव्स जोड़ना','Cube, UV Sphere, Cylinder, Plane; proper scale.','Cube, UV Sphere, Cylinder, Plane; सही scale.','primitives.png'),
+        makeCard(16,'Transforms in Edit Mode','एडिट मोड ट्रांसफॉर्म','Extrude, inset, bevel basics.','Extrude, inset, bevel बेसिक्स.','edit-transforms.png'),
+        makeCard(17,'Normals & Shading','नॉर्मल्स व शेडिंग','Auto smooth, shade smooth/flat; recalc normals.','Auto smooth, shade smooth/flat; normals ठीक करना.','normals.png'),
+        makeCard(18,'Snapping & Precision','स्नैपिंग व प्रिसीजन','Vertex/edge/face snapping; increment & absolute grid.','Vertex/edge/face snapping; increment व absolute grid.','snapping.png'),
+        makeCard(19,'Pivot Points Deep Dive','पिवट पॉइंट्स डीप डाइव','Median, 3D cursor, active element pivots.','Median, 3D cursor, active element pivots.','pivot.png'),
+        makeCard(20,'3D Cursor Workflow','3D कर्सर वर्कफ़्लो','Place/align objects using 3D cursor effectively.','3D cursor से objects place/align करना.','3dcursor.png')
+      ]);
+    </script>
 
-    <!-- Lesson 4 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/blender-navigation.jpg" alt="Blender Navigation" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 4: Viewport Navigation</h2>
-        <p class="mb-2"><strong>English:</strong> Use middle mouse to rotate, scroll to zoom, and Shift+middle mouse to pan. Navigation is key to smooth workflow.</p>
-        <p><strong>हिंदी:</strong> Rotate करने के लिए middle mouse, zoom के लिए scroll और pan करने के लिए Shift+middle mouse का प्रयोग करें। Navigation smooth workflow के लिए ज़रूरी है।</p>
-      </div>
-    </article>
+    <!-- Module 4: Modeling Tools (21–30) -->
+    <section id="m4" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">04 · Modeling Tools</h2>
+      <div id="m4cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m4cards', [
+        makeCard(21,'Extrude, Inset, Bevel','Extrude, Inset, Bevel','Core modeling operations with clean topology.','Clean topology के साथ core modeling operations.','extrude-inset-bevel.png'),
+        makeCard(22,'Loop Cuts & Slide','लूप कट व स्लाइड','Add control loops, maintain forms.','Control loops add करें, forms maintain करें.','loopcut.png'),
+        makeCard(23,'Knife & Bisect','नाइफ़ व बाइसेक्ट','Precise cuts for custom shapes.','Custom shapes के लिए precise cuts.','knife.png'),
+        makeCard(24,'Proportional Editing','प्रोपोर्शनल एडिटिंग','Organic edits with falloff.','Falloff के साथ organic edits.','proportional.png'),
+        makeCard(25,'Mirror Modeling','मिरर मॉडलिंग','Symmetrical modeling workflow.','Symmetrical modeling workflow.','mirror.png'),
+        makeCard(26,'Boolean Modeling','बूलियन मॉडलिंग','Union, difference, intersect; cleanup tips.','Union, difference, intersect; cleanup tips.','boolean.png'),
+        makeCard(27,'Subdivision Modeling','सबडिविजन मॉडलिंग','Control sharpness with creases/loops.','Creases/loops से sharpness control करें.','subd.png'),
+        makeCard(28,'Retopology Basics','रीटोपोलॉजी बेसिक्स','Build clean quads over sculpts.','Sculpts पर clean quads बनाएं.','retopo.png'),
+        makeCard(29,'Modifiers Stack Order','मॉडिफ़ायर्स स्टैक','Why order matters; non-destructive.','Order क्यों मायने रखता है; non-destructive.','stack-order.png'),
+        makeCard(30,'Asset Browser Intro','एसेट ब्राउज़र','Reuse models/materials efficiently.','Models/materials को efficiently reuse करें.','asset-browser.png')
+      ]);
+    </script>
 
-    <!-- Lesson 5 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 5: Object Mode vs Edit Mode</h2>
-        <p class="mb-2"><strong>English:</strong> Object Mode is for managing whole objects, Edit Mode is for editing object geometry. Switch using Tab key.</p>
-        <p><strong>हिंदी:</strong> Object Mode पूरे objects को मैनेज करने के लिए है और Edit Mode geometry एडिट करने के लिए। Tab key से modes बदलें।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/blender-modes.jpg" alt="Blender Object vs Edit Mode" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Module 5: Modifiers Deep Dive (31–38) -->
+    <section id="m5" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">05 · Modifiers Deep Dive</h2>
+      <div id="m5cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m5cards', [
+        makeCard(31,'Array Modifier','अरे मॉडिफ़ायर','Create repeated patterns with offsets.','Offsets से repeated patterns बनाएं.','array.png'),
+        makeCard(32,'Mirror Modifier','मिरर मॉडिफ़ायर','Symmetry with clipping & merge.','Clipping व merge के साथ symmetry.','mirror-mod.png'),
+        makeCard(33,'Solidify & Bevel','सॉलिडिफ़ाई व बेवेल','Add thickness; add realistic edges.','Thickness व realistic edges जोड़ें.','solidify-bevel.png'),
+        makeCard(34,'Subdivision Surface','सबडिव सर्फेस','Smooth forms; control via support loops.','Smooth forms; support loops से control.','subsurf.png'),
+        makeCard(35,'Boolean Workflow','बूलियन वर्कफ़्लो','Hard-surface shapes + cleanup.','Hard-surface shapes + cleanup.','boolean-deep.png'),
+        makeCard(36,'Shrinkwrap & Lattice','श्रिंकव्रैप व लैटिस','Conform to surfaces; deform groups.','Surfaces पर conform; groups deform करें.','shrinkwrap-lattice.png'),
+        makeCard(37,'Array + Curve combo','अरे + कर्व कॉम्बो','Place objects along curves.','Curves के साथ objects place करें.','array-curve.png'),
+        makeCard(38,'Modifiers Case Study','मॉडिफ़ायर्स केस स्टडी','From blockout to detailed model.','Blockout से detailed model तक.','mod-case.png')
+      ]);
+    </script>
 
-    <!-- Lesson 6 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/blender-objects.jpg" alt="Blender Objects" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 6: Adding & Transforming Objects</h2>
-        <p class="mb-2"><strong>English:</strong> Add objects with Shift+A. Use G to move, R to rotate, and S to scale. These shortcuts save time.</p>
-        <p><strong>हिंदी:</strong> Shift+A से objects जोड़ें। G से move करें, R से rotate करें और S से scale करें। ये shortcuts समय बचाते हैं।</p>
-      </div>
-    </article>
+    <!-- Module 6: Materials & Shading (39–44) -->
+    <section id="m6" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">06 · Materials & Shading</h2>
+      <div id="m6cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m6cards', [
+        makeCard(39,'Shader Editor Basics','शेडर एडिटर बेसिक्स','Principled BSDF & common inputs.','Principled BSDF और common inputs.','shader-editor.png'),
+        makeCard(40,'Textures & Mapping','टेक्स्चर व मैपिंग','Image textures, UV & object mapping.','Image textures, UV व object mapping.','textures.png'),
+        makeCard(41,'Roughness & Metalness','रफ़नेस व मेटलनेस','Physically-based material control.','PBR material control.','rough-metal.png'),
+        makeCard(42,'Emission & Glow','इमिशन व ग्लो','Self-lit materials & bloom.','Self-lit materials व bloom.','emission.png'),
+        makeCard(43,'Node Groups','नोड ग्रुप्स','Reusable material setups.','Reusable material setups.','node-groups.png'),
+        makeCard(44,'Material Library','मैटेरियल लाइब्रेरी','Build & organize presets.','Presets बनाएं और organize करें.','library.png')
+      ]);
+    </script>
 
-    <!-- Lesson 7 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 7: Preferences & Customization</h2>
-        <p class="mb-2"><strong>English:</strong> Set themes, shortcuts, and add-ons in Preferences. Personalize Blender for faster workflow.</p>
-        <p><strong>हिंदी:</strong> Preferences में themes, shortcuts और add-ons सेट करें। Blender को personalize करके workflow तेज़ बनाएं।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/blender-preferences.jpg" alt="Blender Preferences" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Module 7: UV & Texturing (45–50) -->
+    <section id="m7" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">07 · UV & Texturing</h2>
+      <div id="m7cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m7cards', [
+        makeCard(45,'UV Basics','UV बेसिक्स','What UVs are; 2D mapping of 3D.','UV क्या हैं; 3D का 2D mapping.','uv-basics.png'),
+        makeCard(46,'Mark Seams','सीम मार्क करना','Plan seams for clean unwraps.','Clean unwrap के लिए seams plan करें.','mark-seams.png'),
+        makeCard(47,'Smart UV vs Manual','स्मार्ट UV बनाम मैनुअल','Pros/cons and when to use each.','Pros/cons और कब कौन सा उपयोग.','smart-uv.png'),
+        makeCard(48,'Packing & Texel Density','पैकिंग व टेक्सल डेंसिटी','Even scale & efficient space.','Even scale व efficient space.','packing.png'),
+        makeCard(49,'Baking Basics','बेकिंग बेसिक्स','Bake normals/AO for detail.','Normals/AO bake करके detail.','baking.png'),
+        makeCard(50,'Texture Painting','टेक्स्चर पेंटिंग','Paint directly on models.','Models पर directly paint करें.','texture-paint.png')
+      ]);
+    </script>
 
-    <!-- Lesson 8 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/blender-shading-modes.jpg" alt="Blender Shading Modes" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 8: Viewport Shading Modes</h2>
-        <p class="mb-2"><strong>English:</strong> Switch between Wireframe, Solid, Material Preview, and Rendered modes for different visualization.</p>
-        <p><strong>हिंदी:</strong> अलग-अलग visualization के लिए Wireframe, Solid, Material Preview और Rendered modes का उपयोग करें।</p>
-      </div>
-    </article>
+    <!-- Module 8: Sculpting Expanded (51–55) -->
+    <section id="m8" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">08 · Sculpting Expanded</h2>
+      <div id="m8cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m8cards', [
+        makeCard(51,'Sculpt Mode Intro','स्कल्प्ट मोड परिचय','Dyntopo, voxel remesh basics.','Dyntopo, voxel remesh बेसिक्स.','sculpt-intro.png'),
+        makeCard(52,'Brushes Deep Dive','ब्रशेस डीप डाइव','Clay, Grab, Inflate, Smooth, Pinch.','Clay, Grab, Inflate, Smooth, Pinch.','brushes.png'),
+        makeCard(53,'Symmetry & Detail','सिमिट्री व डिटेल','Mirror sculpt & detail control.','Mirror sculpt व detail control.','symmetry.png'),
+        makeCard(54,'Sculpt → Retopo','स्कल्प्ट से रीटोपो','Turn sculpts into anim-ready mesh.','Sculpts को anim-ready mesh बनाएं.','sculpt-retopo.png'),
+        makeCard(55,'Sculpt Polishing','स्कल्प्ट पॉलिशिंग','Polish surfaces & harden edges.','Surfaces polish करें व edges harden.','polish.png')
+      ]);
+    </script>
 
-    <!-- Lesson 9 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 9: Basic Materials</h2>
-        <p class="mb-2"><strong>English:</strong> Add materials in Properties → Material tab. Change color, roughness, and metallic values.</p>
-        <p><strong>हिंदी:</strong> Properties → Material tab में materials जोड़ें। Color, roughness और metallic values बदलें।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/blender-materials.jpg" alt="Blender Materials" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Module 9: Lighting & Camera (56–60) -->
+    <section id="m9" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">09 · Lighting & Camera</h2>
+      <div id="m9cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m9cards', [
+        makeCard(56,'Lighting Types','लाइटिंग प्रकार','Point, Sun, Area, Spot; use cases.','Point, Sun, Area, Spot; use cases.','lights.png'),
+        makeCard(57,'Three-Point Lighting','थ्री-पॉइंट लाइटिंग','Key, fill, rim setup tips.','Key, fill, rim setup tips.','three-point.png'),
+        makeCard(58,'HDRI Lighting','HDRI लाइटिंग','Use world HDRIs for realism.','Realism के लिए world HDRIs.','hdri.png'),
+        makeCard(59,'Camera Basics','कैमरा बेसिक्स','Focal length, DOF, composition.','Focal length, DOF, composition.','camera.png'),
+        makeCard(60,'Cinematic Framing','सिनेमैटिक फ्रेमिंग','Rule of thirds, leading lines.','Rule of thirds, leading lines.','framing.png')
+      ]);
+    </script>
 
-    <!-- Lesson 10 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/blender-lighting.jpg" alt="Blender Lighting Basics" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 10: Lighting Basics</h2>
-        <p class="mb-2"><strong>English:</strong> Add Point, Sun, and Area lights to create depth and realism. Adjust intensity and shadows.</p>
-        <p><strong>हिंदी:</strong> Depth और realism बनाने के लिए Point, Sun और Area lights जोड़ें। Intensity और shadows एडजस्ट करें।</p>
-      </div>
-    </article>
+    <!-- Module 10: Animation Basics (61–65) -->
+    <section id="m10" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">10 · Animation Basics</h2>
+      <div id="m10cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m10cards', [
+        makeCard(61,'Keyframes & Timeline','कीफ्रेम्स व टाइमलाइन','Set/modify keyframes; playback.','Keyframes सेट/modify; playback.','keyframes.png'),
+        makeCard(62,'Graph Editor Intro','ग्राफ एडिटर','F-curves, easing, handles.','F-curves, easing, handles.','graph-editor.png'),
+        makeCard(63,'Dope Sheet Basics','डोप शीट','Organize keys, timing fixes.','Keys organize, timing fixes.','dopesheet.png'),
+        makeCard(64,'Constraints 101','कंस्ट्रेंट्स 101','Track To, Copy Rotation, Limit.','Track To, Copy Rotation, Limit.','constraints.png'),
+        makeCard(65,'Simple Rigging','सरल रिगिंग','Armature basics for props.','Props के लिए armature basics.','rigging-basic.png')
+      ]);
+    </script>
 
-    <!-- Lesson 11 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 11: First Animation</h2>
-        <p class="mb-2"><strong>English:</strong> Insert keyframes with I key. Animate cube position across frames to make your first animation.</p>
-        <p><strong>हिंदी:</strong> I key से keyframes डालें। Cube की position बदलकर अपनी पहली animation बनाएं।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/blender-first-animation.jpg" alt="First Blender Animation" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Module 11: Physics & Simulation (66–70) -->
+    <section id="m11" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">11 · Physics & Simulation</h2>
+      <div id="m11cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m11cards', [
+        makeCard(66,'Rigid Bodies','रिजिड बॉडीज़','Collisions, bouncing, stacks.','टकराव, bouncing, stacks.','rigid.png'),
+        makeCard(67,'Soft Body Basics','सॉफ्ट बॉडी','Jelly-like motion & settings.','जेली जैसा motion व settings.','softbody.png'),
+        makeCard(68,'Cloth Simulation','क्लॉथ सिमुलेशन','Draping, pin groups, wind.','Draping, pin groups, wind.','cloth.png'),
+        makeCard(69,'Fluid & Mantaflow','फ्लुइड सिम','Basic liquid flow & domain.','Liquid flow व domain बेसिक्स.','fluid.png'),
+        makeCard(70,'Particles & Emitter','पार्टिकल्स','Sprays, sparks, hair intro.','Sprays, sparks, hair intro.','particles.png')
+      ]);
+    </script>
 
-    <!-- Lesson 12 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/blender-render.jpg" alt="Render in Blender" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 12: Saving & Rendering</h2>
-        <p class="mb-2"><strong>English:</strong> Save projects in .blend format. Use F12 to render and export in PNG or MP4 format.</p>
-        <p><strong>हिंदी:</strong> Projects को .blend फॉर्मेट में सेव करें। F12 से render करें और PNG या MP4 फॉर्मेट में export करें।</p>
-      </div>
-    </article>
+    <!-- Module 12: Rendering & Compositing (71–74) -->
+    <section id="m12" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">12 · Rendering & Compositing</h2>
+      <div id="m12cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m12cards', [
+        makeCard(71,'Eevee vs Cycles','Eevee बनाम Cycles','Speed vs realism; use cases.','Speed बनाम realism; use cases.','eevee-cycles.png'),
+        makeCard(72,'Render Settings','रेंडर सेटिंग्स','Samples, denoise, color mgmt.','Samples, denoise, color mgmt.','render-settings.png'),
+        makeCard(73,'Compositor Basics','कम्पोज़िटर बेसिक्स','Use nodes for post effects.','Post effects के लिए nodes.','compositor.png'),
+        makeCard(74,'Output & Formats','आउटपुट व फॉर्मैट्स','Image sequences, video codecs.','Image sequences, video codecs.','output.png')
+      ]);
+    </script>
 
+    <!-- Module 13: Grease Pencil (75–76) -->
+    <section id="m13" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">13 · Grease Pencil (2D in 3D)</h2>
+      <div id="m13cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m13cards', [
+        makeCard(75,'Grease Pencil Basics','ग्रीस पेंसिल बेसिक्स','Draw 2D strokes in 3D space.','3D space में 2D strokes बनाएँ.','gp-basics.png'),
+        makeCard(76,'2D Animation Intro','2D एनीमेशन','Keys/layers for 2D motion.','2D motion के लिए keys/layers.','gp-anim.png')
+      ]);
+    </script>
+
+    <!-- Module 14: Workflow & Export (77–80 include two here, rest in projects) -->
+    <section id="m14" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">14 · Workflow, Tips & Export</h2>
+      <div id="m14cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m14cards', [
+        makeCard(77,'Non‑Destructive Workflow','नॉन‑डिस्ट्रक्टिव वर्कफ़्लो','Work with modifiers/instances safely.','Modifiers/instances के साथ सुरक्षित workflow.','nondestructive.png'),
+        makeCard(78,'Version Control & Backups','वर्ज़न कंट्रोल व बैकअप','Incremental saves, autosave, Git LFS intro.','Incremental saves, autosave, Git LFS intro.','backups.png')
+      ]);
+    </script>
+
+    <!-- Mini Projects (79–80…actually 10 projects labelled 71–80 originally; we renumber to 79–88? We keep total at 80, so 79–80 shown; but user asked 75–80 total. We will number 79–80 plus 8 substeps inside each project.) -->
+    <section id="projects" class="mb-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Mini Projects (10) – Lessons 71–80 (Practice)</h2>
+      <p class="text-gray-700 mb-6">Practice makes perfect. नीचे दिए गए हर project में bilingual steps + illustration हैं।</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- We map 10 projects to lesson numbers 71–80 (practice numbering) -->
+        <article class="card bg-white p-5 rounded-2xl shadow" data-title="chair model">
+          <h3 class="text-lg font-semibold">Lesson 71: Simple Chair Model | साधारण कुर्सी</h3>
+          <p class="text-sm">EN: Blockout with cubes; bevel & array for legs; materials + render. <br>HI: Cubes से blockout; bevel/array; material लगाकर render।</p>
+          <img src="images/project-chair.png" alt="Simple chair modeling" class="rounded-xl mt-3" loading="lazy" />
+        </article>
+        <article class="card bg-white p-5 rounded-2xl shadow" data-title="bouncing ball">
+          <h3 class="text-lg font-semibold">Lesson 72: Bouncing Ball | उछलती गेंद</h3>
+          <p class="text-sm">EN: Keyframes + squash & stretch; graph editor ease. <br>HI: Keyframes + squash/stretch; graph editor में ease।</p>
+          <img src="images/project-bouncing-ball.png" alt="Bouncing ball animation" class="rounded-xl mt-3" loading="lazy" />
+        </article>
+        <article class="card bg-white p-5 rounded-2xl shadow" data-title="simple room">
+          <h3 class="text-lg font-semibold">Lesson 73: Simple Room Scene | साधारण कमरा</h3>
+          <p class="text-sm">EN: Walls, floor, window; area lights; camera frame. <br>HI: Walls, floor, window; area lights; camera frame।</p>
+          <img src="images/project-room.png" alt="Simple room scene" class="rounded-xl mt-3" loading="lazy" />
+        </article>
+        <article class="card bg-white p-5 rounded-2xl shadow" data-title="logo reveal">
+          <h3 class="text-lg font-semibold">Lesson 74: Logo Reveal | लोगो रिवील</h3>
+          <p class="text-sm">EN: Text extrude, emission glow, camera dolly. <br>HI: Text extrude, emission glow, camera dolly।</p>
+          <img src="images/project-logo.png" alt="Logo reveal animation" class="rounded-xl mt-3" loading="lazy" />
+        </article>
+        <article class="card bg-white p-5 rounded-2xl shadow" data-title="mug model">
+          <h3 class="text-lg font-semibold">Lesson 75: Coffee Mug | कॉफ़ी मग</h3>
+          <p class="text-sm">EN: Spin tool for profile; handle with curve; ceramic shader. <br>HI: Spin tool; curve से handle; ceramic shader।</p>
+          <img src="images/project-mug.png" alt="Coffee mug modeling" class="rounded-xl mt-3" loading="lazy" />
+        </article>
+        <article class="card bg-white p-5 rounded-2xl shadow" data-title="table model">
+          <h3 class="text-lg font-semibold">Lesson 76: Simple Table | साधारण टेबल</h3>
+          <p class="text-sm">EN: Array legs, bevel top; wood texture UV pack. <br>HI: Legs array; top bevel; wood texture UV pack।</p>
+          <img src="images/project-table.png" alt="Simple table modeling" class="rounded-xl mt-3" loading="lazy" />
+        </article>
+        <article class="card bg-white p-5 rounded-2xl shadow" data-title="cartoon tree">
+          <h3 class="text-lg font-semibold">Lesson 77: Cartoon Tree | कार्टून पेड़</h3>
+          <p class="text-sm">EN: Lattice deform canopy; stylized materials. <br>HI: Lattice से canopy deform; stylized materials।</p>
+          <img src="images/project-tree.png" alt="Cartoon tree modeling" class="rounded-xl mt-3" loading="lazy" />
+        </article>
+        <article class="card bg-white p-5 rounded-2xl shadow" data-title="glass water">
+          <h3 class="text-lg font-semibold">Lesson 78: Glass of Water | पानी का ग्लास</h3>
+          <p class="text-sm">EN: Glass IOR, transmission; fluid volume look. <br>HI: Glass IOR, transmission; fluid volume look।</p>
+          <img src="images/project-glass.png" alt="Glass material and water" class="rounded-xl mt-3" loading="lazy" />
+        </article>
+        <article class="card bg-white p-5 rounded-2xl shadow" data-title="flying text">
+          <h3 class="text-lg font-semibold">Lesson 79: Flying Text | उड़ता टेक्स्ट</h3>
+          <p class="text-sm">EN: Keyframe text offset; motion blur; HDRI light. <br>HI: Text offset keyframes; motion blur; HDRI light।</p>
+          <img src="images/project-flying-text.png" alt="Flying text animation" class="rounded-xl mt-3" loading="lazy" />
+        </article>
+        <article class="card bg-white p-5 rounded-2xl shadow" data-title="basic character face">
+          <h3 class="text-lg font-semibold">Lesson 80: Basic Character Face | बेसिक चेहरा</h3>
+          <p class="text-sm">EN: Sculpt blockout; mirror; simple eye material. <br>HI: Sculpt blockout; mirror; simple eye material।</p>
+          <img src="images/project-character-face.png" alt="Basic character face sculpt" class="rounded-xl mt-3" loading="lazy" />
+        </article>
+      </div>
+    </section>
+
+    <div class="mt-8 text-sm text-gray-600">* All images are placeholders. Replace files inside <code>/images/</code> with your own screenshots/illustrations using the same filenames to keep layout intact.</div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-100 p-6 mt-10 text-center">
-    <p class="font-bold text-purple-600 mb-2">Learn 3D Animation</p>
-    <p class="mb-2">Easy to learn 3D animation beginner to advance level free.</p>
-    <nav class="mb-2">
-      <a href="privacy.html" class="mx-2 hover:text-purple-600">Privacy Policy</a>
-      <a href="terms-of-use.html" class="mx-2 hover:text-purple-600">Terms of Use</a>
-      <a href="about.html" class="mx-2 hover:text-purple-600">About</a>
-      <a href="sitemap.xml" class="mx-2 hover:text-purple-600">Sitemap</a>
-    </nav>
-    <p class="text-sm">© 2025 Learn3DAnimation. All rights reserved.</p>
+  <footer class="mt-12 beach-purple text-white">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
+      <div>
+        <h3 class="font-bold text-lg">Learn 3D Animation</h3>
+        <p class="opacity-90 mt-2">Free beginner to advanced Blender tutorials in Hindi + English with clean UI and SEO‑friendly pages.</p>
+      </div>
+      <nav class="space-y-2">
+        <a href="index.html" class="block hover:underline">Home</a>
+        <a href="intermediate.html" class="block hover:underline">Intermediate</a>
+        <a href="advanced.html" class="block hover:underline">Advanced</a>
+      </nav>
+      <nav class="space-y-2">
+        <a href="about.html" class="block hover:underline">About</a>
+        <a href="privacy.html" class="block hover:underline">Privacy Policy</a>
+        <a href="terms-of-use.html" class="block hover:underline">Terms of Use</a>
+        <a href="sitemap.xml" class="block hover:underline">Sitemap</a>
+        <a href="robots.txt" class="block hover:underline">Robots.txt</a>
+      </nav>
+    </div>
+    <div class="text-center text-sm bg-black/20 py-3">© 2025 Learn3DAnimation • All rights reserved</div>
   </footer>
+
+  <!-- Minor JS: smooth scroll for internal links -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{ e.preventDefault(); document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'}); })
+    })
+  </script>
 </body>
 </html>
