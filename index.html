@@ -48,32 +48,55 @@
       <input type="text" id="search" placeholder="Search a section..." class="w-full md:w-1/2 border rounded-lg p-2 shadow" onkeyup="filterSections()">
     </section>
 
-    <section id="sections" class="grid gap-6 md:grid-cols-2">
-      <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
-        <h2 class="text-2xl font-semibold mb-2">How to Download Blender Software</h2>
-        <p class="mb-4">Step-by-step guide to download and install Blender on your system.</p>
-        <a href="beginner.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Learn More</a>
-      </article>
-      <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
-        <h2 class="text-2xl font-semibold mb-2">Blender Software Interface</h2>
-        <p class="mb-4">Understand Blender’s UI layout and customize it for efficiency.</p>
-        <a href="beginner.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Learn More</a>
-      </article>
-      <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
-        <h2 class="text-2xl font-semibold mb-2">Blender Tools Explained</h2>
-        <p class="mb-4">Learn all major Blender tools and their functions for 3D creation.</p>
-        <a href="intermediate.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Learn More</a>
-      </article>
-      <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
-        <h2 class="text-2xl font-semibold mb-2">Blender Shortcut Keys & Cheatsheet</h2>
-        <p class="mb-4">Boost productivity with Blender’s essential shortcuts.</p>
-        <a href="intermediate.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Learn More</a>
-      </article>
-      <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
-        <h2 class="text-2xl font-semibold mb-2">3D Animation Course (Beginner → Advanced)</h2>
-        <p class="mb-4">Complete 3D Animation course covering fundamentals to expert techniques.</p>
-        <a href="advanced.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Start Course</a>
-      </article>
+    <!-- Beginner Section -->
+    <section id="beginner" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-6 text-orange-600">Beginner Course</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-2">How to Download Blender</h3>
+          <p class="mb-4">Step-by-step guide to download and install Blender for beginners.</p>
+          <a href="beginner.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Start Beginner Course</a>
+        </article>
+        <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-2">Blender Interface Basics</h3>
+          <p class="mb-4">Get familiar with Blender’s interface, panels, and navigation tools.</p>
+          <a href="beginner.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Explore Lessons</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Intermediate Section -->
+    <section id="intermediate" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-6 text-orange-600">Intermediate Course</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-2">Modeling & Modifiers</h3>
+          <p class="mb-4">Learn detailed modeling, using modifiers, and creating complex shapes.</p>
+          <a href="intermediate.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Start Intermediate Course</a>
+        </article>
+        <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-2">UV Mapping & Texturing</h3>
+          <p class="mb-4">Understand UV unwrapping and apply realistic textures to models.</p>
+          <a href="intermediate.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Explore Lessons</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Advanced Section -->
+    <section id="advanced" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-6 text-orange-600">Advanced Course</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-2">Physics & Simulations</h3>
+          <p class="mb-4">Dive into advanced physics simulations like cloth, smoke, and fluids.</p>
+          <a href="advanced.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Start Advanced Course</a>
+        </article>
+        <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-2">Cinematic Rendering</h3>
+          <p class="mb-4">Master lighting, rendering engines, and cinematic effects for projects.</p>
+          <a href="advanced.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Explore Lessons</a>
+        </article>
+      </div>
     </section>
   </main>
 
@@ -92,7 +115,7 @@
   <script>
     function filterSections() {
       let input = document.getElementById('search').value.toLowerCase();
-      let sections = document.querySelectorAll('#sections article');
+      let sections = document.querySelectorAll('section article');
       sections.forEach(sec => {
         let text = sec.innerText.toLowerCase();
         sec.style.display = text.includes(input) ? '' : 'none';
@@ -101,6 +124,3 @@
   </script>
 </body>
 </html>
-
-<!-- beginner.html, intermediate.html, advanced.html, about.html, privacy.html, terms-of-use.html, robots.txt, sitemap.xml -->
-<!-- Use the same style as index.html; detailed course content with theory + placeholders already described in previous prompts. -->
