@@ -1,32 +1,57 @@
-<!-- intermediate.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Intermediate Blender Course | Learn 3D Animation</title>
-  <meta name="description" content="Intermediate Blender Course – Learn modifiers, sculpting, UV mapping, materials, lighting, camera, and rendering. Bilingual tutorials (English + Hindi).">
-  <meta name="keywords" content="Blender Intermediate Course, Blender Modifiers, Blender Sculpting, Blender Tutorials Hindi, Blender Tutorials English">
-  <link rel="icon" href="/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <meta property="og:title" content="Intermediate Blender Course | Learn 3D Animation">
-  <meta property="og:description" content="Step-by-step Intermediate Blender Course in English and Hindi. Learn sculpting, UV mapping, lighting, and more.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.github.io/intermediate.html">
-  <meta property="og:image" content="https://yourdomain.github.io/og-intermediate.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Intermediate Blender Course | Learn 3D Animation">
-  <meta name="twitter:description" content="Free Intermediate Blender Course with Hindi + English tutorials.">
-  <meta name="twitter:image" content="https://yourdomain.github.io/og-intermediate.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intermediate Blender Course (125+ Lessons) | Learn 3D Animation</title>
+  <meta name="description" content="Intermediate Blender course with 100+ bilingual lessons: modeling, UVs, shading, lighting, rigging, animation, physics, sculpting, compositing, and projects." />
+  <meta name="keywords" content="Blender intermediate course, Blender Hindi English, Blender modeling advanced, Blender UV unwrapping, Blender rigging, Blender graph editor, cloth simulation, cycles rendering" />
+  <meta property="og:title" content="Intermediate Blender Course (125+ Lessons) | Learn 3D Animation" />
+  <meta property="og:description" content="Deep, bilingual (Hindi + English) intermediate Blender lessons with images, SEO, and projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/blender-intermediate-banner.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Intermediate Blender Course (125+ Lessons)" />
+  <meta name="twitter:description" content="125+ step-by-step intermediate Blender lessons with mini-projects." />
+  <link rel="canonical" href="https://learn3danimation.com/intermediate.html" />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Tailwind CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body{font-family:'Poppins',sans-serif}
+    .beach-purple{background-image:linear-gradient(135deg,#7c3aed 0%,#9333ea 25%,#a855f7 50%,#06b6d4 100%)}
+    .card{transition:transform .25s ease, box-shadow .25s ease}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.15)}
+    .chip{border:1px solid rgba(255,255,255,.35)}
+    .sticky-cta{backdrop-filter:saturate(160%) blur(6px)}
+  </style>
+  <!-- JSON-LD Course Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Course",
+    "name":"Intermediate Blender Course (125+ Lessons)",
+    "description":"Bilingual (Hindi+English) intermediate Blender course with modeling, UVs, shading, lighting, rigging, animation, physics, sculpting, compositing, and projects.",
+    "provider":{"@type":"Organization","name":"Learn3DAnimation","sameAs":"https://learn3danimation.com"},
+    "inLanguage":["en","hi"],
+    "url":"https://learn3danimation.com/intermediate.html"
+  }
+  </script>
 </head>
-<body class="font-[Poppins] bg-white text-gray-800">
-  <!-- Header -->
-  <header class="sticky top-0 bg-white shadow z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
-      <a href="index.html" class="text-xl font-bold text-purple-600">Learn 3D Animation</a>
-      <nav class="space-x-4 hidden md:block">
-        <a href="index.html" class="hover:text-purple-600">Home</a>
+<body class="bg-purple-50 text-gray-900">
+
+  <!-- Sticky Top Bar -->
+  <header class="sticky top-0 z-40 shadow-sm sticky-cta bg-white/90">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="w-8 h-8 rounded-xl beach-purple"></span>
+        <span class="font-bold">Learn 3D Animation</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#toc" class="hover:text-purple-600">Modules</a>
+        <a href="#projects" class="hover:text-purple-600">Projects</a>
         <a href="beginner.html" class="hover:text-purple-600">Beginner</a>
         <a href="advanced.html" class="hover:text-purple-600">Advanced</a>
         <a href="about.html" class="hover:text-purple-600">About</a>
@@ -34,204 +59,413 @@
     </div>
   </header>
 
-  <!-- Banner -->
-  <section class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-16 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Intermediate Blender Course</h1>
-    <p class="text-lg">Move beyond basics – English & Hindi tutorials with images.</p>
+  <!-- Hero Banner -->
+  <section class="beach-purple text-white">
+    <div class="max-w-7xl mx-auto px-6 py-12 text-center">
+      <h1 class="text-3xl md:text-5xl font-extrabold">Intermediate Blender Course – 125+ Lessons (Hindi + English)</h1>
+      <p class="mt-3 text-lg md:text-xl opacity-95">Level up your 3D skills: advanced modeling, UVs, materials, lighting, rigging, animation controls, physics, rendering, compositing & more.</p>
+      <div class="mt-6 flex flex-wrap gap-2 justify-center">
+        <span class="chip px-3 py-1 rounded-full text-sm">SEO-Optimized</span>
+        <span class="chip px-3 py-1 rounded-full text-sm">Mobile-First</span>
+        <span class="chip px-3 py-1 rounded-full text-sm">Illustrations Included</span>
+      </div>
+      <div class="mt-6 max-w-2xl mx-auto">
+        <label class="sr-only" for="search">Search lessons</label>
+        <input id="search" type="search" placeholder="Search lessons… (e.g., Retopo, Cloth, Graph Editor)" class="w-full rounded-2xl px-5 py-3 text-gray-800 shadow focus:ring-2 focus:ring-purple-500" oninput="filterLessons(this.value)" />
+      </div>
+    </div>
   </section>
 
-  <!-- Lessons -->
-  <main class="max-w-5xl mx-auto p-6 space-y-12">
+  <main class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-10">
+    <!-- Table of Contents -->
+    <section id="toc" class="mb-10">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Modules (Click to jump)</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <a href="#m1" class="card bg-white p-4 rounded-2xl shadow">01. Intermediate Modeling</a>
+        <a href="#m2" class="card bg-white p-4 rounded-2xl shadow">02. Modifiers Advanced</a>
+        <a href="#m3" class="card bg-white p-4 rounded-2xl shadow">03. UV & Baking</a>
+        <a href="#m4" class="card bg-white p-4 rounded-2xl shadow">04. Shading & Materials</a>
+        <a href="#m5" class="card bg-white p-4 rounded-2xl shadow">05. Lighting Advanced</a>
+        <a href="#m6" class="card bg-white p-4 rounded-2xl shadow">06. Animation Intermediate</a>
+        <a href="#m7" class="card bg-white p-4 rounded-2xl shadow">07. Rigging & Weights</a>
+        <a href="#m8" class="card bg-white p-4 rounded-2xl shadow">08. Physics Expanded</a>
+        <a href="#m9" class="card bg-white p-4 rounded-2xl shadow">09. Sculpting Deep Dive</a>
+        <a href="#m10" class="card bg-white p-4 rounded-2xl shadow">10. Grease Pencil 2D/3D</a>
+        <a href="#m11" class="card bg-white p-4 rounded-2xl shadow">11. Rendering & Compositing</a>
+        <a href="#m12" class="card bg-white p-4 rounded-2xl shadow">12. Workflow & Optimization</a>
+        <a href="#m13" class="card bg-white p-4 rounded-2xl shadow">13. Geometry Nodes Essentials</a>
+        <a href="#m14" class="card bg-white p-4 rounded-2xl shadow">14. Constraints & Motion Paths</a>
+        <a href="#m15" class="card bg-white p-4 rounded-2xl shadow">15. Game Engine Export</a>
+        <a href="#projects" class="card bg-white p-4 rounded-2xl shadow">Mini Projects (15)</a>
+      </div>
+    </section>
 
-    <!-- Lesson 1 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 1: Modifiers Introduction</h2>
-        <p class="mb-2"><strong>English:</strong> Modifiers are non-destructive tools that automate tasks like mirroring, subdivision, and boolean operations.</p>
-        <p><strong>हिंदी:</strong> Modifiers non-destructive tools हैं जो mirroring, subdivision और boolean operations जैसे tasks को आसान बनाते हैं।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/intermediate-modifiers.jpg" alt="Blender Modifiers" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Utilities -->
+    <script>
+      function makeCard(n, titleEN, titleHI, descEN, descHI, img){
+        return `
+        <article class=\"card bg-white p-5 rounded-2xl shadow\" data-title=\"${titleEN.toLowerCase()} ${titleHI.toLowerCase()}\">
+          <h3 class=\"text-lg md:text-xl font-semibold mb-1\">Lesson ${n}: ${titleEN} | ${titleHI}</h3>
+          <p class=\"text-gray-700 text-sm md:text-base\">English: ${descEN}<br><span class=\"text-gray-800\">हिंदी:</span> ${descHI}</p>
+          <img src=\"images/${img}\" alt=\"${titleEN} illustration\" loading=\"lazy\" class=\"mt-3 rounded-xl\"/>
+        </article>`;
+      }
+      function inject(id, cards){
+        document.addEventListener('DOMContentLoaded',()=>{
+          const el=document.getElementById(id); if(!el) return; el.innerHTML=cards.join('');
+        })
+      }
+      function filterLessons(q){
+        const cards=[...document.querySelectorAll('[data-title]')];
+        const term=(q||'').trim().toLowerCase();
+        cards.forEach(c=>{ c.style.display = !term || c.dataset.title.includes(term) ? '' : 'none'; });
+      }
+    </script>
 
-    <!-- Lesson 2 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/intermediate-subdivision.jpg" alt="Subdivision Surface Modifier" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 2: Subdivision Surface Modifier</h2>
-        <p class="mb-2"><strong>English:</strong> Smooth your model with Subdivision Surface. Higher levels create more geometry for detail.</p>
-        <p><strong>हिंदी:</strong> Subdivision Surface modifier से model को smooth करें। High levels ज्यादा geometry जोड़ते हैं।</p>
-      </div>
-    </article>
+    <!-- Module 1: Intermediate Modeling (1–10) -->
+    <section id="m1" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">01 · Intermediate Modeling</h2>
+      <div id="m1cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m1cards', [
+        makeCard(1,'Topology Principles','टोपोलॉजी सिद्धांत','Quad-based topology, edge flow for deformation.','Quad topology, deformation-friendly edge flow.','topology.png'),
+        makeCard(2,'Blockout to Detail','ब्लॉकआउट से डिटेल','Iterative refinement from primitives to complex forms.','Primitives से complex forms तक iterative refinement.','blockout.png'),
+        makeCard(3,'Reference Setup','रेफ़रेंस सेटअप','Use image planes, set scale, align orthographic views.','Image planes, scale और ortho views सेट करें.','reference.png'),
+        makeCard(4,'Advanced Extrusion','एडवांस्ड एक्सट्रूज़न','Extrude along normals, alt-extrude, inset strategies.','Normals के along extrude, alt-extrude, inset tips.','extrude-adv.png'),
+        makeCard(5,'Creases & Sharpening','क्रीज़ व शार्पनिंग','Control support loops vs edge crease values.','Support loops बनाम edge crease values नियंत्रित करें.','crease.png'),
+        makeCard(6,'Symmetry Management','सिमिट्री मैनेजमेंट','Mirror with bisect; apply transforms cleanly.','Mirror + bisect; transforms correctly apply करें.','symmetry.png'),
+        makeCard(7,'Surface Continuity','सरफेस कंटिन्युटी','Maintain smoothing across joins; weighted normals.','Joins पर smoothness; weighted normals.','continuity.png'),
+        makeCard(8,'Kitbashing','किटबैशिंग','Combine reusable parts to speed modeling.','Reusable parts से modeling तेज करें.','kitbash.png'),
+        makeCard(9,'Subdivision Strategy','सबडिविजन रणनीति','Plan topology for sub-d surfaces.','Sub-d के लिए topology planning.','subd-strategy.png'),
+        makeCard(10,'Hard-Surface Essentials','हार्ड-सर्फेस','Panel cuts, chamfers, booleans cleanup.','Panel cuts, chamfers, booleans cleanup.','hardsurface.png')
+      ]);
+    </script>
 
-    <!-- Lesson 3 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 3: Boolean Modifier</h2>
-        <p class="mb-2"><strong>English:</strong> Boolean modifier allows you to cut, union, or intersect objects. Useful for hard surface modeling.</p>
-        <p><strong>हिंदी:</strong> Boolean modifier objects को cut, union या intersect करने देता है। Hard surface modeling के लिए यह उपयोगी है।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/intermediate-boolean.jpg" alt="Boolean Modifier in Blender" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Module 2: Modifiers Advanced (11–20) -->
+    <section id="m2" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">02 · Modifiers Advanced</h2>
+      <div id="m2cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m2cards', [
+        makeCard(11,'Boolean Mastery','बूलियन मास्टरी','Speed up hard-surface with clean booleans.','Hard-surface को clean booleans से speed दें.','boolean-master.png'),
+        makeCard(12,'Array Techniques','अरे तकनीक','Radial arrays, nested arrays, instancing.','Radial/nested arrays, instancing.','array-adv.png'),
+        makeCard(13,'Curve Deform','कर्व डिफॉर्म','Sweep profiles along curves; rails.','Curves के along profiles sweep करें.','curve-deform.png'),
+        makeCard(14,'Lattice Deform','लैटिस डिफॉर्म','Global shape edits; stylization.','Global shape edits; stylization.','lattice.png'),
+        makeCard(15,'Shrinkwrap Tricks','श्रिंकव्रैप ट्रिक्स','Conform decals/plates to surfaces.','Decals/plates को surface पर conform करें.','shrinkwrap.png'),
+        makeCard(16,'Surface & Skin','सरफेस व स्किन','Generate organic bases for retopo.','Organic base mesh generate करें.','skin.png'),
+        makeCard(17,'Displace & Noise','डिस्प्लेस व नॉइज़','Procedural surface detail.','Procedural surface detail.','displace.png'),
+        makeCard(18,'Corrective Smooth','करेक्टिव स्मूथ','Fix pinching after deformation.','Deformation के बाद pinching ठीक करें.','corrective.png'),
+        makeCard(19,'Data Transfer','डेटा ट्रांसफर','Transfer normals/UVs between meshes.','Meshes में normals/UVs transfer करें.','datatransfer.png'),
+        makeCard(20,'Modifier Stack Tactics','स्टैक रणनीति','Ordering & apply rules for flexibility.','Ordering व apply rules से flexibility.','stack-tactics.png')
+      ]);
+    </script>
 
-    <!-- Lesson 4 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/intermediate-mirror.jpg" alt="Mirror Modifier Blender" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 4: Mirror Modifier</h2>
-        <p class="mb-2"><strong>English:</strong> Mirror modifier saves time by duplicating geometry across an axis.</p>
-        <p><strong>हिंदी:</strong> Mirror modifier geometry को axis के across duplicate करके समय बचाता है।</p>
-      </div>
-    </article>
+    <!-- Module 3: UV & Baking (21–30) -->
+    <section id="m3" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">03 · UV Unwrapping & Texture Baking</h2>
+      <div id="m3cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m3cards', [
+        makeCard(21,'Seam Planning','सीम प्लानिंग','Plan cuts to minimize distortion.','Distortion घटाने के लिए seams plan करें.','seams-plan.png'),
+        makeCard(22,'Unwrap Methods','अनरैप मेथड्स','Angle-based vs conformal unwrapping.','Angle-based बनाम conformal unwrap.','unwrap.png'),
+        makeCard(23,'Texel Density','टेक्सल डेंसिटी','Consistent detail across parts.','हर पार्ट में समान detail scale.','texel.png'),
+        makeCard(24,'UDIM Intro','UDIM परिचय','Tile-based UVs for complex assets.','Complex assets के लिए UDIM tiles.','udim.png'),
+        makeCard(25,'Packing Strategies','पैकिंग रणनीति','Efficient packing with margins.','Efficient packing व margins.','packing-uv.png'),
+        makeCard(26,'Normal/AO Baking','नॉर्मल/AO बेकिंग','High-to-low baking pipeline.','High-to-low baking pipeline.','bake-normal-ao.png'),
+        makeCard(27,'Curvature/Cavity','कर्वेचर/कैविटी','Maps to drive wear/edges.','Wear/edges के लिए maps.','curvature.png'),
+        makeCard(28,'Material ID Maps','मैटेरियल ID मैप्स','Speed texturing with ID islands.','ID islands से texturing तेज.','idmaps.png'),
+        makeCard(29,'Baking Errors Fix','बेकिंग एरर फिक्स','Ray distance, cage, skew fixes.','Ray distance, cage, skew fixes.','bake-fix.png'),
+        makeCard(30,'Exporting to Painter','पेंटर को एक्सपोर्ट','FBX/OBJ with proper naming.','FBX/OBJ proper naming के साथ.','export-painter.png')
+      ]);
+    </script>
 
-    <!-- Lesson 5 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 5: Sculpting Basics</h2>
-        <p class="mb-2"><strong>English:</strong> Sculpt mode is for organic shapes. Brushes like Grab, Clay, and Smooth help refine models.</p>
-        <p><strong>हिंदी:</strong> Sculpt mode organic shapes के लिए है। Grab, Clay और Smooth brushes models को refine करने में मदद करते हैं।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/intermediate-sculpting.jpg" alt="Blender Sculpting Basics" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Module 4: Shading & Materials (31–42) -->
+    <section id="m4" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">04 · Shading & Procedural Materials</h2>
+      <div id="m4cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m4cards', [
+        makeCard(31,'Node Editor Deep Dive','नोड एडिटर डीप डाइव','Mix/Layer shaders, math nodes.','Mix/Layer shaders, math nodes.','nodes-deep.png'),
+        makeCard(32,'PBR Workflow','PBR वर्कफ़्लो','Albedo/Metal/Rough/Normal pipeline.','Albedo/Metal/Rough/Normal pipeline.','pbr.png'),
+        makeCard(33,'Procedural Wood','प्रोसीजरल वुड','Noise, color ramps, mapping.','Noise, color ramps, mapping.','wood.png'),
+        makeCard(34,'Procedural Metal','प्रोसीजरल मेटल','Edge wear with curvature masks.','Curvature से edge wear.','metal.png'),
+        makeCard(35,'Glass & Caustics','ग्लास व कॉस्टिक्स','IOR, transmission, shadow tweaks.','IOR, transmission, shadow tweaks.','glass.png'),
+        makeCard(36,'SSS Skin Basics','SSS स्किन बेसिक्स','Subsurface for organic look.','Organic look के लिए subsurface.','sss.png'),
+        makeCard(37,'Emission & Volumes','इमिशन व वॉल्यूम्स','Neon signs, fog & god rays.','Neon signs, fog, god rays.','volumes.png'),
+        makeCard(38,'Node Groups & Assets','नोड ग्रुप्स/एसेट्स','Reusable materials via Asset Browser.','Asset Browser से reusable materials.','node-groups.png'),
+        makeCard(39,'Triplanar Mapping','ट्राइप्लानर मैपिंग','Texture without UV seams.','UV seams के बिना texturing.','triplanar.png'),
+        makeCard(40,'Detail Normals Blend','डिटेल नॉर्मल्स','Blend tileable detail normals.','Tileable detail normals blend.','detail-normal.png'),
+        makeCard(41,'Stylized Shading','स्टाइलाइज़्ड शेडिंग','Toon BSDF & rim light tricks.','Toon BSDF, rim light tricks.','toon.png'),
+        makeCard(42,'Shader Optimization','शेडर ऑप्टिमाइज़ेशन','Reduce nodes; reuse maps.','Nodes घटाएँ; maps reuse करें.','shader-opt.png')
+      ]);
+    </script>
 
-    <!-- Lesson 6 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/intermediate-dyntopo.jpg" alt="Dynamic Topology Sculpting" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 6: Dynamic Topology</h2>
-        <p class="mb-2"><strong>English:</strong> Dyntopo adds geometry dynamically while sculpting, allowing for more detail.</p>
-        <p><strong>हिंदी:</strong> Dyntopo sculpting के दौरान geometry को dynamically जोड़ता है, जिससे detail बढ़ती है।</p>
-      </div>
-    </article>
+    <!-- Module 5: Lighting Advanced (43–50) -->
+    <section id="m5" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">05 · Lighting Advanced</h2>
+      <div id="m5cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m5cards', [
+        makeCard(43,'HDRI Mastery','HDRI मास्टरी','Use HDRIs for natural lighting.','Natural lighting के लिए HDRIs.','hdri-master.png'),
+        makeCard(44,'Light Linking Basics','लाइट लिंकिंग','Control which lights affect objects.','कौन सी light किन objects पर पड़े, नियंत्रित करें.','light-link.png'),
+        makeCard(45,'IES Profiles','IES प्रोफाइल','Photometric lights for realism.','Realism के लिए photometric lights.','ies.png'),
+        makeCard(46,'Volumetric Lighting','वॉल्यूमेट्रिक लाइटिंग','Fog, beams, depth cues.','Fog, beams, depth cues.','volumetric.png'),
+        makeCard(47,'Interior Lighting','इंटीरियर लाइटिंग','Area lights, portals, bounces.','Area lights, portals, bounces.','interior.png'),
+        makeCard(48,'Exterior Lighting','एक्सटीरियर लाइटिंग','Sun/sky, time-of-day moods.','Sun/sky, time-of-day moods.','exterior.png'),
+        makeCard(49,'Cinematic Looks','सिनेमैटिक लुक्स','Color grading intent, LUTs.','Color grading, LUTs.','cinematic.png'),
+        makeCard(50,'Light Rigs & Presets','लाइट रिग्स','Reusable lighting setups.','Reusable lighting setups.','light-rigs.png')
+      ]);
+    </script>
 
-    <!-- Lesson 7 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 7: Retopology Basics</h2>
-        <p class="mb-2"><strong>English:</strong> Retopology is restructuring high-poly meshes into clean, low-poly models for animation.</p>
-        <p><strong>हिंदी:</strong> Retopology high-poly meshes को साफ, low-poly models में बदलता है ताकि animation smooth चले।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/intermediate-retopo.jpg" alt="Blender Retopology" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Module 6: Animation Intermediate (51–62) -->
+    <section id="m6" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">06 · Animation Intermediate</h2>
+      <div id="m6cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m6cards', [
+        makeCard(51,'Timing & Spacing','टाइमिंग व स्पेसिंग','Principles applied with F-curves.','F-curves के साथ principles.','timing.png'),
+        makeCard(52,'Graph Editor Mastery','ग्राफ एडिटर मास्टरी','Handles, tangents, cleanup.','Handles, tangents, cleanup.','graph-master.png'),
+        makeCard(53,'Dope Sheet Editing','डोप शीट एडिट','Batch key ops, retiming.','Batch key ops, retiming.','dopesheet-adv.png'),
+        makeCard(54,'Animation Modifiers','एनीमेशन मॉडिफ़ायर्स','Noise, cycles, limits.','Noise, cycles, limits.','anim-mod.png'),
+        makeCard(55,'Constraints in Animation','कंस्ट्रेंट्स','Track-To, Copy, Limit for control.','Track-To, Copy, Limit control.','constraints-anim.png'),
+        makeCard(56,'Camera Animation','कैमरा एनीमेशन','Dolly, crane, target rigs.','Dolly, crane, target rigs.','cam-anim.png'),
+        makeCard(57,'Walk Cycle Basics','वॉक साइकिल','Pose-to-pose, arcs, contact.','Pose-to-pose, arcs, contact.','walkcycle.png'),
+        makeCard(58,'Looping Animations','लूपिंग एनीमेशन','Seamless cycles & offsets.','Seamless cycles, offsets.','looping.png'),
+        makeCard(59,'Non-Linear Animation','NLA एडिटर','Blend & reuse actions.','Actions blend/reuse.','nla.png'),
+        makeCard(60,'Facial Animation Intro','फेशियल एनीमेशन','Shape keys & drivers basics.','Shape keys, drivers basics.','facial.png'),
+        makeCard(61,'Lip Sync Basics','लिप सिंक','Audio scrubbing, visemes.','Audio scrubbing, visemes.','lipsync.png'),
+        makeCard(62,'Camera—Cinematic Pacing','सिनेमैटिक पेसिंग','Shot duration, beats, cuts.','Shot duration, beats, cuts.','pacing.png')
+      ]);
+    </script>
 
-    <!-- Lesson 8 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/intermediate-uv-mapping.jpg" alt="UV Mapping in Blender" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 8: UV Mapping Basics</h2>
-        <p class="mb-2"><strong>English:</strong> UV mapping projects 3D models onto a 2D surface for textures. Essential for game assets.</p>
-        <p><strong>हिंदी:</strong> UV mapping 3D models को 2D surface पर project करता है ताकि textures सही से लगें। Game assets के लिए आवश्यक।</p>
-      </div>
-    </article>
+    <!-- Module 7: Rigging & Weights (63–74) -->
+    <section id="m7" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">07 · Rigging & Weight Painting</h2>
+      <div id="m7cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m7cards', [
+        makeCard(63,'Armature Setup','आर्मेचर सेटअप','Bones, roll, naming, parenting.','Bones, roll, naming, parenting.','armature.png'),
+        makeCard(64,'FK vs IK','FK बनाम IK','When to use; switching rigs.','कब उपयोग करें; switching rigs.','fk-ik.png'),
+        makeCard(65,'Automatic Weights','ऑटो वेट्स','Bind mesh; fix common issues.','Mesh bind; common issues fix.','auto-weights.png'),
+        makeCard(66,'Weight Painting Tools','वेट पेंटिंग टूल्स','Brushes, normalize, mirrors.','Brushes, normalize, mirrors.','weightpaint.png'),
+        makeCard(67,'Deformation Tests','डिफॉर्मेशन टेस्ट','Bend, twist, squash checks.','Bend, twist, squash checks.','deform-test.png'),
+        makeCard(68,'Rig Controls & Drivers','रिग कंट्रोल्स','Custom properties, drivers.','Custom properties, drivers.','drivers.png'),
+        makeCard(69,'Constraints for Rigs','कंस्ट्रेंट्स फॉर रिग्स','Pole targets, limits, copy.','Pole targets, limits, copy.','rig-constraints.png'),
+        makeCard(70,'Shape Keys','शेप कीज़','Blendshapes for facial/props.','Facial/props blendshapes.','shapekeys.png'),
+        makeCard(71,'Rig Cleanup','रिग क्लीनअप','Bone layers, collections, UI.','Bone layers, collections, UI.','rig-cleanup.png'),
+        makeCard(72,'Retargeting Basics','रीटार्गेटिंग','Reuse motions between rigs.','Rigs के बीच motions reuse.','retarget.png'),
+        makeCard(73,'Exporting Rigs','रिग एक्सपोर्ट','FBX/GLTF settings for engines.','FBX/GLTF for engines.','rig-export.png'),
+        makeCard(74,'Simple Facial Rig','सरल फेशियल रिग','Bones + shape keys hybrid.','Bones + shape keys hybrid.','facial-rig.png')
+      ]);
+    </script>
 
-    <!-- Lesson 9 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 9: Texture Painting</h2>
-        <p class="mb-2"><strong>English:</strong> Paint textures directly on 3D models. Use brushes for details and realism.</p>
-        <p><strong>हिंदी:</strong> Textures को सीधे 3D models पर paint करें। Brushes से details और realism जोड़ें।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/intermediate-texture-painting.jpg" alt="Blender Texture Painting" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Module 8: Physics Expanded (75–84) -->
+    <section id="m8" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">08 · Physics & Simulation (Expanded)</h2>
+      <div id="m8cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m8cards', [
+        makeCard(75,'Rigid Body Advanced','रिजिड बॉडी एडवांस्ड','Constraints, stacks, fracture add-on.','Constraints, stacks, fracture add-on.','rigid-adv.png'),
+        makeCard(76,'Soft Body Controls','सॉफ्ट बॉडी कंट्रोल','Damping, stiffness, goal weights.','Damping, stiffness, goal weights.','soft-adv.png'),
+        makeCard(77,'Cloth Quality & Pins','क्लॉथ क्वालिटी','Collision, pressure, sew, wind.','Collision, pressure, sew, wind.','cloth-adv.png'),
+        makeCard(78,'Fluid—Mantaflow','फ्लुइड—मंटाफ्लो','Viscosity, obstacles, meshes.','Viscosity, obstacles, meshes.','fluid-adv.png'),
+        makeCard(79,'Smoke & Fire','धुआँ व आग','Domain, flow, cache settings.','Domain, flow, cache settings.','smoke.png'),
+        makeCard(80,'Particles Systems','पार्टिकल सिस्टम','Emitter/ hair, physics, forces.','Emitter/ hair, physics, forces.','particles-adv.png'),
+        makeCard(81,'Forces & Fields','फ़ोर्सेज/फ़ील्ड','Wind, vortex, turbulence.','Wind, vortex, turbulence.','forces.png'),
+        makeCard(82,'Dynamic Paint','डायनामिक पेंट','Wet maps, footprints effects.','Wet maps, footprints effects.','dynamicpaint.png'),
+        makeCard(83,'Rigid+Cloth Combo','रिजिड+क्लॉथ','Hybrid interactions demo.','Hybrid interactions demo.','rigid-cloth.png'),
+        makeCard(84,'Caching & Baking','कैशिंग/बेकिंग','Bake strategy, disk vs mem.','Bake strategy, disk vs mem.','cache.png')
+      ]);
+    </script>
 
-    <!-- Lesson 10 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/intermediate-nodes.jpg" alt="Blender Shader Nodes" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 10: Shader Nodes</h2>
-        <p class="mb-2"><strong>English:</strong> Node editor allows you to build complex materials with procedural textures.</p>
-        <p><strong>हिंदी:</strong> Node editor से complex materials बनाए जाते हैं और procedural textures add किए जाते हैं।</p>
-      </div>
-    </article>
+    <!-- Module 9: Sculpting Deep Dive (85–92) -->
+    <section id="m9" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">09 · Sculpting Deep Dive</h2>
+      <div id="m9cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m9cards', [
+        makeCard(85,'Multires vs Dyntopo','मल्टीरिस बनाम डिन्टोपो','Choose pipeline per asset.','Asset अनुसार सही pipeline चुनें.','multires.png'),
+        makeCard(86,'Brush Catalog','ब्रश कैटलॉग','Clay/Build/Crease/Smooth workflow.','Clay/Build/Crease/Smooth workflow.','brush-catalog.png'),
+        makeCard(87,'Detail Management','डिटेल मैनेजमेंट','Levels, remesh, masks.','Levels, remesh, masks.','detail-manage.png'),
+        makeCard(88,'Hard-Surface Sculpt','हार्ड-सर्फेस स्कल्प्ट','Trim/planar, polish, booleans.','Trim/planar, polish, booleans.','hs-sculpt.png'),
+        makeCard(89,'Organic Forms','ऑर्गेनिक फॉर्म्स','Muscle groups, landmarks.','Muscle groups, landmarks.','organic.png'),
+        makeCard(90,'Hair Cards Intro','हेयर कार्ड्स','Low-poly hair with planes.','Planes से low-poly hair.','haircards.png'),
+        makeCard(91,'Retopo for Sculpt','रीटोपो','Guides, shrinkwrap, snapping.','Guides, shrinkwrap, snapping.','retopo-sculpt.png'),
+        makeCard(92,'Bake from Sculpt','स्कल्प्ट से बेक','Normals/displacement to low.','Normals/displacement to low.','bake-sculpt.png')
+      ]);
+    </script>
 
-    <!-- Lesson 11 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 11: Lighting Setup</h2>
-        <p class="mb-2"><strong>English:</strong> Use three-point lighting (key, fill, rim) to highlight your model professionally.</p>
-        <p><strong>हिंदी:</strong> Three-point lighting (key, fill, rim) से model को professional तरीके से highlight करें।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/intermediate-lighting.jpg" alt="Blender Lighting Setup" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Module 10: Grease Pencil (93–96) -->
+    <section id="m10" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">10 · Grease Pencil (2D/3D)</h2>
+      <div id="m10cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m10cards', [
+        makeCard(93,'Grease Pencil Layers','लेयर्स','Stroke layers, onion skin.','Stroke layers, onion skin.','gp-layers.png'),
+        makeCard(94,'2D Effects','2D इफेक्ट्स','Modifiers for wobble, noise.','Wobble, noise modifiers.','gp-effects.png'),
+        makeCard(95,'3D Integration','3D इंटीग्रेशन','Combine 2D strokes with 3D.','2D strokes को 3D के साथ मिलाएँ.','gp-3d.png'),
+        makeCard(96,'Storyboarding','स्टोरीबोर्ड','Cameras + GP for boards.','Cameras + GP for boards.','gp-board.png')
+      ]);
+    </script>
 
-    <!-- Lesson 12 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/intermediate-camera.jpg" alt="Blender Camera Settings" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 12: Camera Basics</h2>
-        <p class="mb-2"><strong>English:</strong> Learn focal length, depth of field, and camera movement to frame shots better.</p>
-        <p><strong>हिंदी:</strong> Focal length, depth of field और camera movement सीखें ताकि shots बेहतर बनें।</p>
-      </div>
-    </article>
+    <!-- Module 11: Rendering & Compositing (97–106) -->
+    <section id="m11" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">11 · Rendering & Compositing</h2>
+      <div id="m11cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m11cards', [
+        makeCard(97,'Cycles Advanced','Cycles एडवांस्ड','Path depth, clamping, light paths.','Path depth, clamping, light paths.','cycles-adv.png'),
+        makeCard(98,'Eevee Optimization','Eevee ऑप्टिमाइज़','Shadows, AO, SSR tuning.','Shadows, AO, SSR tuning.','eevee-opt.png'),
+        makeCard(99,'Render Passes','रेंडर पासेस','Diffuse/glossy/emit passes.','Diffuse/glossy/emit passes.','passes.png'),
+        makeCard(100,'AOVs & Cryptomatte','AOVs/क्रिप्टोमैट','Selective compositing masks.','Selective compositing masks.','cryptomatte.png'),
+        makeCard(101,'Compositor Nodes','कम्पोज़िटर नोड्स','Glare, color balance, defocus.','Glare, color balance, defocus.','comp-nodes.png'),
+        makeCard(102,'EXR Workflow','EXR वर्कफ़्लो','Multi-layer EXR pipeline.','Multi-layer EXR pipeline.','exr.png'),
+        makeCard(103,'ACES & Color Mgmt','ACES/कलर मैनेज','Wide gamut & tone mapping.','Wide gamut & tone mapping.','aces.png'),
+        makeCard(104,'Denoising Strategies','डीनॉइज़िंग','OIDN/OptiX, radius & strength.','OIDN/OptiX, radius & strength.','denoise.png'),
+        makeCard(105,'Render Farms','रेंडर फ़ार्म','Local vs cloud, cost tips.','Local vs cloud, cost tips.','farm.png'),
+        makeCard(106,'Output Formats','आउटपुट फॉर्मैट्स','PNG, EXR, ProRes, WEBM.','PNG, EXR, ProRes, WEBM.','formats.png')
+      ]);
+    </script>
 
-    <!-- Lesson 13 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 13: Animation Graph Editor</h2>
-        <p class="mb-2"><strong>English:</strong> Refine animations with Graph Editor by adjusting curves for smooth motion.</p>
-        <p><strong>हिंदी:</strong> Graph Editor में curves adjust करके animations को smooth बनाएं।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/intermediate-graph-editor.jpg" alt="Graph Editor in Blender" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Module 12: Workflow & Optimization (107–114) -->
+    <section id="m12" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">12 · Workflow, Add-ons & Optimization</h2>
+      <div id="m12cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m12cards', [
+        makeCard(107,'Scene Organization','सीन ऑर्गनाइज़ेशन','Collections, view layers, overrides.','Collections, view layers, overrides.','scene-org.png'),
+        makeCard(108,'Asset Management','एसेट मैनेजमेंट','Asset Browser best practices.','Asset Browser best practices.','asset-manage.png'),
+        makeCard(109,'Performance Tuning','परफ़ॉर्मेंस ट्यूनिंग','Subdivision, shadows, texture sizes.','Subdivision, shadows, texture sizes.','perf.png'),
+        makeCard(110,'Add-ons Overview','ऐड-ऑन्स','HardOps, DecalMachine (concepts).','HardOps, DecalMachine (concepts).','addons.png'),
+        makeCard(111,'Versioning & Git LFS','वर्ज़निंग/Git LFS','Track large files safely.','Large files safely track.','gitlfs.png'),
+        makeCard(112,'Export Pipelines','एक्सपोर्ट पाइपलाइन','FBX/GLTF to DCC/game engines.','FBX/GLTF to DCC/game engines.','export.png'),
+        makeCard(113,'QA & Checklists','QA/चेकलिस्ट','Before-render sanity checks.','Render से पहले checks.','qa.png'),
+        makeCard(114,'Portfolio Shots','पोर्टफोलियो शॉट्स','Framing, breakdowns, turntables.','Framing, breakdowns, turntables.','portfolio.png')
+      ]);
+    </script>
+    <!-- Module 13: Geometry Nodes Essentials (130–137) -->
+    <section id="m13" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">13 · Geometry Nodes Essentials</h2>
+      <div id="m13cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m13cards', [
+        makeCard(130,'GN Workspace Setup','GN वर्कस्पेस सेटअप','Create node tree, inputs/outputs, instance debug.','Node tree बनाएँ, inputs/outputs, instance debug.','gn-setup.png'),
+        makeCard(131,'Distribute Points','डिस्ट्रिब्यूट पॉइंट्स','Scatter objects on meshes with density.','Meshes पर density के साथ scatter करें.','gn-distribute.png'),
+        makeCard(132,'Instance on Points','इंस्टेंस ऑन पॉइंट्स','Randomize scale/rotation, collections.','Scale/rotation randomize, collections.','gn-instance.png'),
+        makeCard(133,'Attributes & Fields','एट्रिब्यूट्स/फील्ड्स','Field evaluation, capture attributes.','Field evaluation, capture attributes.','gn-fields.png'),
+        makeCard(134,'Curve Tools','कर्व टूल्स','Curve to mesh, profile, taper.','Curve to mesh, profile, taper.','gn-curve.png'),
+        makeCard(135,'Procedural Arrays','प्रोसीजरल अरे','Grid/spiral arrays via nodes.','Nodes से grid/spiral arrays.','gn-array.png'),
+        makeCard(136,'Geometry Selection','जियोमेट्री सिलेक्शन','By normal, by position, face sets.','Normal/position/face set selection.','gn-select.png'),
+        makeCard(137,'Outputs to Modifier','आउटपुट्स टू मॉडिफायर','Expose parameters for artist control.','Artist control के लिए parameters expose करें.','gn-params.png')
+      ]);
+    </script>
 
-    <!-- Lesson 14 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2 order-2 md:order-1">
-        <img src="/assets/intermediate-constraints.jpg" alt="Blender Constraints" loading="lazy" class="rounded-lg shadow">
-      </div>
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 14: Constraints Basics</h2>
-        <p class="mb-2"><strong>English:</strong> Constraints link objects together (e.g., Copy Location, Track To). Useful in rigging.</p>
-        <p><strong>हिंदी:</strong> Constraints objects को जोड़ते हैं (जैसे Copy Location, Track To)। Rigging में उपयोगी।</p>
-      </div>
-    </article>
+    <!-- Module 14: Constraints & Motion Paths (138–145) -->
+    <section id="m14" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">14 · Constraints & Motion Paths</h2>
+      <div id="m14cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m14cards', [
+        makeCard(138,'Track To vs Damped Track','ट्रैक टू बनाम डैम्प्ड','Aim controls for cameras/props.','Cameras/props के aim controls.','con-track.png'),
+        makeCard(139,'Copy Location/Rotation','कॉपी लोकेशन/रोटेशन','Space, influence, offsets.','Space, influence, offsets.','con-copy.png'),
+        makeCard(140,'Follow Path Rigs','फॉलो पाथ रिग्स','Bezier path, follow curve animation.','Bezier path, follow curve animation.','con-follow.png'),
+        makeCard(141,'Limit/Transform','लिमिट/ट्रांसफॉर्म','Constrain ranges for stability.','Stable ranges के लिए constraints.','con-limit.png'),
+        makeCard(142,'Child Of & Space','चाइल्ड ऑफ/स्पेस','Switch parents without pops.','Parents switch करें बिना pops.','con-childof.png'),
+        makeCard(143,'Motion Paths & Ghosting','मोशन पाथ/घोस्टिंग','Visualize arcs, spacing, errors.','Arcs/spacing visualize करें.','con-motionpaths.png'),
+        makeCard(144,'Bake to Keyframes','बेक टू कीफ्रेम्स','Finalize rigs/sims for export.','Export के लिए rigs/sims finalize.','con-bake.png'),
+        makeCard(145,'Drivers for Automation','ड्राइवर्स ऑटोमेशन','Expression-driven controls.','Expression-driven controls.','con-drivers.png')
+      ]);
+    </script>
 
-    <!-- Lesson 15 -->
-    <article class="flex flex-col md:flex-row items-center gap-6">
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Lesson 15: Rendering with Cycles</h2>
-        <p class="mb-2"><strong>English:</strong> Cycles is a realistic render engine. Adjust samples, denoising, and light paths for quality renders.</p>
-        <p><strong>हिंदी:</strong> Cycles एक realistic render engine है। Samples, denoising और light paths adjust करके high quality renders प्राप्त करें।</p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="/assets/intermediate-cycles.jpg" alt="Blender Cycles Rendering" loading="lazy" class="rounded-lg shadow">
-      </div>
-    </article>
+    <!-- Module 15: Game Engine Export (146–153) -->
+    <section id="m15" class="mb-10">
+      <h2 class="text-xl md:text-2xl font-bold mb-4">15 · Game Engine Export (Unity/Unreal)</h2>
+      <div id="m15cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('m15cards', [
+        makeCard(146,'Scale & Units','स्केल/यूनिट्स','Meters vs centimeters; apply transforms.','मीटर/सेंटीमीटर; transforms apply.','ge-scale.png'),
+        makeCard(147,'Naming Conventions','नेमिंग कन्वेंशन्स','Consistent collections, sockets.','Consistent collections, sockets.','ge-naming.png'),
+        makeCard(148,'Collision Proxies','कोलिज़न प्रॉक्सी','UCX/UBX meshes, low-poly colliders.','UCX/UBX meshes, low-poly colliders.','ge-collision.png'),
+        makeCard(149,'Material Channels','मैटेरियल चैनल्स','Packed ORM, texture sizes.','Packed ORM, texture sizes.','ge-material.png'),
+        makeCard(150,'Rig Export FBX','रिग FBX एक्सपोर्ट','Bones, leaf bones, animation NLA.','Bones, leaf bones, animation NLA.','ge-rigfbx.png'),
+        makeCard(151,'LOD Workflow','LOD वर्कफ़्लो','Generate LODs, screen size.','LODs generate, screen size.','ge-lod.png'),
+        makeCard(152,'GLTF Pipeline','GLTF पाइपलाइन','Materials & animation in glTF.','Materials & animation in glTF.','ge-gltf.png'),
+        makeCard(153,'Engine Import Checks','इंजन इम्पोर्ट चेक्स','Normals, tangents, scale verify.','Normals, tangents, scale verify.','ge-import.png')
+      ]);
+    </script>
 
+    <!-- Mini Projects (15) -->
+    <section id="projects" class="mb-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Mini Projects (15) – Practice for Intermediate</h2>
+      <p class="text-gray-700 mb-6">हर project bilingual steps + चित्र placeholders के साथ है ताकि आप concepts को practically apply कर सकें।</p>
+      <div id="projectCards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+    <script>
+      inject('projectCards', [
+        makeCard(115,'Stylized House','स्टाइलाइज़्ड घर','Blockout, booleans, stylized wood/roof shader.','Blockout, booleans, stylized wood/roof shader.','proj-house.png'),
+        makeCard(116,'Interior Corner','इंटीरियर कॉर्नर','Wall, window, curtains (cloth sim), lights.','Wall, window, curtains (cloth sim), lights.','proj-interior.png'),
+        makeCard(117,'Kitchen Set','किचन सेट','Array shelves, metal/glass shaders, HDRI.','Array shelves, metal/glass shaders, HDRI.','proj-kitchen.png'),
+        makeCard(118,'Product Render','प्रोडक्ट रेंडर','Studio light rig, glossy/rough mix.','Studio light rig, glossy/rough mix.','proj-product.png'),
+        makeCard(119,'Car Wheel','कार व्हील','Subdivision, creases, rubber shader.','Subdivision, creases, rubber shader.','proj-wheel.png'),
+        makeCard(120,'Robot Arm','रोबोट आर्म','Hard-surface + constraints rig.','Hard-surface + constraints rig.','proj-robotarm.png'),
+        makeCard(121,'Glass Bottle','ग्लास बोतल','Profile spin, label UV, caustic look.','Profile spin, label UV, caustic look.','proj-bottle.png'),
+        makeCard(122,'Logo Neon Sign','नीयन साइन','Emission with bloom, camera pan.','Emission with bloom, camera pan.','proj-neon.png'),
+        makeCard(123,'Smoke Sim Shot','स्मोक शॉट','Domain, flow, cache, composite.','Domain, flow, cache, composite.','proj-smoke.png'),
+        makeCard(124,'Cloth Flag','क्लॉथ फ्लैग','Pin group, wind force, cycles render.','Pin group, wind force, cycles render.','proj-flag.png'),
+        makeCard(125,'Walk Cycle','वॉक साइकिल','IK rig, pose library, NLA loop.','IK rig, pose library, NLA loop.','proj-walk.png'),
+        makeCard(126,'Lip Sync Shot','लिप सिंक शॉट','Audio, visemes, dopesheet.','Audio, visemes, dopesheet.','proj-lipsync.png'),
+        makeCard(127,'Stylized Tree Pack','ट्री पैक','Lattice deform, toon material.','Lattice deform, toon material.','proj-trees.png'),
+        makeCard(128,'City Block Kitbash','सिटी किटबैश','Modular pieces, array, instancing.','Modular pieces, array, instancing.','proj-city.png'),
+        makeCard(129,'Turntable Render','टर्नटेबल','Camera rig, loop, EXR composite.','Camera rig, loop, EXR composite.','proj-turntable.png')
+      ]);
+    </script>
+
+    <div class="mt-8 text-sm text-gray-600">* All images are placeholders. Replace files inside <code>/images/</code> with your own screenshots/illustrations using the same filenames to keep layout intact.</div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-100 p-6 mt-10 text-center">
-    <p class="font-bold text-purple-600 mb-2">Learn 3D Animation</p>
-    <p class="mb-2">Easy to learn 3D animation beginner to advance level free.</p>
-    <nav class="mb-2">
-      <a href="privacy.html" class="mx-2 hover:text-purple-600">Privacy Policy</a>
-      <a href="terms-of-use.html" class="mx-2 hover:text-purple-600">Terms of Use</a>
-      <a href="about.html" class="mx-2 hover:text-purple-600">About</a>
-      <a href="sitemap.xml" class="mx-2 hover:text-purple-600">Sitemap</a>
-    </nav
+  <footer class="mt-12 beach-purple text-white">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
+      <div>
+        <h3 class="font-bold text-lg">Learn 3D Animation</h3>
+        <p class="opacity-90 mt-2">Free beginner to advanced Blender tutorials in Hindi + English with clean UI and SEO‑friendly pages.</p>
+      </div>
+      <nav class="space-y-2">
+        <a href="index.html" class="block hover:underline">Home</a>
+        <a href="beginner.html" class="block hover:underline">Beginner</a>
+        <a href="advanced.html" class="block hover:underline">Advanced</a>
+      </nav>
+      <nav class="space-y-2">
+        <a href="about.html" class="block hover:underline">About</a>
+        <a href="privacy.html" class="block hover:underline">Privacy Policy</a>
+        <a href="terms-of-use.html" class="block hover:underline">Terms of Use</a>
+        <a href="sitemap.xml" class="block hover:underline">Sitemap</a>
+        <a href="robots.txt" class="block hover:underline">Robots.txt</a>
+      </nav>
+    </div>
+    <div class="text-center text-sm bg-black/20 py-3">© 2025 Learn3DAnimation • All rights reserved</div>
+  </footer>
+
+  <!-- Minor JS: smooth scroll for internal links -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{ e.preventDefault(); document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'}); })
+    })
+  </script>
+</body>
+</html>
