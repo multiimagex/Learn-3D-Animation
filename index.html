@@ -21,14 +21,14 @@
   <meta name="twitter:image" content="https://yourdomain.github.io/og-image.jpg">
 </head>
 <body class="font-[Poppins] bg-white text-gray-800">
+  <!-- Header -->
   <header class="sticky top-0 bg-white shadow z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
       <a href="index.html" class="text-xl font-bold text-orange-600">Learn 3D Animation</a>
       <nav class="space-x-4 hidden md:block">
         <a href="index.html" class="hover:text-orange-600">Home</a>
-        <a href="beginner.html" class="hover:text-orange-600">Beginner</a>
-        <a href="intermediate.html" class="hover:text-orange-600">Intermediate</a>
-        <a href="advanced.html" class="hover:text-orange-600">Advanced</a>
+        <a href="#blender" class="hover:text-orange-600">Blender Sections</a>
+        <a href="#courses" class="hover:text-orange-600">Courses</a>
         <a href="about.html" class="hover:text-orange-600">About</a>
         <a href="privacy.html" class="hover:text-orange-600">Privacy</a>
         <a href="terms-of-use.html" class="hover:text-orange-600">Terms</a>
@@ -36,70 +36,71 @@
     </div>
   </header>
 
+  <!-- Banner -->
   <section class="bg-gradient-to-r from-orange-400 to-yellow-400 text-white py-20 text-center">
     <h1 class="text-5xl font-bold mb-4">LEARN3DANIMATION</h1>
     <p class="text-xl">Beginner to Advanced Blender 3D Animation Tutorials – Free and Easy to Learn.</p>
   </section>
 
   <main class="max-w-7xl mx-auto p-6">
+    <!-- Hero -->
     <section class="text-center mb-10">
       <h2 class="text-3xl font-bold mb-2">Master 3D Animation with Step-by-Step Guides</h2>
       <h3 class="text-lg mb-4">Perfect for beginners to explore Blender tools, shortcuts, and animation courses.</h3>
       <input type="text" id="search" placeholder="Search a section..." class="w-full md:w-1/2 border rounded-lg p-2 shadow" onkeyup="filterSections()">
     </section>
 
-    <!-- Beginner Section -->
-    <section id="beginner" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-6 text-orange-600">Beginner Course</h2>
+    <!-- Blender Sections -->
+    <section id="blender" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-6 text-orange-600">Blender Learning Sections</h2>
       <div class="grid gap-6 md:grid-cols-2">
         <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold mb-2">How to Download Blender</h3>
-          <p class="mb-4">Step-by-step guide to download and install Blender for beginners.</p>
-          <a href="beginner.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Start Beginner Course</a>
+          <h3 class="text-xl font-semibold mb-2">How to Download Blender Software</h3>
+          <p class="mb-4">A complete beginner’s guide to downloading and installing Blender safely.</p>
+          <a href="beginner.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Learn More</a>
         </article>
         <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold mb-2">Blender Interface Basics</h3>
-          <p class="mb-4">Get familiar with Blender’s interface, panels, and navigation tools.</p>
-          <a href="beginner.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Explore Lessons</a>
+          <h3 class="text-xl font-semibold mb-2">About Blender Software Interface</h3>
+          <p class="mb-4">Understand the Blender interface and how to navigate it efficiently.</p>
+          <a href="beginner.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Explore</a>
+        </article>
+        <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-2">Blender Tools Details</h3>
+          <p class="mb-4">In-depth explanation of all tools available in Blender.</p>
+          <a href="intermediate.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Start Learning</a>
+        </article>
+        <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-2">Blender Shortcut Keys & Cheatsheet</h3>
+          <p class="mb-4">Quick access to essential shortcut keys for fast workflow.</p>
+          <a href="intermediate.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">View Shortcuts</a>
         </article>
       </div>
     </section>
 
-    <!-- Intermediate Section -->
-    <section id="intermediate" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-6 text-orange-600">Intermediate Course</h2>
-      <div class="grid gap-6 md:grid-cols-2">
+    <!-- Courses Section -->
+    <section id="courses" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-6 text-orange-600">3D Animation Courses</h2>
+      <div class="grid gap-6 md:grid-cols-3">
         <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold mb-2">Modeling & Modifiers</h3>
-          <p class="mb-4">Learn detailed modeling, using modifiers, and creating complex shapes.</p>
-          <a href="intermediate.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Start Intermediate Course</a>
+          <h3 class="text-xl font-semibold mb-2">Beginner Course</h3>
+          <p class="mb-4">Start your 3D journey with Blender basics, tools, and first projects.</p>
+          <a href="beginner.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Go to Beginner</a>
         </article>
         <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold mb-2">UV Mapping & Texturing</h3>
-          <p class="mb-4">Understand UV unwrapping and apply realistic textures to models.</p>
-          <a href="intermediate.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Explore Lessons</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- Advanced Section -->
-    <section id="advanced" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-6 text-orange-600">Advanced Course</h2>
-      <div class="grid gap-6 md:grid-cols-2">
-        <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold mb-2">Physics & Simulations</h3>
-          <p class="mb-4">Dive into advanced physics simulations like cloth, smoke, and fluids.</p>
-          <a href="advanced.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Start Advanced Course</a>
+          <h3 class="text-xl font-semibold mb-2">Intermediate Course</h3>
+          <p class="mb-4">Advance your skills with modeling, texturing, and animations.</p>
+          <a href="intermediate.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Go to Intermediate</a>
         </article>
         <article class="p-6 border rounded-xl shadow hover:scale-105 transition">
-          <h3 class="text-xl font-semibold mb-2">Cinematic Rendering</h3>
-          <p class="mb-4">Master lighting, rendering engines, and cinematic effects for projects.</p>
-          <a href="advanced.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Explore Lessons</a>
+          <h3 class="text-xl font-semibold mb-2">Advanced Course</h3>
+          <p class="mb-4">Master Blender with simulations, rendering, and cinematic projects.</p>
+          <a href="advanced.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Go to Advanced</a>
         </article>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-gray-100 p-6 mt-10 text-center">
     <p class="font-bold text-orange-600 mb-2">Learn 3D Animation</p>
     <p class="mb-2">Easy to learn 3D animation beginner to advance level free.</p>
