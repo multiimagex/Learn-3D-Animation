@@ -1,432 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advanced 3D Animation Course (200+ Lessons) | Learn 3D Animation</title>
-  <meta name="description" content="Advanced Blender 3D Animation Course with 200+ bilingual lessons (English + Hindi). Master advanced modeling, texturing, rigging, animation, physics, rendering, VFX, scripting, and full projects with mini examples." />
-  <meta name="keywords" content="Advanced 3D animation course, Blender advanced tutorials, rigging, simulation, VFX, geometry nodes, Python scripting, Cycles rendering, Eevee, compositing, motion tracking, UDIM, PBR" />
-  <meta property="og:title" content="Advanced 3D Animation Course – 200+ Lessons" />
-  <meta property="og:description" content="Full advanced Blender course with 200+ lessons, examples, exercises, and SEO-friendly content in Hindi + English." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/images/advanced-banner.png" />
-  <meta property="og:url" content="https://yourdomain.com/advanced.html" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="icon" href="/favicon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced 3D Animation Course | Learn 3D Animation</title>
+  <meta name="description" content="Advanced Blender 3D Animation Course with 220+ lessons. Learn advanced modeling, texturing, rigging, animation, physics, lighting, rendering, VFX, simulations, and motion graphics step by step in Hindi + English." />
+  <meta name="keywords" content="Advanced 3D animation, Blender advanced course, 3D animation tutorials, advanced rigging, advanced rendering, VFX in Blender, simulations, motion graphics, free animation course" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Poppins', sans-serif; }
-    .lesson-card { transition: transform .2s ease, box-shadow .2s ease; }
-    .lesson-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.12); }
-    .chip { background: rgba(107,33,168,.08); border: 1px solid rgba(107,33,168,.2); }
+    .module-card { transition: transform 0.3s, box-shadow 0.3s; }
+    .module-card:hover { transform: scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
   </style>
 </head>
 <body class="bg-purple-50 text-gray-900">
-  <header class="bg-gradient-to-r from-purple-700 to-purple-500 text-white py-8 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <h1 class="text-4xl md:text-6xl font-extrabold">Advanced 3D Animation Course</h1>
-      <p class="mt-3 text-base md:text-lg opacity-90">200+ Lessons • Blender Advanced • Bilingual (English + Hindi) • Free</p>
+
+  <header class="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-8 shadow-lg">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold">Advanced 3D Animation Course</h1>
+      <p class="mt-4 text-lg md:text-xl">220+ Lessons | Blender Advanced | Hindi + English | Free & Easy</p>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-4 py-10">
-    <!-- Search + TOC -->
-    <div class="mb-8 grid gap-4 md:grid-cols-3">
-      <input id="searchInput" type="search" placeholder="Search lessons…" class="md:col-span-2 w-full px-4 py-3 rounded-xl border border-purple-200 focus:ring-2 focus:ring-purple-500 focus:outline-none bg-white" />
-      <select id="moduleFilter" class="w-full px-4 py-3 rounded-xl border border-purple-200 focus:ring-2 focus:ring-purple-500 focus:outline-none bg-white">
-        <option value="">All Modules</option>
-      </select>
-    </div>
+  <main class="container mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-purple-700 mb-8">All Advanced Modules (11)</h2>
 
-    <!-- Chips for quick topics -->
-    <div class="flex flex-wrap gap-2 mb-8">
-      <span class="chip px-3 py-1 rounded-full text-sm">PBR</span>
-      <span class="chip px-3 py-1 rounded-full text-sm">Rigging</span>
-      <span class="chip px-3 py-1 rounded-full text-sm">Geometry Nodes</span>
-      <span class="chip px-3 py-1 rounded-full text-sm">Compositing</span>
-      <span class="chip px-3 py-1 rounded-full text-sm">VFX</span>
-      <span class="chip px-3 py-1 rounded-full text-sm">Cycles</span>
-      <span class="chip px-3 py-1 rounded-full text-sm">Eevee</span>
-      <span class="chip px-3 py-1 rounded-full text-sm">Python</span>
-      <span class="chip px-3 py-1 rounded-full text-sm">Grooming</span>
-      <span class="chip px-3 py-1 rounded-full text-sm">Tracking</span>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Module 1 -->
+      <article class="module-card bg-white rounded-2xl p-6 shadow">
+        <h3 class="text-xl font-semibold mb-2">Module 1: Advanced Modeling</h3>
+        <p class="mb-4">Master high-end modeling workflows including topology, sculpting, and hard-surface detailing.</p>
+        <a href="module1.html" class="bg-purple-600 text-white px-4 py-2 rounded shadow hover:bg-purple-700">Open Module</a>
+      </article>
+      <!-- Module 2 -->
+      <article class="module-card bg-white rounded-2xl p-6 shadow">
+        <h3 class="text-xl font-semibold mb-2">Module 2: Advanced Texturing & Shading</h3>
+        <p class="mb-4">Explore UDIMs, procedural shaders, PBR workflow, and advanced material nodes.</p>
+        <a href="module2.html" class="bg-purple-600 text-white px-4 py-2 rounded shadow hover:bg-purple-700">Open Module</a>
+      </article>
+      <!-- Module 3 -->
+      <article class="module-card bg-white rounded-2xl p-6 shadow">
+        <h3 class="text-xl font-semibold mb-2">Module 3: Advanced Rigging</h3>
+        <p class="mb-4">Learn professional rigging techniques including facial rigs, constraints, and automation.</p>
+        <a href="module3.html" class="bg-purple-600 text-white px-4 py-2 rounded shadow hover:bg-purple-700">Open Module</a>
+      </article>
+      <!-- Module 4 -->
+      <article class="module-card bg-white rounded-2xl p-6 shadow">
+        <h3 class="text-xl font-semibold mb-2">Module 4: Advanced Animation</h3>
+        <p class="mb-4">Dive into complex animation cycles, character acting, and advanced keyframing.</p>
+        <a href="module4.html" class="bg-purple-600 text-white px-4 py-2 rounded shadow hover:bg-purple-700">Open Module</a>
+      </article>
+      <!-- Module 5 -->
+      <article class="module-card bg-white rounded-2xl p-6 shadow">
+        <h3 class="text-xl font-semibold mb-2">Module 5: Physics & Dynamics</h3>
+        <p class="mb-4">Harness cloth, fluid, smoke, and rigid body simulations for realism.</p>
+        <a href="module5.html" class="bg-purple-600 text-white px-4 py-2 rounded shadow hover:bg-purple-700">Open Module</a>
+      </article>
+      <!-- Module 6 -->
+      <article class="module-card bg-white rounded-2xl p-6 shadow">
+        <h3 class="text-xl font-semibold mb-2">Module 6: Lighting & Rendering</h3>
+        <p class="mb-4">Professional lighting setups, HDRI workflows, and advanced rendering with Cycles & Eevee.</p>
+        <a href="module6.html" class="bg-purple-600 text-white px-4 py-2 rounded shadow hover:bg-purple-700">Open Module</a>
+      </article>
+      <!-- Module 7 -->
+      <article class="module-card bg-white rounded-2xl p-6 shadow">
+        <h3 class="text-xl font-semibold mb-2">Module 7: Compositing</h3>
+        <p class="mb-4">Node-based compositing, render passes, and color grading for cinematic output.</p>
+        <a href="module7.html" class="bg-purple-600 text-white px-4 py-2 rounded shadow hover:bg-purple-700">Open Module</a>
+      </article>
+      <!-- Module 8 -->
+      <article class="module-card bg-white rounded-2xl p-6 shadow">
+        <h3 class="text-xl font-semibold mb-2">Module 8: VFX (Visual Effects)</h3>
+        <p class="mb-4">Integrate VFX like explosions, particles, green screen, and motion tracking.</p>
+        <a href="module8.html" class="bg-purple-600 text-white px-4 py-2 rounded shadow hover:bg-purple-700">Open Module</a>
+      </article>
+      <!-- Module 9 -->
+      <article class="module-card bg-white rounded-2xl p-6 shadow">
+        <h3 class="text-xl font-semibold mb-2">Module 9: Motion Graphics</h3>
+        <p class="mb-4">Create professional motion graphics with geometry nodes and procedural animation.</p>
+        <a href="module9.html" class="bg-purple-600 text-white px-4 py-2 rounded shadow hover:bg-purple-700">Open Module</a>
+      </article>
+      <!-- Module 10 -->
+      <article class="module-card bg-white rounded-2xl p-6 shadow">
+        <h3 class="text-xl font-semibold mb-2">Module 10: Advanced Simulation</h3>
+        <p class="mb-4">Master fire, water, explosions, and advanced particle systems in Blender.</p>
+        <a href="module10.html" class="bg-purple-600 text-white px-4 py-2 rounded shadow hover:bg-purple-700">Open Module</a>
+      </article>
+      <!-- Module 11 -->
+      <article class="module-card bg-white rounded-2xl p-6 shadow">
+        <h3 class="text-xl font-semibold mb-2">Module 11: Portfolio & Showreel</h3>
+        <p class="mb-4">Learn how to build a strong portfolio and create a professional showreel for clients.</p>
+        <a href="module11.html" class="bg-purple-600 text-white px-4 py-2 rounded shadow hover:bg-purple-700">Open Module</a>
+      </article>
     </div>
-
-    <!-- Modules will render here -->
-    <div id="modulesContainer" class="space-y-16"></div>
   </main>
 
-  <footer class="bg-purple-700 text-white py-8 mt-14">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <p class="font-semibold">Learn 3D Animation — Advanced Course</p>
-      <p class="opacity-90 text-sm">Easy to learn 3D animation beginner to advanced level free.</p>
-      <nav class="mt-3 space-x-4 text-sm">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="beginner.html" class="hover:underline">Beginner</a>
-        <a href="intermediate.html" class="hover:underline">Intermediate</a>
-        <a href="advanced.html" class="hover:underline">Advanced</a>
-        <a href="about.html" class="hover:underline">About</a>
-        <a href="privacy.html" class="hover:underline">Privacy</a>
-        <a href="terms-of-use.html" class="hover:underline">Terms</a>
-        <a href="sitemap.xml" class="hover:underline">Sitemap</a>
-        <a href="robots.txt" class="hover:underline">Robots</a>
-      </nav>
-      <p class="mt-4 text-xs opacity-80">© 2025 Learn 3D Animation. All rights reserved.</p>
+  <footer class="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-8 mt-12">
+    <div class="container mx-auto text-center">
+      <p class="font-semibold">Learn 3D Animation © 2025 | Advanced Course</p>
+      <p class="mt-2 text-sm">Easy to learn 3D animation beginner to advanced level free. | <a href="privacy.html" class="underline">Privacy Policy</a> | <a href="terms-of-use.html" class="underline">Terms of Use</a></p>
     </div>
   </footer>
 
-  <script>
-    // === Data: 11 modules × 20 lessons = 220 lessons (bilingual + mini projects) ===
-    const modules = [
-      {
-        id: 1,
-        title: 'Advanced Modeling (उन्नत मॉडलिंग)',
-        desc: 'Topology optimization, procedural modeling, hard-surface detailing, organic sculpting, retopology.',
-        lessons: [
-          {t:'Advanced Topology & Retopology', en:'Create clean, animation-ready topology; quad flow, edge loops, poles.', hi:'साफ़, एनीमेशन-रेडी टोपोलॉजी; क्वाड फ्लो, एज लूप्स, पोल्स।', ex:'Retopo a creature sculpt to 10k tris game mesh.', img:'images/m1-01.jpg'},
-          {t:'Boolean-Bevel Hard Surface Workflow', en:'Non-destructive booleans + weighted normals + bevels.', hi:'नॉन-डिस्ट्रक्टिव बूलियन + वेटेड नॉर्मल्स + बेवेल।', ex:'Sci‑fi helmet with panel cuts.', img:'images/m1-02.jpg'},
-          {t:'Kitbashing for Speed', en:'Build complex assets via reusable parts; scale & trim sheets.', hi:'रीयूज़ेबल पार्ट्स से कॉम्प्लेक्स एसेट्स; स्केल व ट्रिम शीट्स।', ex:'Starship greeble kitbash.', img:'images/m1-03.jpg'},
-          {t:'Subdivision Modeling Control', en:'Support loops, creases, topology for Sub‑D.', hi:'सबडिव के लिए सपोर्ट लूप्स, क्रीज़, टोपोलॉजी।', ex:'Car fender with clean highlights.', img:'images/m1-04.jpg'},
-          {t:'Organic Blockout → Sculpt', en:'Block forms, proportion checks, then refine in Sculpt.', hi:'ब्लॉकआउट, प्रपोर्शन चेक्स; Sculpt में रिफाइन।', ex:'Creature bust blocking.', img:'images/m1-05.jpg'},
-          {t:'Parametric Modeling with Modifiers', en:'Array, Mirror, Curve, Lattice for parametric control.', hi:'एरे, मिरर, कर्व, लैटिस से पैरामीट्रिक कंट्रोल।', ex:'Modular bridge.', img:'images/m1-06.jpg'},
-          {t:'Precision Modeling (CAD‑like)', en:'Snapping, measure tools, exact dimensions.', hi:'स्नैपिंग, मेज़र टूल्स, सटीक डाइमेंशन्स।', ex:'Mechanical hinge.', img:'images/m1-07.jpg'},
-          {t:'Retopo Tools: Shrinkwrap & Polybuild', en:'Poly build, shrinkwrap, surface slide.', hi:'पॉली बिल्ड, श्रिंकव्रैप, सरफ़ेस स्लाइड।', ex:'Face retopology.', img:'images/m1-08.jpg'},
-          {t:'Sculpt Detailing: Alphas & Multires', en:'Alphas, detail maps, layer workflow.', hi:'अल्फ़ा, डिटेल मैप्स, लेयर वर्कफ़्लो।', ex:'Skin pores practice.', img:'images/m1-09.jpg'},
-          {t:'Low‑Poly Optimization', en:'Decimation, manual cleanup, silhouette care.', hi:'डेसिमेशन, मैनुअल क्लीनअप, सिल्हूट पर ध्यान।', ex:'Game prop optimization.', img:'images/m1-10.jpg'},
-          {t:'Curve & NURBS Modeling', en:'Bevel profiles, path controls, loft ideas.', hi:'बेवल प्रोफ़ाइल, पाथ कंट्रोल, लॉफ्ट आइडियाज़।', ex:'Cables & hoses set.', img:'images/m1-11.jpg'},
-          {t:'Panel Lines & Chamfers', en:'Consistent chamfer widths; AO‑friendly edges.', hi:'कंसिस्टेंट चेम्फर्स; AO‑फ्रेंडली एजेस।', ex:'Drone shell panels.', img:'images/m1-12.jpg'},
-          {t:'Topology for Deformation', en:'Joint loops, twist areas, muscle flow.', hi:'जॉइंट लूप्स, ट्विस्ट एरिया, मसल फ्लो।', ex:'Elbow topology study.', img:'images/m1-13.jpg'},
-          {t:'Trim Sheets Workflow', en:'Bake trims; atlas for fast detail.', hi:'ट्रिम शीट्स बेक; तेज डिटेल के लिए एटलस।', ex:'Sci‑fi wall with trims.', img:'images/m1-14.jpg'},
-          {t:'Boolean Cleanup & Remesh', en:'Voxel remesh, shrinkwrap to clean.', hi:'वॉक्सेल रीमेश, श्रिंकव्रैप क्लीनअप।', ex:'Weapon receiver cleanup.', img:'images/m1-15.jpg'},
-          {t:'Kit Design Systems', en:'Design language, motif repetition.', hi:'डिज़ाइन लैंग्वेज, मोटिफ़ रिपीटीशन।', ex:'Alien architecture set.', img:'images/m1-16.jpg'},
-          {t:'Measurement & Scale Consistency', en:'Real units, reference import.', hi:'रियल यूनिट्स, रेफ़रेंस इम्पोर्ट।', ex:'Door frames library.', img:'images/m1-17.jpg'},
-          {t:'Custom Normals for Shading', en:'Weighted normals, face strength.', hi:'वेटेड नॉर्मल्स, फेस स्ट्रेंथ।', ex:'Hard edges control.', img:'images/m1-18.jpg'},
-          {t:'Boolean‑to‑Subdivision Strategy', en:'Avoid artifacts; control topology.', hi:'आर्टिफैक्ट्स से बचें; टोपोलॉजी कंट्रोल।', ex:'Helmet ridge sub‑D.', img:'images/m1-19.jpg'},
-          {t:'Asset Library & Reuse', en:'Blender asset browser pipelines.', hi:'एसेट ब्राउज़र पाइपलाइन।', ex:'Reusable greeble pack.', img:'images/m1-20.jpg'}
-        ]
-      },
-      {
-        id: 2,
-        title: 'Advanced Texturing & Shading (टेक्सचरिंग/शेडिंग)',
-        desc: 'UDIMs, advanced UVs, procedural PBR, complex node trees, baking.',
-        lessons: [
-          {t:'UDIM Setup & Painting', en:'Multi‑tile UVs for film assets; paint at 4k/8k.', hi:'फ़िल्म एसेट्स के लिए मल्टी‑टाइल UVs; 4k/8k पेंटिंग।', ex:'Creature UDIMs setup.', img:'images/m2-01.jpg'},
-          {t:'Advanced Unwrap Strategies', en:'Seams planning, distortion control.', hi:'सीम् प्लानिंग, डिस्टॉर्शन कंट्रोल।', ex:'Stylized character unwrap.', img:'images/m2-02.jpg'},
-          {t:'Procedural Metal & Wear', en:'Edge wear, grunge masks, curvature.', hi:'एज वियर, ग्रंज मास्क, कर्वेचर।', ex:'Rusty mech shader.', img:'images/m2-03.jpg'},
-          {t:'Skin Shader Realism', en:'SSS, micro normal, cavity control.', hi:'SSS, माइक्रो नॉर्मल, कैविटी कंट्रोल।', ex:'Portrait skin lookdev.', img:'images/m2-04.jpg'},
-          {t:'Translucency & Thin Surfaces', en:'Leafs, paper, plastics.', hi:'पत्ते, पेपर, प्लास्टिक्स।', ex:'Backlit leaf shader.', img:'images/m2-05.jpg'},
-          {t:'Fabric Weaves & Fuzz', en:'Anisotropy, hair/fiber nodes.', hi:'ऐनिसोट्रॉपी, फाइबर नोड्स।', ex:'Denim material.', img:'images/m2-06.jpg'},
-          {t:'Glass & Caustics Control', en:'Path settings, fake caustics.', hi:'पाथ सेटिंग्स, फ़ेक कॉस्टिक्स।', ex:'Product glass render.', img:'images/m2-07.jpg'},
-          {t:'Baking Maps (HP→LP)', en:'Normal/AO/Curvature/ID bakes.', hi:'नॉर्मल/AO/कर्वेचर/ID बेक्स।', ex:'Game prop bake set.', img:'images/m2-08.jpg'},
-          {t:'Triplanar & World‑space Masks', en:'Seamless projection tricks.', hi:'सीमलेस प्रोजेक्शन ट्रिक्स।', ex:'Rock material set.', img:'images/m2-09.jpg'},
-          {t:'Stylized NPR Shaders', en:'Toon ramps, outlines.', hi:'टून रैम्प्स, आउटलाइन।', ex:'Anime shader pack.', img:'images/m2-10.jpg'},
-          {t:'Displacement & Parallax', en:'Microdisplacement, POM.', hi:'माइक्रोडिस्प्लेसमेंट, POM।', ex:'Tessellated terrain.', img:'images/m2-11.jpg'},
-          {t:'Car Paint & Flakes', en:'Layered BRDFs.', hi:'लेयर्ड BRDFs।', ex:'Automotive lookdev.', img:'images/m2-12.jpg'},
-          {t:'SSS for Food/Marble', en:'Translucent subsurface tricks.', hi:'ट्रांसलूसेंट SSS ट्रिक्स।', ex:'Wax/marble shader.', img:'images/m2-13.jpg'},
-          {t:'Shader Optimization', en:'Node groups, instances.', hi:'नोड ग्रुप्स, इंस्टैंसेस।', ex:'Reusable shaders.', img:'images/m2-14.jpg'},
-          {t:'Texture Atlases & Trims', en:'Atlas packing for games.', hi:'गेम्स के लिए एटलस पैकिंग।', ex:'Trim‑based props.', img:'images/m2-15.jpg'},
-          {t:'Volumetrics (Fog/Smoke)', en:'Volume scatter, step rate.', hi:'वॉल्यूम स्कैटर, स्टेप रेट।', ex:'God‑ray interior.', img:'images/m2-16.jpg'},
-          {t:'Emissive & Bloom Control', en:'Eevee postfx, Cycles glare.', hi:'Eevee पोस्टFX, Cycles ग्लेयर।', ex:'Neon city signs.', img:'images/m2-17.jpg'},
-          {t:'Smart Masks & ID Workflows', en:'ID maps + mask stacks.', hi:'ID मैप + मास्क स्टैक्स।', ex:'Wear by material IDs.', img:'images/m2-18.jpg'},
-          {t:'Texture Painting Pipeline', en:'Layers, stencils, clone.', hi:'लेयर्स, स्टैंसिल, क्लोन।', ex:'Hand‑painted prop.', img:'images/m2-19.jpg'},
-          {t:'LookDev Turntables', en:'Lighting rigs for review.', hi:'रिव्यू के लिए लाइटिंग रिग्स।', ex:'Shader ball reel.', img:'images/m2-20.jpg'}
-        ]
-      },
-      {
-        id: 3,
-        title: 'Advanced Rigging (एडवांस्ड रिगिंग)',
-        desc: 'Biped/quadruped rigs, facial rigs, constraints, drivers, corrective shapes.',
-        lessons: [
-          {t:'Rig Planning & Joint Layout', en:'Proportions, pivot logic, deformation paths.', hi:'प्रपोर्शन, पिवट लॉजिक, डिफॉर्मेशन पाथ्स।', ex:'Biped guide rig.', img:'images/m3-01.jpg'},
-          {t:'FK/IK Systems & Switching', en:'Match transforms, space switching.', hi:'ट्रांसफ़ॉर्म मैच, स्पेस स्विचिंग।', ex:'Arm IK/FK switcher.', img:'images/m3-02.jpg'},
-          {t:'Rig Constraints Deep Dive', en:'Copy/Limit/Track constraints combos.', hi:'कॉपी/लिमिट/ट्रैक कन्स्ट्रेंट कॉम्बो।', ex:'Stabilized camera rig.', img:'images/m3-03.jpg'},
-          {t:'Drivers for Automation', en:'Custom properties drive shapes.', hi:'कस्टम प्रॉपर्टीज़ से शेप्स ड्राइव।', ex:'Auto fist curl.', img:'images/m3-04.jpg'},
-          {t:'Deformation Corrective Shapes', en:'Shape keys for elbows/knees.', hi:'एल्बो/नी पर शेप कीज़।', ex:'Knee corrective set.', img:'images/m3-05.jpg'},
-          {t:'Advanced Weight Painting', en:'Normalize, spread, locked groups.', hi:'नॉर्मलाइज़, स्प्रेड, लॉक्ड ग्रुप्स।', ex:'Shoulder weights.', img:'images/m3-06.jpg'},
-          {t:'Twist Bones & Roll Bones', en:'Avoid candy‑wrap with twist chains.', hi:'ट्विस्ट चेन से कैंडी‑रैप से बचें।', ex:'Forearm twist rig.', img:'images/m3-07.jpg'},
-          {t:'Foot Roll & Reverse Foot', en:'Bank/heel/toe systems.', hi:'बैंक/हील/टो सिस्टम।', ex:'Reverse foot control.', img:'images/m3-08.jpg'},
-          {t:'Facial Rig Basics', en:'Joints vs blendshapes hybrid.', hi:'जॉइंट बनाम ब्लेंडशेप हाइब्रिड।', ex:'Mouth corner rig.', img:'images/m3-09.jpg'},
-          {t:'Facial Rig Advanced', en:'Eye aim, sticky lips, jaw limits.', hi:'आई ऐम, स्टिकी लिप्स, जॉ लिमिट्स।', ex:'Lips zipper rig.', img:'images/m3-10.jpg'},
-          {t:'Spline IK Spines', en:'Stretch/squash spine with FK.', hi:'स्ट्रेच/स्क्वैश स्पाइन + FK।', ex:'Cartoony spine rig.', img:'images/m3-11.jpg'},
-          {t:'Quadruped Rigs', en:'Back/neck counters, paw roll.', hi:'बैक/नेक काउंटर, पाव रोल।', ex:'Dog rig blockout.', img:'images/m3-12.jpg'},
-          {t:'Tail/Tentacle Rigs', en:'Spline IK chains & controls.', hi:'स्प्लाइन IK चेन व कंट्रोल्स।', ex:'Tail dynamics.', img:'images/m3-13.jpg'},
-          {t:'Mechanical Rigs', en:'Constraint‑driven pistons, gears.', hi:'कन्स्ट्रेंट‑ड्रिवन पिस्टन/गियर्स।', ex:'Hydraulic arm.', img:'images/m3-14.jpg'},
-          {t:'Proxy/Collection Linking', en:'Rig reuse across shots.', hi:'शॉट्स में रिग री‑यूज़।', ex:'Library overrides.', img:'images/m3-15.jpg'},
-          {t:'Rig UI & Picker', en:'Bone groups, custom shapes.', hi:'बोन ग्रुप्स, कस्टम शेप्स।', ex:'Rig picker panel.', img:'images/m3-16.jpg'},
-          {t:'Performance Optimization', en:'Bone layers, constraints cost.', hi:'बोन लेयर्स, कन्स्ट्रेंट कॉस्ट।', ex:'Fast playback rig.', img:'images/m3-17.jpg'},
-          {t:'Rig Publishing', en:'Versioning, docs, naming.', hi:'वर्ज़निंग, डॉक्यूमेंटेशन, नेमिंग।', ex:'Studio rig template.', img:'images/m3-18.jpg'},
-          {t:'Auto‑Rig Tools Overview', en:'Rigify basics and custom modules.', hi:'Rigify बेसिक्स व कस्टम मॉड्यूल।', ex:'Rigify biped build.', img:'images/m3-19.jpg'},
-          {t:'Facial AR/Mocap Hookup', en:'Retarget ARKit/LiveLink.', hi:'ARKit/LiveLink रीटार्गेट।', ex:'Face mocap test.', img:'images/m3-20.jpg'}
-        ]
-      },
-      {
-        id: 4,
-        title: 'Advanced Animation (एडवांस्ड एनीमेशन)',
-        desc: 'Graph editor mastery, constraints, NLA, cycles, walk cycles, acting shots.',
-        lessons: [
-          {t:'Polish with Graph Editor', en:'F‑curves, handles, modifiers.', hi:'F‑कर्व्स, हैंडल्स, मॉडिफ़ायर्स।', ex:'Smoothing overshoots.', img:'images/m4-01.jpg'},
-          {t:'Spacing & Timing Nuances', en:'Ease in/out, holds, rhythm.', hi:'ईज़, होल्ड्स, रिदम।', ex:'Ball bounce plus.', img:'images/m4-02.jpg'},
-          {t:'Walk Cycle Pro', en:'Contact, down, pass, up beats.', hi:'कॉन्टैक्ट, डाउन, पास, अप।', ex:'Stylized walk.', img:'images/m4-03.jpg'},
-          {t:'Run & Sprint Cycles', en:'Compression, lean, foot slaps.', hi:'कम्प्रेशन, लीन, फुट स्लैप्स।', ex:'Runner loop.', img:'images/m4-04.jpg'},
-          {t:'Acting & Dialogue', en:'Beats, subtext, gesture design.', hi:'बीट्स, सबटेक्स्ट, जेस्चर डिज़ाइन।', ex:'10‑sec acting shot.', img:'images/m4-05.jpg'},
-          {t:'Camera Animation', en:'Beats with lenses & parallax.', hi:'लेंस/पैरालैक्स के साथ बीट्स।', ex:'Dolly + reveal.', img:'images/m4-06.jpg'},
-          {t:'Constraints for Motion', en:'Child, track, damped track.', hi:'चाइल्ड, ट्रैक, डैम्प्ड ट्रैक।', ex:'Prop attach/release.', img:'images/m4-07.jpg'},
-          {t:'Cycles Modifier Magic', en:'Looping, noise, offset.', hi:'लूप, नॉइज़, ऑफ़सेट।', ex:'Background crowds.', img:'images/m4-08.jpg'},
-          {t:'Secondary & Follow‑through', en:'Overlap, drag, settle.', hi:'ओवरलैप, ड्रैग, सेट्ल।', ex:'Tail dynamics keys.', img:'images/m4-09.jpg'},
-          {t:'NLA Workflow', en:'Clips, strips, layers.', hi:'क्लिप्स, स्ट्रिप्स, लेयर्स।', ex:'Walk + wave blend.', img:'images/m4-10.jpg'},
-          {t:'Motion Paths & Arcs', en:'Arc cleanup, path checks.', hi:'आर्क क्लीनअप, पाथ चेक।', ex:'Hand arc polish.', img:'images/m4-11.jpg'},
-          {t:'Blocking→Spline→Polish', en:'Stepped to spline workflow.', hi:'स्टेप्ड से स्प्लाइन वर्कफ़्लो।', ex:'Pose tests.', img:'images/m4-12.jpg'},
-          {t:'Hands & Fingers Acting', en:'Shapes, accents, rhythm.', hi:'हाथ/उंगलियाँ एक्टिंग।', ex:'Gesture set.', img:'images/m4-13.jpg'},
-          {t:'Facial Acting Beats', en:'Eyes, brows, lids timing.', hi:'आँख/भौं/पलक टाइमिंग।', ex:'Eye darts pass.', img:'images/m4-14.jpg'},
-          {t:'Mechanical Animation', en:'Rigs for machines, cams.', hi:'मशीन मोशन रिग्स।', ex:'Robot arm loop.', img:'images/m4-15.jpg'},
-          {t:'Crowd/Procedural Motion', en:'Offset cycles for variety.', hi:'विविधता हेतु ऑफ़सेट।', ex:'Crowd walkers.', img:'images/m4-16.jpg'},
-          {t:'Physics‑Aided Keys', en:'Use sim caches as guide.', hi:'सिम कैश को गाइड बनायें।', ex:'Rope swing aide.', img:'images/m4-17.jpg'},
-          {t:'Cinematic Beats & Montages', en:'Cutting on motion, J‑cuts.', hi:'मोशन कट्स, J‑कट्स।', ex:'Beat board animatic.', img:'images/m4-18.jpg'},
-          {t:'Exporting Anim for Games', en:'Actions, root motion.', hi:'एक्शन्स, रूट मोशन।', ex:'FBX loop export.', img:'images/m4-19.jpg'},
-          {t:'Polish Checklist', en:'Creaks, pops, foot‑slide fixes.', hi:'क्रीक्स/पॉप/फुट‑स्लाइड फिक्स।', ex:'Shot QC pass.', img:'images/m4-20.jpg'}
-        ]
-      },
-      {
-        id: 5,
-        title: 'Physics & Simulations (फिज़िक्स/सिमुलेशन्स)',
-        desc: 'Cloth, fluid, smoke, fire, rigid/soft body, hair, particles with control.',
-        lessons: [
-          {t:'Rigid Body Fundamentals', en:'Active/passive, constraints, cache.', hi:'ऐक्टिव/पैसिव, कन्स्ट्रेंट, कैश।', ex:'Domino setup.', img:'images/m5-01.jpg'},
-          {t:'Fracture & Debris', en:'Cell fracture, explosive forces.', hi:'सेल फ्रैक्चर, विस्फोट फोर्सेस।', ex:'Wall break VFX.', img:'images/m5-02.jpg'},
-          {t:'Cloth Simulation Control', en:'Pin groups, pressure, sewing.', hi:'पिन ग्रुप, प्रेशर, सिलाई।', ex:'Flag + wind.', img:'images/m5-03.jpg'},
-          {t:'Soft Body & Jelly', en:'Springs, goal weights.', hi:'स्प्रिंग्स, गोल वेट्स।', ex:'Jelly cube.', img:'images/m5-04.jpg'},
-          {t:'Fluid Basics (Mantaflow)', en:'Domain, obstacles, cache.', hi:'डोमेन, ऑब्स्टेकल, कैश।', ex:'Pouring water.', img:'images/m5-05.jpg'},
-          {t:'Smoke & Fire', en:'Combustion, noise, vorticity.', hi:'कम्बशन, नॉइज़, वोर्टिसिटी।', ex:'Candle flame.', img:'images/m5-06.jpg'},
-          {t:'Pyro Shot Control', en:'Temperature, flames, shadows.', hi:'टेम्प, फ्लेम, शैडो।', ex:'Explosion sim.', img:'images/m5-07.jpg'},
-          {t:'Hair & Fur Grooming', en:'Children, clump, kink.', hi:'चिल्ड्रेन, क्लम्प, कিঙ্ক।', ex:'Fur patch.', img:'images/m5-08.jpg'},
-          {t:'Particle Instances', en:'Collection render, randomness.', hi:'कलेक्शन इंस्टैंस, रैंडम।', ex:'Grass scatter.', img:'images/m5-09.jpg'},
-          {t:'Forces & Fields', en:'Wind, turbulence, vortex.', hi:'विंड, टर्बुलेंस, वॉर्टेक्स।', ex:'Dust swirl.', img:'images/m5-10.jpg'},
-          {t:'Caches & Baking Strategy', en:'Modular caches, disk usage.', hi:'कैश रणनीति, डिस्क उपयोग।', ex:'Shot cache plan.', img:'images/m5-11.jpg'},
-          {t:'Collision Proxies', en:'Low‑res proxies for speed.', hi:'स्पीड हेतु लो‑रेज़ प्रॉक्सी।', ex:'Cloth on proxy.', img:'images/m5-12.jpg'},
-          {t:'Viscosity & Fluids', en:'Honey/paint sims.', hi:'हनी/पेंट सिम।', ex:'Honey drip.', img:'images/m5-13.jpg'},
-          {t:'Foam/Spray/Bubbles', en:'Secondary particles.', hi:'सेकेंडरी पार्टिकल्स।', ex:'Ocean shore.', img:'images/m5-14.jpg'},
-          {t:'Ocean Modifier', en:'Spectra, repeat zone.', hi:'स्पेक्ट्रा, रिपीट ज़ोन।', ex:'Boat wake.', img:'images/m5-15.jpg'},
-          {t:'Cloth Tear Effects', en:'Vertex group break.', hi:'वर्टेक्स ग्रुप ब्रेक।', ex:'Ripping banner.', img:'images/m5-16.jpg'},
-          {t:'Smoke Light Interaction', en:'Volumetric shadows.', hi:'वॉल्यूम शैडोज़।', ex:'God‑ray smoke.', img:'images/m5-17.jpg'},
-          {t:'Hybrid Sim + Keys', en:'Bake→hand key polish.', hi:'बेक के बाद की‑पॉलिश।', ex:'Cape sim polish.', img:'images/m5-18.jpg'},
-          {t:'Optimization & Culling', en:'Tile sizes, adaptive step.', hi:'टाइल साइज, अडैप्टिव स्टेप।', ex:'Fast pyro cache.', img:'images/m5-19.jpg'},
-          {t:'Shot Troubleshooting', en:'Explosions, jitter, leaks.', hi:'जिटर/लीक/फटाक से निपटना।', ex:'Fix exploding cloth.', img:'images/m5-20.jpg'}
-        ]
-      },
-      {
-        id: 6,
-        title: 'Lighting & Rendering (लाइटिंग/रेन्डरिंग)',
-        desc: 'Eevee/Cycles, HDRI rigs, AOV passes, denoise, color management.',
-        lessons: [
-          {t:'Lighting Principles', en:'Key/fill/rim, contrast ratios.', hi:'की/फिल/रिम, कॉन्ट्रास्ट रेश्यो।', ex:'3‑point portrait.', img:'images/m6-01.jpg'},
-          {t:'HDRI Lookdev', en:'Studio domes, rotation tricks.', hi:'स्टूडियो डोम, रोटेशन ट्रिक्स।', ex:'Product turntable.', img:'images/m6-02.jpg'},
-          {t:'Photoreal Interiors', en:'Portals, bounces, bounces.', hi:'पोर्टल्स, बाउन्सेस।', ex:'Sun‑sky interior.', img:'images/m6-03.jpg'},
-          {t:'Night/Neon Scenes', en:'Emissive balance, bloom.', hi:'इमिसिव बैलेंस, ब्लूम।', ex:'Cyber street.', img:'images/m6-04.jpg'},
-          {t:'Cycles Optimization', en:'Samples, tiling, OIDN/OptiX.', hi:'सैम्पल्स, टाइलिंग, OIDN/OptiX।', ex:'Fast clean render.', img:'images/m6-05.jpg'},
-          {t:'Eevee Cinematic', en:'Screen space tricks.', hi:'स्क्रीन स्पेस ट्रिक्स।', ex:'Realtime short.', img:'images/m6-06.jpg'},
-          {t:'Render Passes/AOVs', en:'Diffuse/spec/ID/Z/cryptomatte.', hi:'डिफ्यूज़/स्पेक/ID/Z/क्रिप्टोमैट।', ex:'Compo relight.', img:'images/m6-07.jpg'},
-          {t:'Denoise & Cleanups', en:'OIDN vs OptiX tradeoffs.', hi:'OIDN बनाम OptiX।', ex:'Low‑sample scene.', img:'images/m6-08.jpg'},
-          {t:'Color Management/ACES', en:'View transforms, gamut.', hi:'व्यू ट्रांसफॉर्म, गैमट।', ex:'Filmic vs ACES.', img:'images/m6-09.jpg'},
-          {t:'Product Renders', en:'Set cards, reflectors.', hi:'सेट कार्ड्स, रिफ्लेक्टर्स।', ex:'Watch render.', img:'images/m6-10.jpg'},
-          {t:'Automotive Looks', en:'Light rigs for cars.', hi:'कार लाइट रिग्स।', ex:'Car studio.', img:'images/m6-11.jpg'},
-          {t:'Outdoor Daylight', en:'Sun angle, haze.', hi:'सन एंगल, हेज़।', ex:'Plein‑air look.', img:'images/m6-12.jpg'},
-          {t:'Volumetric Lighting', en:'Fog volumes, shafts.', hi:'फॉग वॉल्यूम, शाफ्ट्स।', ex:'Forest beams.', img:'images/m6-13.jpg'},
-          {t:'Render Farm Prep', en:'Strips, file paths.', hi:'स्ट्रिप्स, फ़ाइल पाथ।', ex:'Farm‑ready scene.', img:'images/m6-14.jpg'},
-          {t:'Turntables & Reels', en:'Loop cameras, ramps.', hi:'लूप कैमरा, रैम्प्स।', ex:'Asset turntable.', img:'images/m6-15.jpg'},
-          {t:'Light Linking Tricks', en:'Include/exclude sets.', hi:'इन्क्लूड/एक्सक्लूड सेट्स।', ex:'Hero subject pop.', img:'images/m6-16.jpg'},
-          {t:'Physical Camera', en:'ISO, shutter, f‑stop.', hi:'ISO, शटर, f‑स्टॉप।', ex:'Bokeh control.', img:'images/m6-17.jpg'},
-          {t:'Render Diagnostics', en:'Noise heatmaps.', hi:'नॉइज़ हीटमैप्स।', ex:'Trouble spots.', img:'images/m6-18.jpg'},
-          {t:'Batch/CLI Renders', en:'Command line renders.', hi:'कमांड लाइन रेंडर्स।', ex:'Overnight queue.', img:'images/m6-19.jpg'},
-          {t:'Final Delivery Specs', en:'Color space, bit depth.', hi:'कलर स्पेस, बिट डेप्थ।', ex:'EXR master.', img:'images/m6-20.jpg'}
-        ]
-      },
-      {
-        id: 7,
-        title: 'Compositing & VFX (कंपोज़िटिंग/VFX)',
-        desc: 'Keying, tracking, roto, AOV relighting, light wrap, depth comps.',
-        lessons: [
-          {t:'Green Screen Keying', en:'Keyer nodes, despill.', hi:'कीइंग नोड्स, डीस्पिल।', ex:'Clean plate comp.', img:'images/m7-01.jpg'},
-          {t:'Garbage Mattes & Roto', en:'Bezier shapes, feather.', hi:'बेज़ियर शेप, फ़ेदर।', ex:'Roto hand pass.', img:'images/m7-02.jpg'},
-          {t:'2D Motion Tracking', en:'Affines, lens solve.', hi:'अफ़ाइन, लेंस सॉल्व।', ex:'Sign replacement.', img:'images/m7-03.jpg'},
-          {t:'3D Camera Tracking', en:'Solve quality & scale.', hi:'सॉल्व क्वालिटी/स्केल।', ex:'CG set‑extension.', img:'images/m7-04.jpg'},
-          {t:'Relighting with AOVs', en:'Normals/Z for tweaks.', hi:'नॉर्मल/Z से रीलाइट।', ex:'Spec boost pass.', img:'images/m7-05.jpg'},
-          {t:'Light Wrap & Edge Work', en:'Wrap size, edge blur.', hi:'रैप साइज, एज ब्लर।', ex:'Blend into plate.', img:'images/m7-06.jpg'},
-          {t:'Grading & LUTs', en:'Match plates, mood.', hi:'प्लेट मैच, मूड।', ex:'Day‑for‑night.', img:'images/m7-07.jpg'},
-          {t:'Depth‑of‑Field in Comp', en:'Z‑defocus, bokeh.', hi:'Z‑डीफोकस, बोकेह।', ex:'Rack focus.', img:'images/m7-08.jpg'},
-          {t:'Glow/Flares/ChromAb', en:'Stylized post fx.', hi:'स्टाइलाइज़्ड पोस्ट FX।', ex:'Neon glow pass.', img:'images/m7-09.jpg'},
-          {t:'Grain & Matchmove', en:'Grain plates, scanlines.', hi:'ग्रेन प्लेट्स, स्कैनलाइन्स।', ex:'Film emulation.', img:'images/m7-10.jpg'},
-          {t:'Set Extensions', en:'Projections, cards.', hi:'प्रोजेक्शन्स, कार्ड्स।', ex:'Matte‑painting comp.', img:'images/m7-11.jpg'},
-          {t:'Multipass Composites', en:'Beauty from AOVs.', hi:'AOV से ब्यूटी रिकंस्ट्रक्ट।', ex:'Recombine passes.', img:'images/m7-12.jpg'},
-          {t:'Lens Distortion', en:'Undistort/redistort.', hi:'अनडिस्टॉर्ट/रीडिस्टॉर्ट।', ex:'Tracker prep.', img:'images/m7-13.jpg'},
-          {t:'Clean Plates', en:'Patch fixes, remove.', hi:'पैच फिक्स, रिमूवल।', ex:'Wire removal.', img:'images/m7-14.jpg'},
-          {t:'VFX QC & Delivery', en:'Slate, handles, edls.', hi:'स्लेट, हैंडल्स, EDLs।', ex:'Shot delivery.', img:'images/m7-15.jpg'},
-          {t:'CG/Plate Integration', en:'Contact shadows, AO.', hi:'कॉन्टैक्ट शैडोज़, AO।', ex:'Footprint AO.', img:'images/m7-16.jpg'},
-          {t:'Noise/Grain Management', en:'Match grain, temporal.', hi:'ग्रेन मैच, टेम्पोरल।', ex:'Plate match.', img:'images/m7-17.jpg'},
-          {t:'Keyframe vs Gizmo', en:'Gizmos for speed.', hi:'गिज़्मो से स्पीड।', ex:'Reusable gizmos.', img:'images/m7-18.jpg'},
-          {t:'ACES in Compositing', en:'OCIO configs.', hi:'OCIO कॉन्फ़िग।', ex:'Linear comp test.', img:'images/m7-19.jpg'},
-          {t:'Shot Breakdown Docs', en:'Notes & versions.', hi:'नोट्स, वर्ज़न्स।', ex:'Breakdown sheet.', img:'images/m7-20.jpg'}
-        ]
-      },
-      {
-        id: 8,
-        title: 'Geometry Nodes & Proceduralism (जियो नोड्स)',
-        desc: 'Node‑based scattering, instancing, fields, simulations, tools.',
-        lessons: [
-          {t:'Fields Basics Refresher', en:'Attributes → fields model.', hi:'एट्रिब्यूट्स → फील्ड्स मॉडल।', ex:'Noise displace.', img:'images/m8-01.jpg'},
-          {t:'Scatter Systems', en:'Density/scale/align rules.', hi:'डेंसिटी/स्केल/अलाइन रूल्स।', ex:'Forest scatter.', img:'images/m8-02.jpg'},
-          {t:'Procedural Assets', en:'Parametric controls.', hi:'पैरामीट्रिक कंट्रोल्स।', ex:'Fence generator.', img:'images/m8-03.jpg'},
-          {t:'Curve Tools', en:'Railings, cables.', hi:'रेलिंग, केबल्स।', ex:'Cable node tool.', img:'images/m8-04.jpg'},
-          {t:'Physics with GN', en:'Simple sims & rules.', hi:'सरल सिम/रूल्स।', ex:'Boids scatter.', img:'images/m8-05.jpg'},
-          {t:'Mesh Ops & Fields', en:'Sample, capture, store.', hi:'सैम्पल/कैप्चर/स्टोर।', ex:'Rock erosion.', img:'images/m8-06.jpg'},
-          {t:'Instance Control', en:'ID masks, randomize.', hi:'ID मास्क, रैंडम।', ex:'City blocks.', img:'images/m8-07.jpg'},
-          {t:'Attribute Workflows', en:'Store named attrs.', hi:'नेम्ड एट्रिब्यूट्स।', ex:'Slope masks.', img:'images/m8-08.jpg'},
-          {t:'Simulation Nodes', en:'GN sim cache basics.', hi:'GN सिम कैश बेसिक्स।', ex:'Particle drift.', img:'images/m8-09.jpg'},
-          {t:'Tool Packaging', en:'Group I/O, assetization.', hi:'ग्रुप I/O, एसेटाइज़ेशन।', ex:'Road tool.', img:'images/m8-10.jpg'},
-          {t:'Procedural FX', en:'Trails, growth, veins.', hi:'ट्रेल्स/ग्रोथ/वेन्स।', ex:'Vines growth.', img:'images/m8-11.jpg'},
-          {t:'Performance in GN', en:'Instancing wins, profiles.', hi:'इंस्टैंसिंग, प्रोफाइल्स।', ex:'Fast scatter.', img:'images/m8-12.jpg'},
-          {t:'Data Interfaces', en:'GN↔Shaders links.', hi:'GN↔शेडर्स लिंक।', ex:'GN masks to shader.', img:'images/m8-13.jpg'},
-          {t:'Procedural UVs', en:'Auto unwrap ideas.', hi:'ऑटो UV आइडियाज़।', ex:'Brick UVs.', img:'images/m8-14.jpg'},
-          {t:'Road/Bridge Generators', en:'Curves + profiles.', hi:'कर्व + प्रोफ़ाइल्स।', ex:'Bridge tool.', img:'images/m8-15.jpg'},
-          {t:'Scatter Biomes', en:'Layered noise biomes.', hi:'लेयर्ड नॉइज़ बायोम्स।', ex:'Desert biome.', img:'images/m8-16.jpg'},
-          {t:'Procedural City', en:'Rules & zoning.', hi:'रूल्स/ज़ोनिंग।', ex:'Blocks & streets.', img:'images/m8-17.jpg'},
-          {t:'GN for Motion Graphics', en:'Patterns, reps.', hi:'पैटर्न, रिपीट।', ex:'Radial mograph.', img:'images/m8-18.jpg'},
-          {t:'Interactive Tools', en:'Pickers, sliders.', hi:'पिकर/स्लाइडर।', ex:'Facade editor.', img:'images/m8-19.jpg'},
-          {t:'Publishing GN Assets', en:'Version, docs, icons.', hi:'वर्ज़न, डॉक, आइकन्स।', ex:'Asset pack.', img:'images/m8-20.jpg'}
-        ]
-      },
-      {
-        id: 9,
-        title: 'Python Scripting (पाइथन स्क्रिप्टिंग)',
-        desc: 'Automate Blender: operators, panels, batch tools, generators.',
-        lessons: [
-          {t:'Blender API Basics', en:'bpy data/ops/context.', hi:'bpy डेटा/ऑप्स/कॉन्टेक्स्ट।', ex:'Rename assets batch.', img:'images/m9-01.jpg'},
-          {t:'Custom Operators', en:'Invoke/execute, props.', hi:'इनवोक/एग्जीक्यूट, प्रॉप्स।', ex:'Cleanup operator.', img:'images/m9-02.jpg'},
-          {t:'UI Panels & Menus', en:'Layout, draw funcs.', hi:'लेआउट, ड्रॉ फंक्शन।', ex:'Tools panel.', img:'images/m9-03.jpg'},
-          {t:'Property Drivers', en:'Python‑driven drivers.', hi:'पाइथन ड्राइवर्स।', ex:'Auto door open.', img:'images/m9-04.jpg'},
-          {t:'Batch Import/Export', en:'FBX/OBJ flows.', hi:'FBX/OBJ बैच।', ex:'Folder export.', img:'images/m9-05.jpg'},
-          {t:'Geometry Gen via bpy', en:'Mesh create/modify.', hi:'मेश क्रिएट/मॉडिफ़ाइ।', ex:'Param chair gen.', img:'images/m9-06.jpg'},
-          {t:'Scene Assembly', en:'Link/append scripts.', hi:'लिंक/एपेंड स्क्रिप्ट्स।', ex:'Scene builder.', img:'images/m9-07.jpg'},
-          {t:'Render Automation', en:'CLI, batch frames.', hi:'CLI, बैच फ्रेम्स।', ex:'Shot renders.', img:'images/m9-08.jpg'},
-          {t:'Data Cleanup', en:'Orphans, users.', hi:'ऑरफ़न्स, यूज़र्स।', ex:'Purge tool.', img:'images/m9-09.jpg'},
-          {t:'Asset Versioning', en:'Hashes, naming.', hi:'हैश/नेमिंग।', ex:'Increment save.', img:'images/m9-10.jpg'},
-          {t:'Pipeline Hooks', en:'JSON/CSV i/o.', hi:'JSON/CSV I/O।', ex:'Shot manifest.', img:'images/m9-11.jpg'},
-          {t:'UI Theming via Script', en:'Prefs edits.', hi:'प्रेफ एडिट।', ex:'Theme switcher.', img:'images/m9-12.jpg'},
-          {t:'Mocap Retarget Helper', en:'Bone maps.', hi:'बोन मैप्स।', ex:'Auto retarget.', img:'images/m9-13.jpg'},
-          {t:'Render Farm Submit', en:'HTTP calls.', hi:'HTTP कॉल्स।', ex:'Farm submitter.', img:'images/m9-14.jpg'},
-          {t:'Error Handling & Logs', en:'Try/except, reports.', hi:'त्रुटि हैंडल/लॉग।', ex:'Robust ops.', img:'images/m9-15.jpg'},
-          {t:'Packaging Add‑ons', en:'bl_info, register.', hi:'bl_info, रजिस्टर।', ex:'Addon zip.', img:'images/m9-16.jpg'},
-          {t:'Performance Tips', en:'Avoid loops in UI.', hi:'UI में भारी लूप्स न करें।', ex:'Fast ops.', img:'images/m9-17.jpg'},
-          {t:'Security & Paths', en:'File ops safety.', hi:'फ़ाइल सुरक्षा।', ex:'Sandbox paths.', img:'images/m9-18.jpg'},
-          {t:'Documentation & Help', en:'Docstrings/tooltips.', hi:'डॉकस्ट्रिंग/टूलटिप्स।', ex:'Help panel.', img:'images/m9-19.jpg'},
-          {t:'Distribute Your Add‑on', en:'Release, version.', hi:'रिलीज़, वर्ज़न।', ex:'Public repo.', img:'images/m9-20.jpg'}
-        ]
-      },
-      {
-        id: 10,
-        title: 'Game Assets & Realtime (गेम एसेट्स/रीयलटाइम)',
-        desc: 'Low‑poly workflows, bakes, LODs, FBX/GLTF export, Unity/Unreal.',
-        lessons: [
-          {t:'Low‑Poly Modeling Rules', en:'Silhouette first.', hi:'पहले सिल्हूट।', ex:'Hero prop LP.', img:'images/m10-01.jpg'},
-          {t:'HP→LP Baking Suite', en:'Normals/AO/curvature.', hi:'नॉर्मल/AO/कर्वेचर।', ex:'Weapon bake.', img:'images/m10-02.jpg'},
-          {t:'Texel Density & Atlases', en:'Consistent density.', hi:'कंसिस्टेंट डेंसिटी।', ex:'TD checker.', img:'images/m10-03.jpg'},
-          {t:'LOD Strategy', en:'LOD0/1/2 setup.', hi:'LOD0/1/2 सेटअप।', ex:'Prop LODs.', img:'images/m10-04.jpg'},
-          {t:'Collision Primitives', en:'UCX naming.', hi:'UCX नेमिंग।', ex:'Physics colliders.', img:'images/m10-05.jpg'},
-          {t:'FBX Export Unity', en:'Scale, units, root.', hi:'स्केल/यूनिट/रूट।', ex:'Unity import.', img:'images/m10-06.jpg'},
-          {t:'GLTF Export & PBR', en:'GLTF 2.0 maps.', hi:'GLTF 2.0 मैप्स।', ex:'Web viewer.', img:'images/m10-07.jpg'},
-          {t:'Rigged Props for Games', en:'Simple bones.', hi:'सिंपल बोन्स।', ex:'Door rig.', img:'images/m10-08.jpg'},
-          {t:'Decals & Trim Sheets', en:'Detail without geo.', hi:'जियो बिना डिटेल।', ex:'Panel decals.', img:'images/m10-09.jpg'},
-          {t:'Lightmaps & UV2', en:'No overlaps, padding.', hi:'ओवरलैप न हो, पैडिंग।', ex:'Static meshes.', img:'images/m10-10.jpg'},
-          {t:'Realtime Shaders', en:'Packed maps, masks.', hi:'पैक्ड मैप्स, मास्क।', ex:'Smart shader.', img:'images/m10-11.jpg'},
-          {t:'Animation Export', en:'Actions naming.', hi:'एक्शन नेमिंग।', ex:'Run loop FBX.', img:'images/m10-12.jpg'},
-          {t:'Root Motion', en:'Consistent displacement.', hi:'कंसिस्टेंट डिस्प्लेस।', ex:'Root motion test.', img:'images/m10-13.jpg'},
-          {t:'Performance Budgets', en:'Poly/draw/RAM goals.', hi:'पॉली/ड्रॉ/RAM गोल।', ex:'Console budget.', img:'images/m10-14.jpg'},
-          {t:'Material Instances', en:'Param controls.', hi:'पैरामीट्रिक कंट्रोल्स।', ex:'Color variants.', img:'images/m10-15.jpg'},
-          {t:'FX in Realtime', en:'Niagara/VFX Graph.', hi:'नायग्रा/VFX ग्राफ।', ex:'Spark burst.', img:'images/m10-16.jpg'},
-          {t:'Profiling & Debugging', en:'GPU views.', hi:'GPU प्रोफाइलिंग।', ex:'Frame capture.', img:'images/m10-17.jpg'},
-          {t:'Packaging for Stores', en:'Icons, LOD notes.', hi:'आइकॉन्स, LOD नोट्स।', ex:'Asset store pack.', img:'images/m10-18.jpg'},
-          {t:'Version Control', en:'Git/LFS for binaries.', hi:'Git/LFS।', ex:'Team repo.', img:'images/m10-19.jpg'},
-          {t:'Documentation for Teams', en:'Readmes & wikis.', hi:'रीडमी/विकि।', ex:'Team wiki.', img:'images/m10-20.jpg'}
-        ]
-      },
-      {
-        id: 11,
-        title: 'Capstone Projects & Showreel (फ़ाइनल प्रोजेक्ट्स)',
-        desc: 'End‑to‑end shots, breakdowns, QC, delivery, reel building.',
-        lessons: [
-          {t:'Project: Photoreal Product', en:'Client brief → delivery.', hi:'क्लाइंट ब्रीफ़ → डिलिवरी।', ex:'Watch ad shot.', img:'images/m11-01.jpg'},
-          {t:'Project: Interior ArchViz', en:'Model→light→render.', hi:'मॉडल→लाइट→रेंडर।', ex:'Living room.', img:'images/m11-02.jpg'},
-          {t:'Project: Automotive Look', en:'Studio rig & paint.', hi:'स्टूडियो रिग/पेंट।', ex:'Sports car.', img:'images/m11-03.jpg'},
-          {t:'Project: Stylized Short', en:'Story, layout, edit.', hi:'स्टोरी, लेआउट, एडिट।', ex:'1‑min short.', img:'images/m11-04.jpg'},
-          {t:'Project: VFX Integration', en:'Track, comp, match.', hi:'ट्रैक, कॉम्प, मैच।', ex:'Drone add‑on.', img:'images/m11-05.jpg'},
-          {t:'Project: Creature Bust', en:'Sculpt→retopo→lookdev.', hi:'स्कल्प्ट→रीटोपो→लुकडेव।', ex:'Monster bust.', img:'images/m11-06.jpg'},
-          {t:'Project: GN Tool', en:'Design→package.', hi:'डिज़ाइन→पैकेज।', ex:'Road generator.', img:'images/m11-07.jpg'},
-          {t:'Project: Game Prop Set', en:'HP→LP→bakes→export.', hi:'HP→LP→बेक→एक्सपोर्ट।', ex:'Weapon set.', img:'images/m11-08.jpg'},
-          {t:'Project: Crowd Shot', en:'Cycles+NLA crowds.', hi:'सायकल्स+NLA क्राउड।', ex:'Street scene.', img:'images/m11-09.jpg'},
-          {t:'Project: FX Shot (Pyro)', en:'Explosion + comp.', hi:'विस्फोट + कॉम्प।', ex:'Wall break.', img:'images/m11-10.jpg'},
-          {t:'QC & Troubleshooting', en:'Pops, flicker, seams.', hi:'पॉप/फ्लिकर/सीम्।', ex:'Shot QC log.', img:'images/m11-11.jpg'},
-          {t:'Deliverables & Formats', en:'EXR, ProRes, H.264.', hi:'EXR/ProRes/H.264।', ex:'Delivery pack.', img:'images/m11-12.jpg'},
-          {t:'Reel Strategy', en:'Open strong, pacing.', hi:'मज़बूत ओपन, पेसिंग।', ex:'1‑min reel.', img:'images/m11-13.jpg'},
-          {t:'Portfolio Page', en:'Case studies, SEO.', hi:'केस स्टडीज़, SEO।', ex:'ArtStation page.', img:'images/m11-14.jpg'},
-          {t:'Client Brief Practice', en:'Mock briefs.', hi:'मॉक ब्रीफ़।', ex:'Creative deck.', img:'images/m11-15.jpg'},
-          {t:'Bidding & Estimation', en:'Scopes, buffers.', hi:'स्कोप/बफ़र।', ex:'Quote sheet.', img:'images/m11-16.jpg'},
-          {t:'Time Management', en:'Blocking calendar.', hi:'कैलेंडर ब्लॉकिंग।', ex:'Gantt chart.', img:'images/m11-17.jpg'},
-          {t:'Team Collaboration', en:'Reviews, notes.', hi:'रिव्यू/नोट्स।', ex:'Shot tracker.', img:'images/m11-18.jpg'},
-          {t:'Feedback & Revisions', en:'Notes cycles.', hi:'नोट्स साइकल्स।', ex:'v01→v05.', img:'images/m11-19.jpg'},
-          {t:'Final Showcase', en:'Publish & share.', hi:'पब्लिश/शेयर।', ex:'Public reel.', img:'images/m11-20.jpg'}
-        ]
-      }
-    ];
-
-    // Populate module dropdown
-    const modSel = document.getElementById('moduleFilter');
-    modules.forEach(m => {
-      const opt = document.createElement('option');
-      opt.value = m.id; opt.textContent = `Module ${m.id}: ${m.title}`;
-      modSel.appendChild(opt);
-    });
-
-    // Render modules & lessons
-    const container = document.getElementById('modulesContainer');
-    function render(filterText = '', moduleId = '') {
-      container.innerHTML = '';
-      modules.forEach((m, idx) => {
-        if (moduleId && String(m.id) !== String(moduleId)) return;
-        const sec = document.createElement('section');
-        sec.id = `module-${m.id}`;
-        sec.className = 'scroll-mt-24';
-        sec.innerHTML = `
-          <h2 class="text-3xl font-bold text-purple-700 mb-3">Module ${m.id}: ${m.title}</h2>
-          <p class="mb-6">${m.desc}</p>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>`;
-        const grid = sec.querySelector('div.grid');
-        m.lessons.forEach((L, i) => {
-          const textBlob = (L.t + ' ' + L.en + ' ' + L.hi + ' ' + (L.ex||'')).toLowerCase();
-          if (filterText && !textBlob.includes(filterText.toLowerCase())) return;
-          const card = document.createElement('article');
-          card.className = 'lesson-card bg-white rounded-2xl p-5 shadow border border-purple-100';
-          card.innerHTML = `
-            <h3 class="text-lg font-semibold mb-1">Lesson ${m.id}.${(i+1).toString().padStart(2,'0')}: ${L.t}</h3>
-            <p class="text-sm"><b>English:</b> ${L.en}</p>
-            <p class="text-sm mt-1"><b>हिन्दी:</b> ${L.hi}</p>
-            ${L.ex ? `<h4 class='mt-3 font-semibold'>Mini Project:</h4><p class='text-sm mb-2'>${L.ex}</p>`:''}
-            <img src="${L.img}" alt="${L.t} – Blender Advanced Lesson" loading="lazy" class="mt-2 rounded-lg shadow"/>
-          `;
-          grid.appendChild(card);
-        });
-        container.appendChild(sec);
-      });
-    }
-
-    render();
-
-    // Search + filter handlers
-    document.getElementById('searchInput').addEventListener('input', e => {
-      render(e.target.value, document.getElementById('moduleFilter').value);
-    });
-    modSel.addEventListener('change', e => {
-      render(document.getElementById('searchInput').value, e.target.value);
-    });
-  </script>
 </body>
 </html>
