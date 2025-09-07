@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Module 1 — Advanced Modeling | Learn 3D Animation</title>
+  <meta name="description" content="Module 1: Advanced Modeling — 20+ detailed Blender lessons (English + Hindi). Topology, retopology, hard-surface, sculpting, procedural modeling with step-by-step examples and mini projects." />
+  <meta name="keywords" content="Advanced modeling, Blender modeling course, retopology tutorial, hard-surface modeling, procedural modeling, topology for animation" />
+  <link rel="canonical" href="https://yourdomain.com/modules/module1.html" />
+  <meta property="og:title" content="Module 1 — Advanced Modeling | Learn 3D Animation" />
+  <meta property="og:description" content="20+ Blender lessons: topology, retopo, hard-surface, sculpting, procedural modeling — bilingual (EN/HI)." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://yourdomain.com/modules/module1.html" />
+  <meta property="og:image" content="/images/m1-banner.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style> body{font-family:'Poppins',sans-serif} .lesson{transition:transform .18s ease,box-shadow .18s ease} .lesson:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08)}</style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Course",
+    "name":"Advanced Modeling — Module 1",
+    "description":"Module 1 of Learn 3D Animation Advanced Course: 20+ in-depth Blender modeling lessons with projects (English + Hindi).",
+    "provider":{"@type":"Organization","name":"Learn 3D Animation","sameAs":"https://yourdomain.com"}
+  }
+  </script>
+</head>
+<body class="bg-purple-50 text-gray-900">
+  <header class="bg-gradient-to-r from-purple-700 to-purple-500 text-white p-6 sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <a href="/Advanced-modules-connected.html" class="text-xl font-bold">Learn 3D Animation</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="/index.html" class="hover:underline">Home</a>
+        <a href="/beginner.html" class="hover:underline">Beginner</a>
+        <a href="/intermediate.html" class="hover:underline">Intermediate</a>
+        <a href="/Advanced-modules-connected.html" class="hover:underline">Advanced</a>
+        <a href="/about.html" class="hover:underline">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-10">
+    <article>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-purple-700 mb-2">Module 1 — Advanced Modeling</h1>
+      <p class="text-gray-700 mb-4">20+ detailed lessons covering advanced Blender modeling workflows: topology, retopology, hard-surface, sculpting, procedural modeling, optimization and asset pipelines. (English + हिन्दी)</p>
+      <div class="flex gap-3 mb-6">
+        <a href="/Advanced-modules-connected.html" class="px-3 py-2 bg-white rounded shadow text-sm">← Back to Advanced Overview</a>
+        <a href="#lessons" class="px-3 py-2 bg-yellow-400 text-white rounded shadow text-sm">Jump to Lessons</a>
+      </div>
+
+      <section id="module-summary" class="mb-10 bg-white p-5 rounded-lg shadow">
+        <h2 class="text-xl font-bold mb-2">What you'll learn</h2>
+        <ul class="list-disc ml-5 text-gray-700">
+          <li>Animation‑friendly topology & retopology workflows.</li>
+          <li>Hard‑surface modeling: boolean→bevel→cleanup strategies.</li>
+          <li>Procedural modeling using modifiers & geometry nodes.</li>
+          <li>High→low poly pipelines, baking, and optimization for games.</li>
+        </ul>
+      </section>
+
+      <section id="lessons" class="space-y-6">
+        <!-- Lesson template repeated -->
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-1">
+          <h3 class="text-lg font-semibold">Lesson 1 — Advanced Topology & Retopology</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Learn quad-based topology, edge flow for deformation, poles management and when to use loops vs. radial topology.<br>
+          <strong>हिन्दी:</strong> क्वाड-आधारित टोपोलॉजी, डिफॉर्मेशन के लिए एज‑फ्लो, पोल्स का प्रबंधन और कब लूप बनाम रेडियल टोपोलॉजी उपयोग करें।</p>
+          <h4 class="mt-3 font-medium">Step-by-step</h4>
+          <ol class="list-decimal ml-5 text-sm text-gray-700">
+            <li>Prepare sculpt: blockout high poly and export as reference.</li>
+            <li>Use Shrinkwrap / Surface Snap to project retopo vertices.</li>
+            <li>Create edge loops near joints and keep quads for good deformation.</li>
+            <li>Validate with simple animations (bend/twist) and refine.</li>
+          </ol>
+          <h4 class="mt-3 font-medium">Mini project</h4>
+          <p class="text-sm text-gray-700">Retopologize a creature head from 400k → 20k tris keeping clean edge flow for mouth and eyes.</p>
+          <img src="/images/m1-01-topology.jpg" alt="Retopology example - clean quad flow" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-2">
+          <h3 class="text-lg font-semibold">Lesson 2 — Boolean → Bevel Hard-surface Workflow</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Non-destructive boolean operations, using boolean modifier with bevel weight and weighted normals to keep clean shading.<br>
+          <strong>हिन्दी:</strong> नॉन‑डिस्ट्रक्टिव बूलियन ऑपरेशन, बेवेल वेट और वेटेड नॉर्मल्स के साथ शेडिंग को साफ़ रखने की तकनीक।</p>
+          <h4 class="mt-3 font-medium">Step-by-step</h4>
+          <ol class="list-decimal ml-5 text-sm text-gray-700">
+            <li>Model base volumes and use Boolean modifier (Exact) with a boolean object.</li>
+            <li>Apply Bevel modifier above boolean in stack or use bevel weight when non-applied.</li>
+            <li>Use Weighted Normals or custom normals to fix shading artifacts.</li>
+            <li>Final cleanup: apply remesh or manual topology as needed.</li>
+          </ol>
+          <h4 class="mt-3 font-medium">Mini project</h4>
+          <p class="text-sm text-gray-700">Create a sci‑fi helmet with panel cuts, then set up bevels and weighted normals for crisp highlights.</p>
+          <img src="/images/m1-02-boolean.jpg" alt="Hard surface boolean workflow" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-3">
+          <h3 class="text-lg font-semibold">Lesson 3 — Kitbashing & Modular Asset Workflow</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Build reusable kit parts (greebles, panels) and assemble complex scenes fast. Manage naming & scale conventions.<br>
+          <strong>हिन्दी:</strong> रीयूज़ेबल किट‑पार्ट्स बनाएं और तेज़ी से कॉम्प्लेक्स सीन असेंबल करें। नेमिंग और स्केल कन्वेंशन रखें।</p>
+          <h4 class="mt-3 font-medium">Steps</h4>
+          <ul class="list-disc ml-5 text-sm text-gray-700">
+            <li>Create modular pieces with center pivots.</li>
+            <li>Save to Asset Browser with tags and metadata.</li>
+            <li>Assemble using arrays and instances to keep memory low.</li>
+          </ul>
+          <h4 class="mt-3 font-medium">Mini project</h4>
+          <p class="text-sm text-gray-700">Make a kitbash pack (10 pieces) and compose a ship hull scene.</p>
+          <img src="/images/m1-03-kitbash.jpg" alt="Kitbashing modular pieces" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-4">
+          <h3 class="text-lg font-semibold">Lesson 4 — Subdivision Surface Control & Support Loops</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Plan edge loops and support geometry for crisp bevels and predictable smoothing.<br>
+          <strong>हिन्दी:</strong> सपोर्ट लूप्स और एज पुशिंग से सबडिविजन शार्पनेस कंट्रोल करें।</p>
+          <h4 class="mt-3 font-medium">Quick steps</h4>
+          <ol class="list-decimal ml-5 text-sm text-gray-700">
+            <li>Place support loops near chamfers; avoid poles in long loops.</li>
+            <li>Use crease vs support loop tradeoffs when managing polycount.</li>
+            <li>Check smoothing with viewport subdivision and tweak.
+            </li>
+          </ol>
+          <h4 class="mt-3 font-medium">Mini project</h4>
+          <p class="text-sm text-gray-700">Model a mechanical arm panel with clean support topology.</p>
+          <img src="/images/m1-04-subd.jpg" alt="Subdivision support loops" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-5">
+          <h3 class="text-lg font-semibold">Lesson 5 — Sculpt Pipeline: Blockout → Multires</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Start with low-res blockout, refine forms in multires, and project details from a high sculpt to low mesh.
+          <br><strong>हिन्दी:</strong> लो‑रेज़ ब्लॉकआउट से multires तक जाएँ, और हाई‑डिटेल प्रोजेक्ट करें।</p>
+          <h4 class="mt-3 font-medium">Steps</h4>
+          <ol class="list-decimal ml-5 text-sm text-gray-700">
+            <li>Block basic shapes with primitives and blockout proportions.</li>
+            <li>Use dynamic topology for concept detail, then remesh → multires for final detail.</li>
+            <li>Use alphas & detail maps for pores and micro details.</li>
+          </ol>
+          <h4 class="mt-3 font-medium">Mini project</h4>
+          <p class="text-sm text-gray-700">Sculpt a creature nose and project micro-detail to a lower resolution mesh for game use.</p>
+          <img src="/images/m1-05-sculpt.jpg" alt="Sculpt multires workflow" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-6">
+          <h3 class="text-lg font-semibold">Lesson 6 — Retopology Tools & Strategies</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Use Shrinkwrap, Poly Build, and Retopoflow (addon) strategies for fast retopo.
+          <br><strong>हिन्दी:</strong> शींकव्रैप, पॉलीबिल्ड और Retopoflow टूल्स का उपयोग करके तेज़ रीटोपो करें।</p>
+          <h4 class="mt-3 font-medium">Workflow</h4>
+          <ul class="list-disc ml-5 text-sm text-gray-700">
+            <li>Prepare high poly with clear surface normals.</li>
+            <li>Block base loops, use shrinkwrap target, refine loops around joints.</li>
+            <li>Test deformation and make final corrections.</li>
+          </ul>
+          <h4 class="mt-3 font-medium">Mini project</h4>
+          <p class="text-sm text-gray-700">Retopo a scanned asset for animation-ready mesh.</p>
+          <img src="/images/m1-06-retopo.jpg" alt="Retopology using shrinkwrap" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-7">
+          <h3 class="text-lg font-semibold">Lesson 7 — UVs for Subdivision & Baking</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Plan seams for Sub-D and baking; use padding and consistent texel density.
+          <br><strong>हिन्दी:</strong> सब‑डी और बेकिंग के लिए सीम और टेक्सल डेंसिटी प्लान करें।</p>
+          <h4 class="mt-3 font-medium">Best practices</h4>
+          <ol class="list-decimal ml-5 text-sm text-gray-700">
+            <li>Separate moving parts to avoid texture stretch.</li>
+            <li>Maintain uniform texel density; use UDIMs for large assets.</li>
+            <li>Pack with margins and test bake at target resolution.</li>
+          </ol>
+          <h4 class="mt-3 font-medium">Mini project</h4>
+          <p class="text-sm text-gray-700">Unwrap a character head with proper seam placement and test AO/normal bakes.</p>
+          <img src="/images/m1-07-uvs.jpg" alt="UV unwrapping for subdivision" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-8">
+          <h3 class="text-lg font-semibold">Lesson 8 — Custom Normals & Shading Fixes</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Use weighted normals, custom split normals and shading autosmooth to get crisp hard-surface renders.
+          <br><strong>हिन्दी:</strong> वेटेड नॉर्मल्स और कस्टम स्प्लिट नॉर्मल्स से शार्प शेडिंग प्राप्त करें।</p>
+          <h4 class="mt-3 font-medium">Steps</h4>
+          <ul class="list-disc ml-5 text-sm text-gray-700">
+            <li>Mark sharp edges where geometry requires it.</li>
+            <li>Create custom normals from high poly if necessary.</li>
+            <li>Use autosmooth thresholds to balance smooth vs hard edges.</li>
+          </ul>
+          <h4 class="mt-3 font-medium">Mini project</h4>
+          <p class="text-sm text-gray-700">Prepare a mechanical prop and repair shading using custom normals and autosmooth.</p>
+          <img src="/images/m1-08-normals.jpg" alt="Custom normals and weighted normals" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-9">
+          <h3 class="text-lg font-semibold">Lesson 9 — Trim Sheets & Decal Workflow</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Create trim sheets to reuse detail across many assets; apply decals for variation without extra geometry.
+          <br><strong>हिन्दी:</strong> ट्रिम शीट और डिकैल वर्कफ़्लो से कम जियो में ज्यादा डिटेल पाएं।</p>
+          <h4 class="mt-3 font-medium">Mini project</h4>
+          <p class="text-sm text-gray-700">Make a sci‑fi trim sheet and apply as decals to a spaceship hull.</p>
+          <img src="/images/m1-09-trims.jpg" alt="Trim sheet workflow" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-10">
+          <h3 class="text-lg font-semibold">Lesson 10 — Precision & CAD-like Modelling</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Working with exact measurements, snapping, and boolean precision for product and mechanical design.
+          <br><strong>हिन्दी:</strong> सटीक माप, स्नैपिंग और बूलियन प्रिसिशन से प्रोडक्ट मॉडलिंग करें।</p>
+          <h4 class="mt-3 font-medium">Use-case</h4>
+          <p class="text-sm text-gray-700">Create an accurate hinge or bracket with correct tolerances for 3D printing or visualization.</p>
+          <img src="/images/m1-10-precision.jpg" alt="Precision CAD-like modeling" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <!-- Continue up to Lesson 20 -->
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-11">
+          <h3 class="text-lg font-semibold">Lesson 11 — Curve Modeling & Profiles</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Use curves for cables, pipes, trims and profile sweeps; convert to mesh for final edits.<br>
+          <strong>हिन्दी:</strong> केबल, पाइप, और प्रोफ़ाइल स्विप्स के लिए कर्व का उपयोग करें।</p>
+          <p class="text-sm text-gray-700"><strong>Mini project:</strong> Create a braided cable using curve profiles and array modifiers.</p>
+          <img src="/images/m1-11-curve.jpg" alt="Curve modeling and sweeps" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-12">
+          <h3 class="text-lg font-semibold">Lesson 12 — Subsurface & Micro Detail Baking</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Techniques to capture micro detail (displacement/normal) from sculpt to maps for games and film.<br>
+          <strong>हिन्दी:</strong> स्कल्प्ट से माइक्रो‑डिटेल बेक करने के तरीके।</p>
+          <p class="text-sm text-gray-700"><strong>Mini project:</strong> Bake high-poly skin pores into normal and displacement maps.</p>
+          <img src="/images/m1-12-bake.jpg" alt="Micro detail baking workflow" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-13">
+          <h3 class="text-lg font-semibold">Lesson 13 — Boolean Cleanup: Remesh & Retopo</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> After booleans use remesh and retopo to produce clean quads for subdivision.
+          <br><strong>हिन्दी:</strong> बूलियन के बाद रीमेश और रीटोपो से साफ़ क्वैड्स बनाएं।</p>
+          <p class="text-sm text-gray-700"><strong>Mini project:</strong> Create a broken mechanical panel, boolean, then retopo for animation.</p>
+          <img src="/images/m1-13-cleanup.jpg" alt="Boolean cleanup and remesh" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-14">
+          <h3 class="text-lg font-semibold">Lesson 14 — UV-Friendly Topology for Baking</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Plan topology to avoid seams in normal/AO bakes; place UV seams in low-visibility areas.
+          <br><strong>हिन्दी:</strong> बेकिंग में सीम की समस्याएं कम करने के लिए UV‑फ्रेंडली टोपोलॉजी रखें।</p>
+          <p class="text-sm text-gray-700"><strong>Mini project:</strong> Prepare a prop optimized for trim/normal bakes with minimal seams.</p>
+          <img src="/images/m1-14-uvtopo.jpg" alt="UV friendly topology" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-15">
+          <h3 class="text-lg font-semibold">Lesson 15 — Asset Pipeline & Naming Conventions</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Folder structure, naming, LODs and metadata for team pipelines.
+          <br><strong>हिन्दी:</strong> टीम के लिए फ़ोल्डर स्ट्रक्चर, नेमिंग कन्वेंशन और LOD नियम।</p>
+          <p class="text-sm text-gray-700"><strong>Mini project:</strong> Organize an asset folder for a small scene with clear naming and LODs.</p>
+          <img src="/images/m1-15-pipeline.jpg" alt="Asset pipeline and naming" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-16">
+          <h3 class="text-lg font-semibold">Lesson 16 — Procedural Patterns & Instancing</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Use instancing to populate scenes with low memory cost using collections and geometry nodes patterns.
+          <br><strong>हिन्दी:</strong> कलेक्शन्स और जियोमेट्री नोड्स से इंस्टैंसिंग करें।</p>
+          <p class="text-sm text-gray-700"><strong>Mini project:</strong> Create a fence module and instance it across a scene with variation.</p>
+          <img src="/images/m1-16-instance.jpg" alt="Instancing patterns with collections" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-17">
+          <h3 class="text-lg font-semibold">Lesson 17 — Sculpt to Low‑poly Workflows</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Bake high-poly detail to maps, decimate carefully and preserve silhouette.
+          <br><strong>हिन्दी:</strong> हाई‑पॉली डिटेल को मैप में बेक करें और लो‑पॉली silhouette रखें।</p>
+          <p class="text-sm text-gray-700"><strong>Mini project:</strong> Sculpt a stylized head and bake to a 4k normal/displacement set.</p>
+          <img src="/images/m1-17-sculpt2low.jpg" alt="Sculpt to low poly baking" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-18">
+          <h3 class="text-lg font-semibold">Lesson 18 — Edge Flow for Facial Deformation</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Design loops to support smiles, squints and phonemes for facial animation.
+          <br><strong>हिन्दी:</strong> फेशियल एनिमेशन के लिए लूप्स डिज़ाइन करें (स्माइल्स, स्क्विंट्स, फोनीम)।</p>
+          <p class="text-sm text-gray-700"><strong>Mini project:</strong> Create a mouth/eye edge flow study and test with simple blendshapes.</p>
+          <img src="/images/m1-18-faceflow.jpg" alt="Facial edge flow" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-19">
+          <h3 class="text-lg font-semibold">Lesson 19 — Optimization for Real-time Engines</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> Polygon budgets, LODs, texture atlases and draw calls reduction.
+          <br><strong>हिन्दी:</strong> पॉली बजट, LOD, टेक्सचर एटलस और ड्रॉ कॉल्स कम करना।</p>
+          <p class="text-sm text-gray-700"><strong>Mini project:</strong> Convert a high‑poly prop to a game‑ready asset with LODs and atlases.</p>
+          <img src="/images/m1-19-optimization.jpg" alt="Optimization for game engines" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+        <article class="lesson bg-white p-6 rounded-2xl shadow" id="lesson-20">
+          <h3 class="text-lg font-semibold">Lesson 20 — Final Module Project: Complete Asset Pipeline</h3>
+          <p class="text-sm text-gray-700"><strong>English:</strong> End-to-end project: concept → blockout → sculpt → retopo → UV → bake → shader → render.
+          <br><strong>हिन्दी:</strong> कॉन्सेप्ट → ब्लॉकआउट → स्कल्प्ट → रीटोपो → UV → बेक → शेडर → रेंडर।</p>
+          <h4 class="mt-3 font-medium">Deliverables</h4>
+          <ul class="list-disc ml-5 text-sm text-gray-700">
+            <li>Final FBX/GLTF (LOD0/1), texture maps (albedo/normal/rough/metallic/ao), render turntable (EXR/PNG).</li>
+            <li>Short breakdown document describing steps and time taken.</li>
+          </ul>
+          <img src="/images/m1-20-project.jpg" alt="Complete asset pipeline project" loading="lazy" class="mt-3 rounded-lg"/>
+        </article>
+
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="bg-purple-700 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="font-semibold">Learn 3D Animation • Module 1 — Advanced Modeling</p>
+      <p class="text-sm opacity-90 mt-2">Return to <a href="/Advanced-modules-connected.html" class="underline font-medium">Advanced Overview</a> or visit <a href="/index.html" class="underline">Home</a>.</p>
+      <p class="text-xs opacity-80 mt-3">© 2025 Learn 3D Animation. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
